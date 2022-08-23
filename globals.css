@@ -1,0 +1,24 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+/* The following line is used to measure usage of this code in production. For more info see our usage billing page */
+@import url("https://px.animaapp.com/62fdc780a1b66608b86be2da.62fcfbfaa1b66608b86bdee6.cMmUPY2.rcp.png");
+
+@font-face {
+  font-family: "SitkaText-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("static/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
+}
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}

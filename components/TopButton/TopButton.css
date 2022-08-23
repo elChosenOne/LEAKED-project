@@ -1,0 +1,38 @@
+.top-back {
+  height: 60px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /*width: 384px;*/
+}
+
+
+.overlap-group {
+  /*align-items: flex-start;*/
+  align-items: center;
+  display: flex;
+  width: 20%;
+  height: 100%;
+  position: relative;
+}
+
+.overlap-group:hover {
+  border-top-right-radius: 55px;
+  border-bottom-right-radius: 55px;
+  background-color: lightgray;
+}
+
+.inicio,
+.chats,
+.notificaciones,
+.perfil {
+  font-size: 100%;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: absolute;
+  /*top: 15px;*/ 
+  white-space: nowrap;
+}
+

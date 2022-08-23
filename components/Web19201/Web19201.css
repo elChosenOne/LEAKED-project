@@ -1,0 +1,7 @@
+.muro {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+:root { 
+  --bon-jour: #e2e2e2;
+  --dove-gray: #707070;
+  --masala: #3d3d3d;
+  --white: #ffffff;
+ 
+  --font-size-l: 60px;
+  --font-size-m: 30px;
+  --font-size-s: 20px;
+ 
+  --font-family-sitkatext-regular: "SitkaText-Regular", Helvetica;
+}
+.sitkatext-regular-normal-masala-30px {
+  color: var(--masala);
+  font-family: var(--font-family-sitkatext-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sitkatext-regular-normal-masala-20px {
+  color: var(--masala);
+  font-family: var(--font-family-sitkatext-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}

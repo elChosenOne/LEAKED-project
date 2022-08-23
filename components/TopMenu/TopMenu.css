@@ -1,0 +1,29 @@
+.top-menu {
+  align-items: flex-start;
+  background-color: var(--bon-jour);
+  display: flex;
+  height: 30px;
+  left: 0;
+  width: 100%;
+  position:fixed;
+  top:40px;
+  z-index: 1;
+}
+
+.grupo-de-desplazamiento-7::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.title {
+  color: var(--masala);
+  font-family: var(--font-family-sitkatext-regular);
+  font-size: 150%;
+  width: 20%;
+  font-weight: 400;
+  letter-spacing: 0;
+  /*line-height: 60px;*/
+  margin-bottom: -2px;
+  white-space: nowrap;
+}
+

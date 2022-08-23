@@ -1,0 +1,256 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+@import "https://px.animaapp.com/62fdc780a1b66608b86be2da.62fcfbfaa1b66608b86bdee6.cMmUPY2.rcp.png";
+@font-face {
+  font-family: SitkaText-Regular;
+  font-style: normal;
+  font-weight: 400;
+  src: url("DMSerifDisplay-Regular.4f3192bd.ttf") format("truetype");
+}
+
+.screen a {
+  text-decoration: none;
+  display: contents;
+}
+
+input:focus {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bon-jour: #e2e2e2;
+  --dove-gray: #707070;
+  --masala: #3d3d3d;
+  --white: #fff;
+  --font-size-l: 60px;
+  --font-size-m: 30px;
+  --font-size-s: 20px;
+  --font-family-sitkatext-regular: "SitkaText-Regular", Helvetica;
+}
+
+.sitkatext-regular-normal-masala-30px {
+  color: var(--masala);
+  font-family: var(--font-family-sitkatext-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sitkatext-regular-normal-masala-20px {
+  color: var(--masala);
+  font-family: var(--font-family-sitkatext-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}
+
+
+
+.top-search {
+  background-color: var(--bon-jour);
+  height: 40px;
+  width: 100%;
+  z-index: 2;
+  align-items: center;
+  padding-left: 10%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.overlap-group5 {
+  background-color: var(--white);
+  height: 80%;
+  width: 70%;
+  max-width: 550px;
+  border-radius: 20px;
+  align-items: center;
+  padding-left: 19px;
+  padding-right: 19px;
+  display: flex;
+}
+
+.busqueda {
+  height: 22px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #0000;
+  border: 0;
+  padding: 0;
+  line-height: 20px;
+}
+
+.busqueda::placeholder {
+  color: #3d3d3d99;
+}
+
+.buscar {
+  letter-spacing: 0;
+  white-space: nowrap;
+  font-family: SitkaText-Regular;
+  font-size: 100%;
+  position: absolute;
+}
+
+.search-button {
+  height: 80%;
+  min-width: 100px;
+  width: 10%;
+  background-color: #ccc;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  left: 10px;
+}
+
+.search-button:hover {
+  background-color: #a8a8a8;
+}
+
+.top-menu {
+  background-color: var(--bon-jour);
+  height: 30px;
+  width: 100%;
+  z-index: 1;
+  align-items: flex-start;
+  display: flex;
+  position: fixed;
+  top: 40px;
+  left: 0;
+}
+
+.grupo-de-desplazamiento-7::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.title {
+  color: var(--masala);
+  font-family: var(--font-family-sitkatext-regular);
+  width: 20%;
+  letter-spacing: 0;
+  white-space: nowrap;
+  margin-bottom: -2px;
+  font-size: 150%;
+  font-weight: 400;
+}
+
+.top-back {
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlap-group {
+  width: 20%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.overlap-group:hover {
+  background-color: #d3d3d3;
+  border-top-right-radius: 55px;
+  border-bottom-right-radius: 55px;
+}
+
+.inicio, .chats, .notificaciones, .perfil {
+  letter-spacing: 0;
+  white-space: nowrap;
+  font-size: 100%;
+  line-height: 30px;
+  position: absolute;
+  left: 0;
+}
+
+.muro {
+  background-color: var(--white);
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+}
+
+.TablaPublicaciones {
+  width: 100%;
+  margin-top: 70px;
+  display: block;
+}
+
+.publicacion {
+  align-items: left;
+  height: auto;
+  width: 60%;
+  border-radius: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 20%;
+  padding: 15px;
+  position: relative;
+}
+
+.perfil-placeholder {
+  height: 70px;
+  object-fit: fill;
+  float: left;
+  border-radius: 35px;
+}
+
+.usuario {
+  letter-spacing: 0;
+  text-align: left;
+  white-space: nowrap;
+  margin-top: 10px;
+  margin-left: 90px;
+  font-size: 30px;
+}
+
+.fecha {
+  color: #585858;
+  letter-spacing: 0;
+  text-align: left;
+  white-space: nowrap;
+  margin-top: 7px;
+  margin-left: 110px;
+  font-size: 18px;
+}
+
+.contenido {
+  letter-spacing: 0;
+  text-align: justify;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+.salto {
+  clear: both;
+}
+
+.up-arrow, .down-arrow {
+  height: 50px;
+  object-fit: cover;
+}
+
+.comments {
+  height: 50px;
+  object-fit: cover;
+  margin-left: 15px;
+}
+
+/*# sourceMappingURL=index.e1b8c111.css.map */

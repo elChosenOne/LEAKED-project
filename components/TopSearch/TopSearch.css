@@ -1,0 +1,68 @@
+.top-search {
+  align-items: center;
+  background-color: var(--bon-jour);
+  display: flex;
+  height: 40px;
+  left: 0;
+  width: 100%;
+  padding-left: 10%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.overlap-group5 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 20px;
+  display: flex;
+  height: 80%;
+  padding-left: 19px;
+  padding-right: 19px;
+  width: 70%;
+  max-width: 550px;
+  /*padding: 0 19px;*/
+}
+
+.busqueda {
+  background-color: transparent;
+  border: 0;
+  height: 22px;
+  letter-spacing: 0;
+  line-height: 20px;
+  padding: 0;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.busqueda::placeholder {
+  color: #3d3d3d99;
+}
+
+.buscar {
+  /*left: 62px;*/
+  font-family: "SitkaText-Regular";
+  font-size: 100%;
+  letter-spacing: 0;
+  /*line-height: 20px;*/
+  position:absolute;
+  /*top: 10px;*/
+  white-space: nowrap;
+}
+
+.search-button {
+  background-color: #cccccc;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 80%;
+  position: relative;
+  min-width: 100px;
+  width: 10%;
+}
+
+.search-button:hover {
+  background-color: #a8a8a8;
+}
