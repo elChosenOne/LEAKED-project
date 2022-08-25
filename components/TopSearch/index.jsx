@@ -16,9 +16,9 @@ class TopSearch extends React.Component {
             required
           />
         </div>
-          <div className="search-button border-1px-dove-gray">
-            <div className="buscar">{buscar}</div>
-          </div>
+        <div className="search-button border-1px-dove-gray">
+          <div className="buscar">{buscar}</div>
+        </div>
       </div>
     );
   }
