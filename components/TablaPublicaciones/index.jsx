@@ -9,7 +9,9 @@ class TablaPublicaciones extends React.Component {
     return (
         <div className="TablaPublicaciones">
             {publicaciones.map((pub) => (
-                <Publicacion nombre={pub.nombre} fecha={pub.fecha} texto={pub.texto} data={pub.data} color={pub.color} id={pub.key}/>
+                <Publicacion nombre={pub.nombre} fecha={pub.fecha} 
+                             texto={pub.texto} graphType={pub.graphType} 
+                             data={pub.data} color={pub.color} id={pub.key}/>
             ))}
         </div>
     );

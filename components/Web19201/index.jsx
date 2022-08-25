@@ -21,7 +21,8 @@ class Web19201 extends React.Component {
       {
         nombre: "GenNom1", 
         fecha: hoy.toLocaleDateString(),
-        texto: texto, 
+        texto: texto,
+        graphType: "BarGraph",
         data: [
           {
             name: "Page A",
@@ -43,6 +44,7 @@ class Web19201 extends React.Component {
         nombre: "GenNom2", 
         fecha: hoy.toLocaleDateString(), 
         texto: "texto 2", 
+        graphType: "LineGraph",
         data: [
           {
             name: "Lun",
@@ -51,10 +53,52 @@ class Web19201 extends React.Component {
           {
             name: "Mar",
             val: 12
+          },
+          {
+            name: "Mie",
+            val: 4
+          },
+          {
+            name: "Jue",
+            val: 2
+          },
+          {
+            name: "Vie",
+            val: 7
           }
         ],
         color: "blue",
         key: 2
+      }, 
+      {
+        nombre: "GenNom3", 
+        fecha: hoy.toLocaleDateString(), 
+        texto: "texto 3", 
+        graphType: "AreaGraph",
+        data: [
+          {
+            name: 1,
+            val: 10
+          },
+          {
+            name: 2,
+            val: 6
+          },
+          {
+            name: 3,
+            val: 9
+          },
+          {
+            name: 4,
+            val: 5
+          },
+          {
+            name: 5,
+            val: 7
+          }
+        ],
+        color: "green",
+        key: 3
       }
     ];
     const { topSearchProps, topMenuProps } = this.props;

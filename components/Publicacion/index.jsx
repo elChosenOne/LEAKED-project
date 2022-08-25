@@ -4,11 +4,11 @@ import downarrow from "../../dist/downarrow-1@1x.74fc2ae1.png";
 import comments from "../../dist/comments-1@1x.472e0dad.png";
 import perfilplaceholder from "../../dist/perfilplaceholder-1@1x.dce7175b.png";
 import "./Publicacion.css";
-import BarGraph from "../BarGraph";
+import Graphics from "../Graphics";
 
 class Publicacion extends React.Component {
   render() {
-    const { nombre, fecha, texto, data, color, key } = this.props;
+    const { nombre, fecha, texto, graphType, data, color, key } = this.props;
 
     return (
       <div key={key} className="publicacion border-1px-dove-gray">
@@ -18,7 +18,7 @@ class Publicacion extends React.Component {
         <div className="salto" />
         <div className="contenido segoeui-regular-normal-dove-gray-25px">{texto}</div>
         <div className="bloque-grafico">
-          <BarGraph data={data} color={color}/>
+          <Graphics graphType={graphType} data={data} color={color}/>
         </div>
         <img className="up-arrow" src={uparrow} />
         <img className="down-arrow" src={downarrow} />

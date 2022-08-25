@@ -30191,6 +30191,7 @@ class Web19201 extends (0, _reactDefault.default).Component {
                 nombre: "GenNom1",
                 fecha: hoy.toLocaleDateString(),
                 texto: texto,
+                graphType: "BarGraph",
                 data: [
                     {
                         name: "Page A",
@@ -30212,6 +30213,7 @@ class Web19201 extends (0, _reactDefault.default).Component {
                 nombre: "GenNom2",
                 fecha: hoy.toLocaleDateString(),
                 texto: "texto 2",
+                graphType: "LineGraph",
                 data: [
                     {
                         name: "Lun",
@@ -30220,10 +30222,52 @@ class Web19201 extends (0, _reactDefault.default).Component {
                     {
                         name: "Mar",
                         val: 12
+                    },
+                    {
+                        name: "Mie",
+                        val: 4
+                    },
+                    {
+                        name: "Jue",
+                        val: 2
+                    },
+                    {
+                        name: "Vie",
+                        val: 7
                     }
                 ],
                 color: "blue",
                 key: 2
+            },
+            {
+                nombre: "GenNom3",
+                fecha: hoy.toLocaleDateString(),
+                texto: "texto 3",
+                graphType: "AreaGraph",
+                data: [
+                    {
+                        name: 1,
+                        val: 10
+                    },
+                    {
+                        name: 2,
+                        val: 6
+                    },
+                    {
+                        name: 3,
+                        val: 9
+                    },
+                    {
+                        name: 4,
+                        val: 5
+                    },
+                    {
+                        name: 5,
+                        val: 7
+                    }
+                ],
+                color: "green",
+                key: 3
             }
         ];
         const { topSearchProps , topMenuProps  } = this.props;
@@ -30236,7 +30280,7 @@ class Web19201 extends (0, _reactDefault.default).Component {
                     buscar: topSearchProps.buscar
                 }, void 0, false, {
                     fileName: "components/Web19201/index.jsx",
-                    lineNumber: 64,
+                    lineNumber: 108,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topMenuDefault.default), {
@@ -30247,20 +30291,20 @@ class Web19201 extends (0, _reactDefault.default).Component {
                     grupo14Props: topMenuProps.grupo14Props
                 }, void 0, false, {
                     fileName: "components/Web19201/index.jsx",
-                    lineNumber: 69,
+                    lineNumber: 113,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tablaPublicacionesDefault.default), {
                     publicaciones: Publs
                 }, void 0, false, {
                     fileName: "components/Web19201/index.jsx",
-                    lineNumber: 76,
+                    lineNumber: 120,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "components/Web19201/index.jsx",
-            lineNumber: 63,
+            lineNumber: 107,
             columnNumber: 7
         }, this);
     }
@@ -30604,6 +30648,7 @@ class TablaPublicaciones extends (0, _reactDefault.default).Component {
                     nombre: pub.nombre,
                     fecha: pub.fecha,
                     texto: pub.texto,
+                    graphType: pub.graphType,
                     data: pub.data,
                     color: pub.color,
                     id: pub.key
@@ -30647,11 +30692,11 @@ var _comments11X472E0DadPngDefault = parcelHelpers.interopDefault(_comments11X47
 var _perfilplaceholder11XDce7175BPng = require("../../dist/perfilplaceholder-1@1x.dce7175b.png");
 var _perfilplaceholder11XDce7175BPngDefault = parcelHelpers.interopDefault(_perfilplaceholder11XDce7175BPng);
 var _publicacionCss = require("./Publicacion.css");
-var _barGraph = require("../BarGraph");
-var _barGraphDefault = parcelHelpers.interopDefault(_barGraph);
+var _graphics = require("../Graphics");
+var _graphicsDefault = parcelHelpers.interopDefault(_graphics);
 class Publicacion extends (0, _reactDefault.default).Component {
     render() {
-        const { nombre , fecha , texto , data , color , key  } = this.props;
+        const { nombre , fecha , texto , graphType , data , color , key  } = this.props;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "publicacion border-1px-dove-gray",
             children: [
@@ -30696,7 +30741,8 @@ class Publicacion extends (0, _reactDefault.default).Component {
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "bloque-grafico",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _barGraphDefault.default), {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _graphicsDefault.default), {
+                        graphType: graphType,
                         data: data,
                         color: color
                     }, void 0, false, {
@@ -30748,7 +30794,7 @@ exports.default = Publicacion;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../dist/uparrow-1@1x.5e56ec5b.png":"6r3v6","../../dist/downarrow-1@1x.74fc2ae1.png":"a8e4k","../../dist/comments-1@1x.472e0dad.png":"h5AIe","../../dist/perfilplaceholder-1@1x.dce7175b.png":"hBpMn","./Publicacion.css":"lT8a2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../BarGraph":"gwO7C"}],"6r3v6":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../dist/uparrow-1@1x.5e56ec5b.png":"6r3v6","../../dist/downarrow-1@1x.74fc2ae1.png":"a8e4k","../../dist/comments-1@1x.472e0dad.png":"h5AIe","../../dist/perfilplaceholder-1@1x.dce7175b.png":"hBpMn","./Publicacion.css":"lT8a2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Graphics":"khCUO"}],"6r3v6":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "uparrow-1@1x.5e56ec5b.ca4defab.png" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -30794,7 +30840,61 @@ module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "commen
 },{"./helpers/bundle-url":"lgJ39"}],"hBpMn":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "perfilplaceholder-1@1x.dce7175b.0b244b6e.png" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"lT8a2":[function() {},{}],"gwO7C":[function(require,module,exports) {
+},{"./helpers/bundle-url":"lgJ39"}],"lT8a2":[function() {},{}],"khCUO":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8312 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8312.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _barGraph = require("../BarGraph");
+var _barGraphDefault = parcelHelpers.interopDefault(_barGraph);
+var _lineGraph = require("../LineGraph");
+var _lineGraphDefault = parcelHelpers.interopDefault(_lineGraph);
+var _areaGraph = require("../AreaGraph");
+var _areaGraphDefault = parcelHelpers.interopDefault(_areaGraph);
+class Graphics extends (0, _reactDefault.default).Component {
+    render() {
+        const { graphType , data , color  } = this.props;
+        if (graphType === "BarGraph") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _barGraphDefault.default), {
+            data: data,
+            color: color
+        }, void 0, false, {
+            fileName: "components/Graphics/index.jsx",
+            lineNumber: 12,
+            columnNumber: 17
+        }, this);
+        else if (graphType === "LineGraph") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lineGraphDefault.default), {
+            data: data,
+            color: color
+        }, void 0, false, {
+            fileName: "components/Graphics/index.jsx",
+            lineNumber: 16,
+            columnNumber: 17
+        }, this);
+        else if (graphType === "AreaGraph") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _areaGraphDefault.default), {
+            data: data,
+            color: color
+        }, void 0, false, {
+            fileName: "components/Graphics/index.jsx",
+            lineNumber: 20,
+            columnNumber: 17
+        }, this);
+    }
+}
+exports.default = Graphics;
+
+  $parcel$ReactRefreshHelpers$8312.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../BarGraph":"gwO7C","../LineGraph":"g0hh4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../AreaGraph":"02cn0"}],"gwO7C":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$a5f9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30965,7 +31065,7 @@ var _funnelChart = require("./chart/FunnelChart");
 var _trapezoid = require("./shape/Trapezoid");
 var _global = require("./util/Global");
 
-},{"./container/Surface":"ldrIX","./container/Layer":"hLZRL","./component/Legend":"3qIzt","./component/Tooltip":"gEbNO","./component/ResponsiveContainer":"jjAvV","./component/Cell":"cmpyN","./component/Text":"gXuIW","./component/Label":"snyTy","./component/LabelList":"e2z7M","./component/Customized":false,"./shape/Sector":"djk2D","./shape/Curve":"ldzTR","./shape/Rectangle":"21ix4","./shape/Polygon":false,"./shape/Dot":"hrSyt","./shape/Cross":"8B3ly","./shape/Symbols":"2a019","./polar/PolarGrid":false,"./polar/PolarRadiusAxis":false,"./polar/PolarAngleAxis":false,"./polar/Pie":false,"./polar/Radar":false,"./polar/RadialBar":false,"./cartesian/Brush":"b3JiM","./cartesian/ReferenceLine":"9l3Ij","./cartesian/ReferenceDot":"8ANk2","./cartesian/ReferenceArea":"8U9tT","./cartesian/CartesianAxis":"2GpfE","./cartesian/CartesianGrid":false,"./cartesian/Line":false,"./cartesian/Area":false,"./cartesian/Bar":"62moi","./cartesian/Scatter":false,"./cartesian/XAxis":"doQvk","./cartesian/YAxis":"h3RMd","./cartesian/ZAxis":false,"./cartesian/ErrorBar":"ddxHl","./chart/LineChart":false,"./chart/BarChart":"as5Yi","./chart/PieChart":false,"./chart/Treemap":false,"./chart/Sankey":false,"./chart/RadarChart":false,"./chart/ScatterChart":false,"./chart/AreaChart":false,"./chart/RadialBarChart":false,"./chart/ComposedChart":false,"./numberAxis/Funnel":false,"./chart/FunnelChart":false,"./shape/Trapezoid":false,"./util/Global":"7fOrk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ldrIX":[function(require,module,exports) {
+},{"./container/Surface":"ldrIX","./container/Layer":"hLZRL","./component/Legend":"3qIzt","./component/Tooltip":"gEbNO","./component/ResponsiveContainer":"jjAvV","./component/Cell":"cmpyN","./component/Text":"gXuIW","./component/Label":"snyTy","./component/LabelList":"e2z7M","./component/Customized":false,"./shape/Sector":"djk2D","./shape/Curve":"ldzTR","./shape/Rectangle":"21ix4","./shape/Polygon":false,"./shape/Dot":"hrSyt","./shape/Cross":"8B3ly","./shape/Symbols":"2a019","./polar/PolarGrid":false,"./polar/PolarRadiusAxis":false,"./polar/PolarAngleAxis":false,"./polar/Pie":false,"./polar/Radar":false,"./polar/RadialBar":false,"./cartesian/Brush":"b3JiM","./cartesian/ReferenceLine":"9l3Ij","./cartesian/ReferenceDot":"8ANk2","./cartesian/ReferenceArea":"8U9tT","./cartesian/CartesianAxis":"2GpfE","./cartesian/CartesianGrid":false,"./cartesian/Line":"bjP4o","./cartesian/Area":"dfpTQ","./cartesian/Bar":"62moi","./cartesian/Scatter":false,"./cartesian/XAxis":"doQvk","./cartesian/YAxis":"h3RMd","./cartesian/ZAxis":false,"./cartesian/ErrorBar":"ddxHl","./chart/LineChart":"2RI7N","./chart/BarChart":"as5Yi","./chart/PieChart":false,"./chart/Treemap":false,"./chart/Sankey":false,"./chart/RadarChart":false,"./chart/ScatterChart":false,"./chart/AreaChart":"f9mWK","./chart/RadialBarChart":false,"./chart/ComposedChart":false,"./numberAxis/Funnel":false,"./chart/FunnelChart":false,"./shape/Trapezoid":false,"./util/Global":"7fOrk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ldrIX":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Surface", ()=>Surface);
@@ -58329,7 +58429,1330 @@ CartesianAxis.defaultProps = {
     interval: "preserveEnd"
 };
 
-},{"lodash/get":"8UELX","lodash/isFunction":"cfti6","react":"21dqq","classnames":"jocGM","../util/ShallowEqual":"6PNVp","../util/DOMUtils":"kK8xO","../container/Layer":"hLZRL","../component/Text":"gXuIW","../component/Label":"snyTy","../util/Global":"7fOrk","../util/DataUtils":"exzKF","../util/types":"8jZsH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"62moi":[function(require,module,exports) {
+},{"lodash/get":"8UELX","lodash/isFunction":"cfti6","react":"21dqq","classnames":"jocGM","../util/ShallowEqual":"6PNVp","../util/DOMUtils":"kK8xO","../container/Layer":"hLZRL","../component/Text":"gXuIW","../component/Label":"snyTy","../util/Global":"7fOrk","../util/DataUtils":"exzKF","../util/types":"8jZsH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bjP4o":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Line", ()=>Line);
+var _isEqual = require("lodash/isEqual");
+var _isEqualDefault = parcelHelpers.interopDefault(_isEqual);
+var _isFunction = require("lodash/isFunction");
+var _isFunctionDefault = parcelHelpers.interopDefault(_isFunction);
+var _isNil = require("lodash/isNil");
+var _isNilDefault = parcelHelpers.interopDefault(_isNil);
+/**
+ * @fileOverview Line
+ */ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactSmooth = require("react-smooth");
+var _reactSmoothDefault = parcelHelpers.interopDefault(_reactSmooth);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _curve = require("../shape/Curve");
+var _dot = require("../shape/Dot");
+var _layer = require("../container/Layer");
+var _labelList = require("../component/LabelList");
+var _errorBar = require("./ErrorBar");
+var _dataUtils = require("../util/DataUtils");
+var _reactUtils = require("../util/ReactUtils");
+var _global = require("../util/Global");
+var _chartUtils = require("../util/ChartUtils");
+var _types = require("../util/types");
+function _typeof(obj) {
+    "@babel/helpers - typeof";
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") _typeof = function _typeof(obj) {
+        return typeof obj;
+    };
+    else _typeof = function _typeof(obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+    return _typeof(obj);
+}
+function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {};
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+function _extends() {
+    _extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+        if (enumerableOnly) symbols = symbols.filter(function(sym) {
+            return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+        });
+        keys.push.apply(keys, symbols);
+    }
+    return keys;
+}
+function _objectSpread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {};
+        if (i % 2) ownKeys(Object(source), true).forEach(function(key) {
+            _defineProperty(target, key, source[key]);
+        });
+        else if (Object.getOwnPropertyDescriptors) Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+        else ownKeys(Object(source)).forEach(function(key) {
+            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+    }
+    return target;
+}
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+function _toConsumableArray(arr) {
+    return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
+}
+function _nonIterableSpread() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray(o, minLen) {
+    if (!o) return;
+    if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+    var n = Object.prototype.toString.call(o).slice(8, -1);
+    if (n === "Object" && o.constructor) n = o.constructor.name;
+    if (n === "Map" || n === "Set") return Array.from(o);
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+function _iterableToArray(iter) {
+    if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
+function _arrayWithoutHoles(arr) {
+    if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
+function _arrayLikeToArray(arr, len) {
+    if (len == null || len > arr.length) len = arr.length;
+    for(var i = 0, arr2 = new Array(len); i < len; i++)arr2[i] = arr[i];
+    return arr2;
+}
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties(target, props) {
+    for(var i = 0; i < props.length; i++){
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+    }
+}
+function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function");
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) _setPrototypeOf(subClass, superClass);
+}
+function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+        o.__proto__ = p;
+        return o;
+    };
+    return _setPrototypeOf(o, p);
+}
+function _createSuper(Derived) {
+    var hasNativeReflectConstruct = _isNativeReflectConstruct();
+    return function _createSuperInternal() {
+        var Super = _getPrototypeOf(Derived), result;
+        if (hasNativeReflectConstruct) {
+            var NewTarget = _getPrototypeOf(this).constructor;
+            result = Reflect.construct(Super, arguments, NewTarget);
+        } else result = Super.apply(this, arguments);
+        return _possibleConstructorReturn(this, result);
+    };
+}
+function _possibleConstructorReturn(self, call) {
+    if (call && (_typeof(call) === "object" || typeof call === "function")) return call;
+    return _assertThisInitialized(self);
+}
+function _assertThisInitialized(self) {
+    if (self === void 0) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return self;
+}
+function _isNativeReflectConstruct() {
+    if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+    if (Reflect.construct.sham) return false;
+    if (typeof Proxy === "function") return true;
+    try {
+        Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {}));
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+function _getPrototypeOf(o) {
+    _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+        return o.__proto__ || Object.getPrototypeOf(o);
+    };
+    return _getPrototypeOf(o);
+}
+var Line = /*#__PURE__*/ function(_PureComponent) {
+    _inherits(Line, _PureComponent);
+    var _super = _createSuper(Line);
+    function Line() {
+        var _this;
+        _classCallCheck(this, Line);
+        for(var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+        _this = _super.call.apply(_super, [
+            this
+        ].concat(args));
+        _this.mainCurve = void 0;
+        _this.state = {
+            isAnimationFinished: true,
+            totalLength: 0
+        };
+        _this.getStrokeDasharray = function(length, totalLength, lines) {
+            var lineLength = lines.reduce(function(pre, next) {
+                return pre + next;
+            });
+            var count = Math.floor(length / lineLength);
+            var remainLength = length % lineLength;
+            var restLength = totalLength - length;
+            var remainLines = [];
+            for(var i = 0, sum = 0;; sum += lines[i], ++i)if (sum + lines[i] > remainLength) {
+                remainLines = [].concat(_toConsumableArray(lines.slice(0, i)), [
+                    remainLength - sum
+                ]);
+                break;
+            }
+            var emptyLines = remainLines.length % 2 === 0 ? [
+                0,
+                restLength
+            ] : [
+                restLength
+            ];
+            return [].concat(_toConsumableArray(Line.repeat(lines, count)), _toConsumableArray(remainLines), emptyLines).map(function(line) {
+                return "".concat(line, "px");
+            }).join(", ");
+        };
+        _this.id = (0, _dataUtils.uniqueId)("recharts-line-");
+        _this.pathRef = function(node) {
+            _this.mainCurve = node;
+        };
+        _this.handleAnimationEnd = function() {
+            _this.setState({
+                isAnimationFinished: true
+            });
+            if (_this.props.onAnimationEnd) _this.props.onAnimationEnd();
+        };
+        _this.handleAnimationStart = function() {
+            _this.setState({
+                isAnimationFinished: false
+            });
+            if (_this.props.onAnimationStart) _this.props.onAnimationStart();
+        };
+        return _this;
+    }
+    _createClass(Line, [
+        {
+            key: "componentDidMount",
+            value: /* eslint-disable  react/no-did-mount-set-state */ function componentDidMount() {
+                if (!this.props.isAnimationActive) return;
+                var totalLength = this.getTotalLength();
+                this.setState({
+                    totalLength: totalLength
+                });
+            }
+        },
+        {
+            key: "getTotalLength",
+            value: function getTotalLength() {
+                var curveDom = this.mainCurve;
+                try {
+                    return curveDom && curveDom.getTotalLength && curveDom.getTotalLength() || 0;
+                } catch (err) {
+                    return 0;
+                }
+            }
+        },
+        {
+            key: "renderErrorBar",
+            value: function renderErrorBar() {
+                if (this.props.isAnimationActive && !this.state.isAnimationFinished) return null;
+                var _this$props = this.props, points = _this$props.points, xAxis = _this$props.xAxis, yAxis = _this$props.yAxis, layout = _this$props.layout, children = _this$props.children;
+                var errorBarItems = (0, _reactUtils.findAllByType)(children, (0, _errorBar.ErrorBar).displayName);
+                if (!errorBarItems) return null;
+                function dataPointFormatter(dataPoint, dataKey) {
+                    return {
+                        x: dataPoint.x,
+                        y: dataPoint.y,
+                        value: dataPoint.value,
+                        errorVal: (0, _chartUtils.getValueByDataKey)(dataPoint.payload, dataKey)
+                    };
+                }
+                return errorBarItems.map(function(item, i) {
+                    return /*#__PURE__*/ (0, _reactDefault.default).cloneElement(item, {
+                        // eslint-disable-next-line react/no-array-index-key
+                        key: "bar-".concat(i),
+                        data: points,
+                        xAxis: xAxis,
+                        yAxis: yAxis,
+                        layout: layout,
+                        dataPointFormatter: dataPointFormatter
+                    });
+                });
+            }
+        },
+        {
+            key: "renderDots",
+            value: function renderDots(needClip, clipPathId) {
+                var isAnimationActive = this.props.isAnimationActive;
+                if (isAnimationActive && !this.state.isAnimationFinished) return null;
+                var _this$props2 = this.props, dot = _this$props2.dot, points = _this$props2.points, dataKey = _this$props2.dataKey;
+                var lineProps = (0, _types.filterProps)(this.props);
+                var customDotProps = (0, _types.filterProps)(dot, true);
+                var dots = points.map(function(entry, i) {
+                    var dotProps = _objectSpread(_objectSpread(_objectSpread({
+                        key: "dot-".concat(i),
+                        r: 3
+                    }, lineProps), customDotProps), {}, {
+                        value: entry.value,
+                        dataKey: dataKey,
+                        cx: entry.x,
+                        cy: entry.y,
+                        index: i,
+                        payload: entry.payload
+                    });
+                    return Line.renderDotItem(dot, dotProps);
+                });
+                var dotsProps = {
+                    clipPath: needClip ? "url(#clipPath-".concat(clipPathId, ")") : null
+                };
+                return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _layer.Layer), _extends({
+                    className: "recharts-line-dots",
+                    key: "dots"
+                }, dotsProps), dots);
+            }
+        },
+        {
+            key: "renderCurveStatically",
+            value: function renderCurveStatically(points, needClip, clipPathId, props) {
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                var _this$props3 = this.props, type = _this$props3.type, layout = _this$props3.layout, connectNulls = _this$props3.connectNulls, ref = _this$props3.ref, others = _objectWithoutProperties(_this$props3, [
+                    "type",
+                    "layout",
+                    "connectNulls",
+                    "ref"
+                ]);
+                var curveProps = _objectSpread(_objectSpread(_objectSpread({}, (0, _types.filterProps)(others, true)), {}, {
+                    fill: "none",
+                    className: "recharts-line-curve",
+                    clipPath: needClip ? "url(#clipPath-".concat(clipPathId, ")") : null,
+                    points: points
+                }, props), {}, {
+                    type: type,
+                    layout: layout,
+                    connectNulls: connectNulls
+                });
+                return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _curve.Curve), _extends({}, curveProps, {
+                    pathRef: this.pathRef
+                }));
+            }
+        },
+        {
+            key: "renderCurveWithAnimation",
+            value: function renderCurveWithAnimation(needClip, clipPathId) {
+                var _this2 = this;
+                var _this$props4 = this.props, points = _this$props4.points, strokeDasharray = _this$props4.strokeDasharray, isAnimationActive = _this$props4.isAnimationActive, animationBegin = _this$props4.animationBegin, animationDuration = _this$props4.animationDuration, animationEasing = _this$props4.animationEasing, animationId = _this$props4.animationId, animateNewValues = _this$props4.animateNewValues, width = _this$props4.width, height = _this$props4.height;
+                var _this$state = this.state, prevPoints = _this$state.prevPoints, totalLength = _this$state.totalLength;
+                return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _reactSmoothDefault.default), {
+                    begin: animationBegin,
+                    duration: animationDuration,
+                    isActive: isAnimationActive,
+                    easing: animationEasing,
+                    from: {
+                        t: 0
+                    },
+                    to: {
+                        t: 1
+                    },
+                    key: "line-".concat(animationId),
+                    onAnimationEnd: this.handleAnimationEnd,
+                    onAnimationStart: this.handleAnimationStart
+                }, function(_ref) {
+                    var t = _ref.t;
+                    if (prevPoints) {
+                        var prevPointsDiffFactor = prevPoints.length / points.length;
+                        var stepData = points.map(function(entry, index) {
+                            var prevPointIndex = Math.floor(index * prevPointsDiffFactor);
+                            if (prevPoints[prevPointIndex]) {
+                                var prev = prevPoints[prevPointIndex];
+                                var interpolatorX = (0, _dataUtils.interpolateNumber)(prev.x, entry.x);
+                                var interpolatorY = (0, _dataUtils.interpolateNumber)(prev.y, entry.y);
+                                return _objectSpread(_objectSpread({}, entry), {}, {
+                                    x: interpolatorX(t),
+                                    y: interpolatorY(t)
+                                });
+                            } // magic number of faking previous x and y location
+                            if (animateNewValues) {
+                                var _interpolatorX = (0, _dataUtils.interpolateNumber)(width * 2, entry.x);
+                                var _interpolatorY = (0, _dataUtils.interpolateNumber)(height / 2, entry.y);
+                                return _objectSpread(_objectSpread({}, entry), {}, {
+                                    x: _interpolatorX(t),
+                                    y: _interpolatorY(t)
+                                });
+                            }
+                            return _objectSpread(_objectSpread({}, entry), {}, {
+                                x: entry.x,
+                                y: entry.y
+                            });
+                        });
+                        return _this2.renderCurveStatically(stepData, needClip, clipPathId);
+                    }
+                    var interpolator = (0, _dataUtils.interpolateNumber)(0, totalLength);
+                    var curLength = interpolator(t);
+                    var currentStrokeDasharray;
+                    if (strokeDasharray) {
+                        var lines = "".concat(strokeDasharray).split(/[,\s]+/gim).map(function(num) {
+                            return parseFloat(num);
+                        });
+                        currentStrokeDasharray = _this2.getStrokeDasharray(curLength, totalLength, lines);
+                    } else currentStrokeDasharray = "".concat(curLength, "px ").concat(totalLength - curLength, "px");
+                    return _this2.renderCurveStatically(points, needClip, clipPathId, {
+                        strokeDasharray: currentStrokeDasharray
+                    });
+                });
+            }
+        },
+        {
+            key: "renderCurve",
+            value: function renderCurve(needClip, clipPathId) {
+                var _this$props5 = this.props, points = _this$props5.points, isAnimationActive = _this$props5.isAnimationActive;
+                var _this$state2 = this.state, prevPoints = _this$state2.prevPoints, totalLength = _this$state2.totalLength;
+                if (isAnimationActive && points && points.length && (!prevPoints && totalLength > 0 || !(0, _isEqualDefault.default)(prevPoints, points))) return this.renderCurveWithAnimation(needClip, clipPathId);
+                return this.renderCurveStatically(points, needClip, clipPathId);
+            }
+        },
+        {
+            key: "render",
+            value: function render() {
+                var _this$props6 = this.props, hide = _this$props6.hide, dot = _this$props6.dot, points = _this$props6.points, className = _this$props6.className, xAxis = _this$props6.xAxis, yAxis = _this$props6.yAxis, top = _this$props6.top, left = _this$props6.left, width = _this$props6.width, height = _this$props6.height, isAnimationActive = _this$props6.isAnimationActive, id = _this$props6.id;
+                if (hide || !points || !points.length) return null;
+                var isAnimationFinished = this.state.isAnimationFinished;
+                var hasSinglePoint = points.length === 1;
+                var layerClass = (0, _classnamesDefault.default)("recharts-line", className);
+                var needClip = xAxis && xAxis.allowDataOverflow || yAxis && yAxis.allowDataOverflow;
+                var clipPathId = (0, _isNilDefault.default)(id) ? this.id : id;
+                return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _layer.Layer), {
+                    className: layerClass
+                }, needClip ? /*#__PURE__*/ (0, _reactDefault.default).createElement("defs", null, /*#__PURE__*/ (0, _reactDefault.default).createElement("clipPath", {
+                    id: "clipPath-".concat(clipPathId)
+                }, /*#__PURE__*/ (0, _reactDefault.default).createElement("rect", {
+                    x: left,
+                    y: top,
+                    width: width,
+                    height: height
+                }))) : null, !hasSinglePoint && this.renderCurve(needClip, clipPathId), this.renderErrorBar(), (hasSinglePoint || dot) && this.renderDots(needClip, clipPathId), (!isAnimationActive || isAnimationFinished) && (0, _labelList.LabelList).renderCallByParent(this.props, points));
+            }
+        }
+    ], [
+        {
+            key: "getDerivedStateFromProps",
+            value: function getDerivedStateFromProps(nextProps, prevState) {
+                if (nextProps.animationId !== prevState.prevAnimationId) return {
+                    prevAnimationId: nextProps.animationId,
+                    curPoints: nextProps.points,
+                    prevPoints: prevState.curPoints
+                };
+                if (nextProps.points !== prevState.curPoints) return {
+                    curPoints: nextProps.points
+                };
+                return null;
+            }
+        },
+        {
+            key: "repeat",
+            value: function repeat(lines, count) {
+                var linesUnit = lines.length % 2 !== 0 ? [].concat(_toConsumableArray(lines), [
+                    0
+                ]) : lines;
+                var result = [];
+                for(var i = 0; i < count; ++i)result = [].concat(_toConsumableArray(result), _toConsumableArray(linesUnit));
+                return result;
+            }
+        },
+        {
+            key: "renderDotItem",
+            value: function renderDotItem(option, props) {
+                var dotItem;
+                if (/*#__PURE__*/ (0, _reactDefault.default).isValidElement(option)) dotItem = /*#__PURE__*/ (0, _reactDefault.default).cloneElement(option, props);
+                else if ((0, _isFunctionDefault.default)(option)) dotItem = option(props);
+                else {
+                    var className = (0, _classnamesDefault.default)("recharts-line-dot", option ? option.className : "");
+                    dotItem = /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _dot.Dot), _extends({}, props, {
+                        className: className
+                    }));
+                }
+                return dotItem;
+            }
+        }
+    ]);
+    return Line;
+}((0, _react.PureComponent));
+Line.displayName = "Line";
+Line.defaultProps = {
+    xAxisId: 0,
+    yAxisId: 0,
+    connectNulls: false,
+    activeDot: true,
+    dot: true,
+    legendType: "line",
+    stroke: "#3182bd",
+    strokeWidth: 1,
+    fill: "#fff",
+    points: [],
+    isAnimationActive: !(0, _global.Global).isSsr,
+    animateNewValues: true,
+    animationBegin: 0,
+    animationDuration: 1500,
+    animationEasing: "ease",
+    hide: false
+};
+Line.getComposedData = function(_ref2) {
+    var props = _ref2.props, xAxis = _ref2.xAxis, yAxis = _ref2.yAxis, xAxisTicks = _ref2.xAxisTicks, yAxisTicks = _ref2.yAxisTicks, dataKey = _ref2.dataKey, bandSize = _ref2.bandSize, displayedData = _ref2.displayedData, offset = _ref2.offset;
+    var layout = props.layout;
+    var points = displayedData.map(function(entry, index) {
+        var value = (0, _chartUtils.getValueByDataKey)(entry, dataKey);
+        if (layout === "horizontal") return {
+            x: (0, _chartUtils.getCateCoordinateOfLine)({
+                axis: xAxis,
+                ticks: xAxisTicks,
+                bandSize: bandSize,
+                entry: entry,
+                index: index
+            }),
+            y: (0, _isNilDefault.default)(value) ? null : yAxis.scale(value),
+            value: value,
+            payload: entry
+        };
+        return {
+            x: (0, _isNilDefault.default)(value) ? null : xAxis.scale(value),
+            y: (0, _chartUtils.getCateCoordinateOfLine)({
+                axis: yAxis,
+                ticks: yAxisTicks,
+                bandSize: bandSize,
+                entry: entry,
+                index: index
+            }),
+            value: value,
+            payload: entry
+        };
+    });
+    return _objectSpread({
+        points: points,
+        layout: layout
+    }, offset);
+};
+
+},{"lodash/isEqual":"9XEia","lodash/isFunction":"cfti6","lodash/isNil":"jYD3f","react":"21dqq","react-smooth":"p2bRC","classnames":"jocGM","../shape/Curve":"ldzTR","../shape/Dot":"hrSyt","../container/Layer":"hLZRL","../component/LabelList":"e2z7M","./ErrorBar":"ddxHl","../util/DataUtils":"exzKF","../util/ReactUtils":"gDert","../util/Global":"7fOrk","../util/ChartUtils":"2s4mV","../util/types":"8jZsH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ddxHl":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ErrorBar", ()=>ErrorBar);
+/**
+ * @fileOverview Render a group of error bar
+ */ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _layer = require("../container/Layer");
+var _types = require("../util/types");
+function _extends() {
+    _extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+function _slicedToArray(arr, i) {
+    return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+function _nonIterableRest() {
+    throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray(o, minLen) {
+    if (!o) return;
+    if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+    var n = Object.prototype.toString.call(o).slice(8, -1);
+    if (n === "Object" && o.constructor) n = o.constructor.name;
+    if (n === "Map" || n === "Set") return Array.from(o);
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+function _arrayLikeToArray(arr, len) {
+    if (len == null || len > arr.length) len = arr.length;
+    for(var i = 0, arr2 = new Array(len); i < len; i++)arr2[i] = arr[i];
+    return arr2;
+}
+function _iterableToArrayLimit(arr, i) {
+    if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+    var _arr = [];
+    var _n = true;
+    var _d = false;
+    var _e = undefined;
+    try {
+        for(var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true){
+            _arr.push(_s.value);
+            if (i && _arr.length === i) break;
+        }
+    } catch (err) {
+        _d = true;
+        _e = err;
+    } finally{
+        try {
+            if (!_n && _i["return"] != null) _i["return"]();
+        } finally{
+            if (_d) throw _e;
+        }
+    }
+    return _arr;
+}
+function _arrayWithHoles(arr) {
+    if (Array.isArray(arr)) return arr;
+}
+function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {};
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+function ErrorBar(props) {
+    var offset = props.offset, layout = props.layout, width = props.width, dataKey = props.dataKey, data = props.data, dataPointFormatter = props.dataPointFormatter, xAxis = props.xAxis, yAxis = props.yAxis, others = _objectWithoutProperties(props, [
+        "offset",
+        "layout",
+        "width",
+        "dataKey",
+        "data",
+        "dataPointFormatter",
+        "xAxis",
+        "yAxis"
+    ]);
+    var svgProps = (0, _types.filterProps)(others);
+    var errorBars = data.map(function(entry, i) {
+        var _dataPointFormatter = dataPointFormatter(entry, dataKey), x = _dataPointFormatter.x, y = _dataPointFormatter.y, value = _dataPointFormatter.value, errorVal = _dataPointFormatter.errorVal;
+        if (!errorVal) return null;
+        var lineCoordinates = [];
+        var lowBound, highBound;
+        if (Array.isArray(errorVal)) {
+            var _errorVal = _slicedToArray(errorVal, 2);
+            lowBound = _errorVal[0];
+            highBound = _errorVal[1];
+        } else lowBound = highBound = errorVal;
+        if (layout === "vertical") {
+            // error bar for horizontal charts, the y is fixed, x is a range value
+            var scale = xAxis.scale;
+            var yMid = y + offset;
+            var yMin = yMid + width;
+            var yMax = yMid - width;
+            var xMin = scale(value - lowBound);
+            var xMax = scale(value + highBound); // the right line of |--|
+            lineCoordinates.push({
+                x1: xMax,
+                y1: yMin,
+                x2: xMax,
+                y2: yMax
+            }); // the middle line of |--|
+            lineCoordinates.push({
+                x1: xMin,
+                y1: yMid,
+                x2: xMax,
+                y2: yMid
+            }); // the left line of |--|
+            lineCoordinates.push({
+                x1: xMin,
+                y1: yMin,
+                x2: xMin,
+                y2: yMax
+            });
+        } else if (layout === "horizontal") {
+            // error bar for horizontal charts, the x is fixed, y is a range value
+            var _scale = yAxis.scale;
+            var xMid = x + offset;
+            var _xMin = xMid - width;
+            var _xMax = xMid + width;
+            var _yMin = _scale(value - lowBound);
+            var _yMax = _scale(value + highBound); // the top line
+            lineCoordinates.push({
+                x1: _xMin,
+                y1: _yMax,
+                x2: _xMax,
+                y2: _yMax
+            }); // the middle line
+            lineCoordinates.push({
+                x1: xMid,
+                y1: _yMin,
+                x2: xMid,
+                y2: _yMax
+            }); // the bottom line
+            lineCoordinates.push({
+                x1: _xMin,
+                y1: _yMin,
+                x2: _xMax,
+                y2: _yMin
+            });
+        }
+        return(/*#__PURE__*/ // eslint-disable-next-line react/no-array-index-key
+        (0, _reactDefault.default).createElement((0, _layer.Layer), _extends({
+            className: "recharts-errorBar",
+            key: "bar-".concat(i)
+        }, svgProps), lineCoordinates.map(function(coordinates, index) {
+            return(/*#__PURE__*/ // eslint-disable-next-line react/no-array-index-key
+            (0, _reactDefault.default).createElement("line", _extends({}, coordinates, {
+                key: "line-".concat(index)
+            })));
+        })));
+    });
+    return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _layer.Layer), {
+        className: "recharts-errorBars"
+    }, errorBars);
+}
+ErrorBar.defaultProps = {
+    stroke: "black",
+    strokeWidth: 1.5,
+    width: 5,
+    offset: 0,
+    layout: "horizontal"
+};
+ErrorBar.displayName = "ErrorBar";
+
+},{"react":"21dqq","../container/Layer":"hLZRL","../util/types":"8jZsH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dfpTQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Area", ()=>Area);
+var _isEqual = require("lodash/isEqual");
+var _isEqualDefault = parcelHelpers.interopDefault(_isEqual);
+var _isNaN = require("lodash/isNaN");
+var _isNaNDefault = parcelHelpers.interopDefault(_isNaN);
+var _max = require("lodash/max");
+var _maxDefault = parcelHelpers.interopDefault(_max);
+var _isFunction = require("lodash/isFunction");
+var _isFunctionDefault = parcelHelpers.interopDefault(_isFunction);
+var _get = require("lodash/get");
+var _getDefault = parcelHelpers.interopDefault(_get);
+var _isNil = require("lodash/isNil");
+var _isNilDefault = parcelHelpers.interopDefault(_isNil);
+var _isArray = require("lodash/isArray");
+var _isArrayDefault = parcelHelpers.interopDefault(_isArray);
+/**
+ * @fileOverview Area
+ */ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _reactSmooth = require("react-smooth");
+var _reactSmoothDefault = parcelHelpers.interopDefault(_reactSmooth);
+var _curve = require("../shape/Curve");
+var _dot = require("../shape/Dot");
+var _layer = require("../container/Layer");
+var _labelList = require("../component/LabelList");
+var _global = require("../util/Global");
+var _dataUtils = require("../util/DataUtils");
+var _chartUtils = require("../util/ChartUtils");
+var _types = require("../util/types");
+function _typeof(obj) {
+    "@babel/helpers - typeof";
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") _typeof = function _typeof(obj) {
+        return typeof obj;
+    };
+    else _typeof = function _typeof(obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+    return _typeof(obj);
+}
+function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {};
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+function _extends() {
+    _extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+        if (enumerableOnly) symbols = symbols.filter(function(sym) {
+            return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+        });
+        keys.push.apply(keys, symbols);
+    }
+    return keys;
+}
+function _objectSpread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {};
+        if (i % 2) ownKeys(Object(source), true).forEach(function(key) {
+            _defineProperty(target, key, source[key]);
+        });
+        else if (Object.getOwnPropertyDescriptors) Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+        else ownKeys(Object(source)).forEach(function(key) {
+            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+    }
+    return target;
+}
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties(target, props) {
+    for(var i = 0; i < props.length; i++){
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+    }
+}
+function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function");
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) _setPrototypeOf(subClass, superClass);
+}
+function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+        o.__proto__ = p;
+        return o;
+    };
+    return _setPrototypeOf(o, p);
+}
+function _createSuper(Derived) {
+    var hasNativeReflectConstruct = _isNativeReflectConstruct();
+    return function _createSuperInternal() {
+        var Super = _getPrototypeOf(Derived), result;
+        if (hasNativeReflectConstruct) {
+            var NewTarget = _getPrototypeOf(this).constructor;
+            result = Reflect.construct(Super, arguments, NewTarget);
+        } else result = Super.apply(this, arguments);
+        return _possibleConstructorReturn(this, result);
+    };
+}
+function _possibleConstructorReturn(self, call) {
+    if (call && (_typeof(call) === "object" || typeof call === "function")) return call;
+    return _assertThisInitialized(self);
+}
+function _assertThisInitialized(self) {
+    if (self === void 0) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return self;
+}
+function _isNativeReflectConstruct() {
+    if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+    if (Reflect.construct.sham) return false;
+    if (typeof Proxy === "function") return true;
+    try {
+        Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {}));
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+function _getPrototypeOf(o) {
+    _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+        return o.__proto__ || Object.getPrototypeOf(o);
+    };
+    return _getPrototypeOf(o);
+}
+var Area = /*#__PURE__*/ function(_PureComponent) {
+    _inherits(Area, _PureComponent);
+    var _super = _createSuper(Area);
+    function Area() {
+        var _this;
+        _classCallCheck(this, Area);
+        for(var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+        _this = _super.call.apply(_super, [
+            this
+        ].concat(args));
+        _this.state = {
+            isAnimationFinished: true
+        };
+        _this.id = (0, _dataUtils.uniqueId)("recharts-area-");
+        _this.handleAnimationEnd = function() {
+            var onAnimationEnd = _this.props.onAnimationEnd;
+            _this.setState({
+                isAnimationFinished: true
+            });
+            if ((0, _isFunctionDefault.default)(onAnimationEnd)) onAnimationEnd();
+        };
+        _this.handleAnimationStart = function() {
+            var onAnimationStart = _this.props.onAnimationStart;
+            _this.setState({
+                isAnimationFinished: false
+            });
+            if ((0, _isFunctionDefault.default)(onAnimationStart)) onAnimationStart();
+        };
+        return _this;
+    }
+    _createClass(Area, [
+        {
+            key: "renderDots",
+            value: function renderDots(needClip, clipPathId) {
+                var isAnimationActive = this.props.isAnimationActive;
+                var isAnimationFinished = this.state.isAnimationFinished;
+                if (isAnimationActive && !isAnimationFinished) return null;
+                var _this$props = this.props, dot = _this$props.dot, points = _this$props.points, dataKey = _this$props.dataKey;
+                var areaProps = (0, _types.filterProps)(this.props);
+                var customDotProps = (0, _types.filterProps)(dot, true);
+                var dots = points.map(function(entry, i) {
+                    var dotProps = _objectSpread(_objectSpread(_objectSpread({
+                        key: "dot-".concat(i),
+                        r: 3
+                    }, areaProps), customDotProps), {}, {
+                        dataKey: dataKey,
+                        cx: entry.x,
+                        cy: entry.y,
+                        index: i,
+                        value: entry.value,
+                        payload: entry.payload
+                    });
+                    return Area.renderDotItem(dot, dotProps);
+                });
+                var dotsProps = {
+                    clipPath: needClip ? "url(#clipPath-".concat(clipPathId, ")") : null
+                };
+                return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _layer.Layer), _extends({
+                    className: "recharts-area-dots"
+                }, dotsProps), dots);
+            }
+        },
+        {
+            key: "renderHorizontalRect",
+            value: function renderHorizontalRect(alpha) {
+                var _this$props2 = this.props, baseLine = _this$props2.baseLine, points = _this$props2.points, strokeWidth = _this$props2.strokeWidth;
+                var startX = points[0].x;
+                var endX = points[points.length - 1].x;
+                var width = alpha * Math.abs(startX - endX);
+                var maxY = (0, _maxDefault.default)(points.map(function(entry) {
+                    return entry.y || 0;
+                }));
+                if ((0, _dataUtils.isNumber)(baseLine) && typeof baseLine === "number") maxY = Math.max(baseLine, maxY);
+                else if (baseLine && (0, _isArrayDefault.default)(baseLine) && baseLine.length) maxY = Math.max((0, _maxDefault.default)(baseLine.map(function(entry) {
+                    return entry.y || 0;
+                })), maxY);
+                if ((0, _dataUtils.isNumber)(maxY)) return /*#__PURE__*/ (0, _reactDefault.default).createElement("rect", {
+                    x: startX < endX ? startX : startX - width,
+                    y: 0,
+                    width: width,
+                    height: Math.floor(maxY + (strokeWidth ? parseInt("".concat(strokeWidth), 10) : 1))
+                });
+                return null;
+            }
+        },
+        {
+            key: "renderVerticalRect",
+            value: function renderVerticalRect(alpha) {
+                var _this$props3 = this.props, baseLine = _this$props3.baseLine, points = _this$props3.points, strokeWidth = _this$props3.strokeWidth;
+                var startY = points[0].y;
+                var endY = points[points.length - 1].y;
+                var height = alpha * Math.abs(startY - endY);
+                var maxX = (0, _maxDefault.default)(points.map(function(entry) {
+                    return entry.x || 0;
+                }));
+                if ((0, _dataUtils.isNumber)(baseLine) && typeof baseLine === "number") maxX = Math.max(baseLine, maxX);
+                else if (baseLine && (0, _isArrayDefault.default)(baseLine) && baseLine.length) maxX = Math.max((0, _maxDefault.default)(baseLine.map(function(entry) {
+                    return entry.x || 0;
+                })), maxX);
+                if ((0, _dataUtils.isNumber)(maxX)) return /*#__PURE__*/ (0, _reactDefault.default).createElement("rect", {
+                    x: 0,
+                    y: startY < endY ? startY : startY - height,
+                    width: maxX + (strokeWidth ? parseInt("".concat(strokeWidth), 10) : 1),
+                    height: Math.floor(height)
+                });
+                return null;
+            }
+        },
+        {
+            key: "renderClipRect",
+            value: function renderClipRect(alpha) {
+                var layout = this.props.layout;
+                if (layout === "vertical") return this.renderVerticalRect(alpha);
+                return this.renderHorizontalRect(alpha);
+            }
+        },
+        {
+            key: "renderAreaStatically",
+            value: function renderAreaStatically(points, baseLine, needClip, clipPathId) {
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                var _this$props4 = this.props, layout = _this$props4.layout, type = _this$props4.type, stroke = _this$props4.stroke, connectNulls = _this$props4.connectNulls, isRange = _this$props4.isRange, ref = _this$props4.ref, others = _objectWithoutProperties(_this$props4, [
+                    "layout",
+                    "type",
+                    "stroke",
+                    "connectNulls",
+                    "isRange",
+                    "ref"
+                ]);
+                return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _layer.Layer), {
+                    clipPath: needClip ? "url(#clipPath-".concat(clipPathId, ")") : null
+                }, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _curve.Curve), _extends({}, (0, _types.filterProps)(others, true), {
+                    points: points,
+                    connectNulls: connectNulls,
+                    type: type,
+                    baseLine: baseLine,
+                    layout: layout,
+                    stroke: "none",
+                    className: "recharts-area-area"
+                })), stroke !== "none" && /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _curve.Curve), _extends({}, (0, _types.filterProps)(this.props), {
+                    className: "recharts-area-curve",
+                    layout: layout,
+                    type: type,
+                    connectNulls: connectNulls,
+                    fill: "none",
+                    points: points
+                })), stroke !== "none" && isRange && /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _curve.Curve), _extends({}, (0, _types.filterProps)(this.props), {
+                    className: "recharts-area-curve",
+                    layout: layout,
+                    type: type,
+                    connectNulls: connectNulls,
+                    fill: "none",
+                    points: baseLine
+                })));
+            }
+        },
+        {
+            key: "renderAreaWithAnimation",
+            value: function renderAreaWithAnimation(needClip, clipPathId) {
+                var _this2 = this;
+                var _this$props5 = this.props, points = _this$props5.points, baseLine = _this$props5.baseLine, isAnimationActive = _this$props5.isAnimationActive, animationBegin = _this$props5.animationBegin, animationDuration = _this$props5.animationDuration, animationEasing = _this$props5.animationEasing, animationId = _this$props5.animationId;
+                var _this$state = this.state, prevPoints = _this$state.prevPoints, prevBaseLine = _this$state.prevBaseLine; // const clipPathId = _.isNil(id) ? this.id : id;
+                return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _reactSmoothDefault.default), {
+                    begin: animationBegin,
+                    duration: animationDuration,
+                    isActive: isAnimationActive,
+                    easing: animationEasing,
+                    from: {
+                        t: 0
+                    },
+                    to: {
+                        t: 1
+                    },
+                    key: "area-".concat(animationId),
+                    onAnimationEnd: this.handleAnimationEnd,
+                    onAnimationStart: this.handleAnimationStart
+                }, function(_ref) {
+                    var t = _ref.t;
+                    if (prevPoints) {
+                        var prevPointsDiffFactor = prevPoints.length / points.length; // update animtaion
+                        var stepPoints = points.map(function(entry, index) {
+                            var prevPointIndex = Math.floor(index * prevPointsDiffFactor);
+                            if (prevPoints[prevPointIndex]) {
+                                var prev = prevPoints[prevPointIndex];
+                                var interpolatorX = (0, _dataUtils.interpolateNumber)(prev.x, entry.x);
+                                var interpolatorY = (0, _dataUtils.interpolateNumber)(prev.y, entry.y);
+                                return _objectSpread(_objectSpread({}, entry), {}, {
+                                    x: interpolatorX(t),
+                                    y: interpolatorY(t)
+                                });
+                            }
+                            return entry;
+                        });
+                        var stepBaseLine;
+                        if ((0, _dataUtils.isNumber)(baseLine) && typeof baseLine === "number") {
+                            var interpolator = (0, _dataUtils.interpolateNumber)(prevBaseLine, baseLine);
+                            stepBaseLine = interpolator(t);
+                        } else if ((0, _isNilDefault.default)(baseLine) || (0, _isNaNDefault.default)(baseLine)) {
+                            var _interpolator = (0, _dataUtils.interpolateNumber)(prevBaseLine, 0);
+                            stepBaseLine = _interpolator(t);
+                        } else stepBaseLine = baseLine.map(function(entry, index) {
+                            var prevPointIndex = Math.floor(index * prevPointsDiffFactor);
+                            if (prevBaseLine[prevPointIndex]) {
+                                var prev = prevBaseLine[prevPointIndex];
+                                var interpolatorX = (0, _dataUtils.interpolateNumber)(prev.x, entry.x);
+                                var interpolatorY = (0, _dataUtils.interpolateNumber)(prev.y, entry.y);
+                                return _objectSpread(_objectSpread({}, entry), {}, {
+                                    x: interpolatorX(t),
+                                    y: interpolatorY(t)
+                                });
+                            }
+                            return entry;
+                        });
+                        return _this2.renderAreaStatically(stepPoints, stepBaseLine, needClip, clipPathId);
+                    }
+                    return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _layer.Layer), null, /*#__PURE__*/ (0, _reactDefault.default).createElement("defs", null, /*#__PURE__*/ (0, _reactDefault.default).createElement("clipPath", {
+                        id: "animationClipPath-".concat(clipPathId)
+                    }, _this2.renderClipRect(t))), /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _layer.Layer), {
+                        clipPath: "url(#animationClipPath-".concat(clipPathId, ")")
+                    }, _this2.renderAreaStatically(points, baseLine, needClip, clipPathId)));
+                });
+            }
+        },
+        {
+            key: "renderArea",
+            value: function renderArea(needClip, clipPathId) {
+                var _this$props6 = this.props, points = _this$props6.points, baseLine = _this$props6.baseLine, isAnimationActive = _this$props6.isAnimationActive;
+                var _this$state2 = this.state, prevPoints = _this$state2.prevPoints, prevBaseLine = _this$state2.prevBaseLine, totalLength = _this$state2.totalLength;
+                if (isAnimationActive && points && points.length && (!prevPoints && totalLength > 0 || !(0, _isEqualDefault.default)(prevPoints, points) || !(0, _isEqualDefault.default)(prevBaseLine, baseLine))) return this.renderAreaWithAnimation(needClip, clipPathId);
+                return this.renderAreaStatically(points, baseLine, needClip, clipPathId);
+            }
+        },
+        {
+            key: "render",
+            value: function render() {
+                var _this$props7 = this.props, hide = _this$props7.hide, dot = _this$props7.dot, points = _this$props7.points, className = _this$props7.className, top = _this$props7.top, left = _this$props7.left, xAxis = _this$props7.xAxis, yAxis = _this$props7.yAxis, width = _this$props7.width, height = _this$props7.height, isAnimationActive = _this$props7.isAnimationActive, id = _this$props7.id;
+                if (hide || !points || !points.length) return null;
+                var isAnimationFinished = this.state.isAnimationFinished;
+                var hasSinglePoint = points.length === 1;
+                var layerClass = (0, _classnamesDefault.default)("recharts-area", className);
+                var needClip = xAxis && xAxis.allowDataOverflow || yAxis && yAxis.allowDataOverflow;
+                var clipPathId = (0, _isNilDefault.default)(id) ? this.id : id;
+                return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _layer.Layer), {
+                    className: layerClass
+                }, needClip ? /*#__PURE__*/ (0, _reactDefault.default).createElement("defs", null, /*#__PURE__*/ (0, _reactDefault.default).createElement("clipPath", {
+                    id: "clipPath-".concat(clipPathId)
+                }, /*#__PURE__*/ (0, _reactDefault.default).createElement("rect", {
+                    x: left,
+                    y: top,
+                    width: width,
+                    height: Math.floor(height)
+                }))) : null, !hasSinglePoint ? this.renderArea(needClip, clipPathId) : null, (dot || hasSinglePoint) && this.renderDots(needClip, clipPathId), (!isAnimationActive || isAnimationFinished) && (0, _labelList.LabelList).renderCallByParent(this.props, points));
+            }
+        }
+    ], [
+        {
+            key: "getDerivedStateFromProps",
+            value: function getDerivedStateFromProps(nextProps, prevState) {
+                if (nextProps.animationId !== prevState.prevAnimationId) return {
+                    prevAnimationId: nextProps.animationId,
+                    curPoints: nextProps.points,
+                    curBaseLine: nextProps.baseLine,
+                    prevPoints: prevState.curPoints,
+                    prevBaseLine: prevState.curBaseLine
+                };
+                if (nextProps.points !== prevState.curPoints || nextProps.baseLine !== prevState.curBaseLine) return {
+                    curPoints: nextProps.points,
+                    curBaseLine: nextProps.baseLine
+                };
+                return null;
+            }
+        }
+    ]);
+    return Area;
+}((0, _react.PureComponent));
+Area.displayName = "Area";
+Area.defaultProps = {
+    stroke: "#3182bd",
+    fill: "#3182bd",
+    fillOpacity: 0.6,
+    xAxisId: 0,
+    yAxisId: 0,
+    legendType: "line",
+    connectNulls: false,
+    // points of area
+    points: [],
+    dot: false,
+    activeDot: true,
+    hide: false,
+    isAnimationActive: !(0, _global.Global).isSsr,
+    animationBegin: 0,
+    animationDuration: 1500,
+    animationEasing: "ease"
+};
+Area.getBaseValue = function(props, xAxis, yAxis) {
+    var layout = props.layout, baseValue = props.baseValue;
+    if ((0, _dataUtils.isNumber)(baseValue) && typeof baseValue === "number") return baseValue;
+    var numericAxis = layout === "horizontal" ? yAxis : xAxis;
+    var domain = numericAxis.scale.domain();
+    if (numericAxis.type === "number") {
+        var max = Math.max(domain[0], domain[1]);
+        var min = Math.min(domain[0], domain[1]);
+        if (baseValue === "dataMin") return min;
+        if (baseValue === "dataMax") return max;
+        return max < 0 ? max : Math.max(Math.min(domain[0], domain[1]), 0);
+    }
+    if (baseValue === "dataMin") return domain[0];
+    if (baseValue === "dataMax") return domain[1];
+    return domain[0];
+};
+Area.getComposedData = function(_ref2) {
+    var props = _ref2.props, xAxis = _ref2.xAxis, yAxis = _ref2.yAxis, xAxisTicks = _ref2.xAxisTicks, yAxisTicks = _ref2.yAxisTicks, bandSize = _ref2.bandSize, dataKey = _ref2.dataKey, stackedData = _ref2.stackedData, dataStartIndex = _ref2.dataStartIndex, displayedData = _ref2.displayedData, offset = _ref2.offset;
+    var layout = props.layout;
+    var hasStack = stackedData && stackedData.length;
+    var baseValue = Area.getBaseValue(props, xAxis, yAxis);
+    var isRange = false;
+    var points = displayedData.map(function(entry, index) {
+        var originalValue = (0, _chartUtils.getValueByDataKey)(entry, dataKey);
+        var value;
+        if (hasStack) value = stackedData[dataStartIndex + index];
+        else {
+            value = originalValue;
+            if (!(0, _isArrayDefault.default)(value)) value = [
+                baseValue,
+                value
+            ];
+            else isRange = true;
+        }
+        var isBreakPoint = (0, _isNilDefault.default)(value[1]) || hasStack && (0, _isNilDefault.default)(originalValue);
+        if (layout === "horizontal") return {
+            x: (0, _chartUtils.getCateCoordinateOfLine)({
+                axis: xAxis,
+                ticks: xAxisTicks,
+                bandSize: bandSize,
+                entry: entry,
+                index: index
+            }),
+            y: isBreakPoint ? null : yAxis.scale(value[1]),
+            value: value,
+            payload: entry
+        };
+        return {
+            x: isBreakPoint ? null : xAxis.scale(value[1]),
+            y: (0, _chartUtils.getCateCoordinateOfLine)({
+                axis: yAxis,
+                ticks: yAxisTicks,
+                bandSize: bandSize,
+                entry: entry,
+                index: index
+            }),
+            value: value,
+            payload: entry
+        };
+    });
+    var baseLine;
+    if (hasStack || isRange) baseLine = points.map(function(entry) {
+        if (layout === "horizontal") return {
+            x: entry.x,
+            y: !(0, _isNilDefault.default)((0, _getDefault.default)(entry, "value[0]")) && !(0, _isNilDefault.default)((0, _getDefault.default)(entry, "y")) ? yAxis.scale((0, _getDefault.default)(entry, "value[0]")) : null
+        };
+        return {
+            x: !(0, _isNilDefault.default)((0, _getDefault.default)(entry, "value[0]")) ? xAxis.scale((0, _getDefault.default)(entry, "value[0]")) : null,
+            y: entry.y
+        };
+    });
+    else if (layout === "horizontal") baseLine = yAxis.scale(baseValue);
+    else baseLine = xAxis.scale(baseValue);
+    return _objectSpread({
+        points: points,
+        baseLine: baseLine,
+        layout: layout,
+        isRange: isRange
+    }, offset);
+};
+Area.renderDotItem = function(option, props) {
+    var dotItem;
+    if (/*#__PURE__*/ (0, _reactDefault.default).isValidElement(option)) dotItem = /*#__PURE__*/ (0, _reactDefault.default).cloneElement(option, props);
+    else if ((0, _isFunctionDefault.default)(option)) dotItem = option(props);
+    else dotItem = /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _dot.Dot), _extends({}, props, {
+        className: "recharts-area-dot"
+    }));
+    return dotItem;
+};
+
+},{"lodash/isEqual":"9XEia","lodash/isNaN":"5ajks","lodash/max":"d0ret","lodash/isFunction":"cfti6","lodash/get":"8UELX","lodash/isNil":"jYD3f","lodash/isArray":"dZaTH","react":"21dqq","classnames":"jocGM","react-smooth":"p2bRC","../shape/Curve":"ldzTR","../shape/Dot":"hrSyt","../container/Layer":"hLZRL","../component/LabelList":"e2z7M","../util/Global":"7fOrk","../util/DataUtils":"exzKF","../util/ChartUtils":"2s4mV","../util/types":"8jZsH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"62moi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Bar", ()=>Bar);
@@ -58836,198 +60259,7 @@ Bar.getComposedData = function(_ref2) {
     }, offset);
 };
 
-},{"lodash/isNil":"jYD3f","lodash/isEqual":"9XEia","lodash/isFunction":"cfti6","lodash/isArray":"dZaTH","react":"21dqq","classnames":"jocGM","react-smooth":"p2bRC","../shape/Rectangle":"21ix4","../container/Layer":"hLZRL","./ErrorBar":"ddxHl","../component/Cell":"cmpyN","../component/LabelList":"e2z7M","../util/DataUtils":"exzKF","../util/ReactUtils":"gDert","../util/Global":"7fOrk","../util/ChartUtils":"2s4mV","../util/types":"8jZsH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ddxHl":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ErrorBar", ()=>ErrorBar);
-/**
- * @fileOverview Render a group of error bar
- */ var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _layer = require("../container/Layer");
-var _types = require("../util/types");
-function _extends() {
-    _extends = Object.assign || function(target) {
-        for(var i = 1; i < arguments.length; i++){
-            var source = arguments[i];
-            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
-        }
-        return target;
-    };
-    return _extends.apply(this, arguments);
-}
-function _slicedToArray(arr, i) {
-    return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-}
-function _nonIterableRest() {
-    throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-function _unsupportedIterableToArray(o, minLen) {
-    if (!o) return;
-    if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-    var n = Object.prototype.toString.call(o).slice(8, -1);
-    if (n === "Object" && o.constructor) n = o.constructor.name;
-    if (n === "Map" || n === "Set") return Array.from(o);
-    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-function _arrayLikeToArray(arr, len) {
-    if (len == null || len > arr.length) len = arr.length;
-    for(var i = 0, arr2 = new Array(len); i < len; i++)arr2[i] = arr[i];
-    return arr2;
-}
-function _iterableToArrayLimit(arr, i) {
-    if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-    var _arr = [];
-    var _n = true;
-    var _d = false;
-    var _e = undefined;
-    try {
-        for(var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true){
-            _arr.push(_s.value);
-            if (i && _arr.length === i) break;
-        }
-    } catch (err) {
-        _d = true;
-        _e = err;
-    } finally{
-        try {
-            if (!_n && _i["return"] != null) _i["return"]();
-        } finally{
-            if (_d) throw _e;
-        }
-    }
-    return _arr;
-}
-function _arrayWithHoles(arr) {
-    if (Array.isArray(arr)) return arr;
-}
-function _objectWithoutProperties(source, excluded) {
-    if (source == null) return {};
-    var target = _objectWithoutPropertiesLoose(source, excluded);
-    var key, i;
-    if (Object.getOwnPropertySymbols) {
-        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-        for(i = 0; i < sourceSymbolKeys.length; i++){
-            key = sourceSymbolKeys[i];
-            if (excluded.indexOf(key) >= 0) continue;
-            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-            target[key] = source[key];
-        }
-    }
-    return target;
-}
-function _objectWithoutPropertiesLoose(source, excluded) {
-    if (source == null) return {};
-    var target = {};
-    var sourceKeys = Object.keys(source);
-    var key, i;
-    for(i = 0; i < sourceKeys.length; i++){
-        key = sourceKeys[i];
-        if (excluded.indexOf(key) >= 0) continue;
-        target[key] = source[key];
-    }
-    return target;
-}
-function ErrorBar(props) {
-    var offset = props.offset, layout = props.layout, width = props.width, dataKey = props.dataKey, data = props.data, dataPointFormatter = props.dataPointFormatter, xAxis = props.xAxis, yAxis = props.yAxis, others = _objectWithoutProperties(props, [
-        "offset",
-        "layout",
-        "width",
-        "dataKey",
-        "data",
-        "dataPointFormatter",
-        "xAxis",
-        "yAxis"
-    ]);
-    var svgProps = (0, _types.filterProps)(others);
-    var errorBars = data.map(function(entry, i) {
-        var _dataPointFormatter = dataPointFormatter(entry, dataKey), x = _dataPointFormatter.x, y = _dataPointFormatter.y, value = _dataPointFormatter.value, errorVal = _dataPointFormatter.errorVal;
-        if (!errorVal) return null;
-        var lineCoordinates = [];
-        var lowBound, highBound;
-        if (Array.isArray(errorVal)) {
-            var _errorVal = _slicedToArray(errorVal, 2);
-            lowBound = _errorVal[0];
-            highBound = _errorVal[1];
-        } else lowBound = highBound = errorVal;
-        if (layout === "vertical") {
-            // error bar for horizontal charts, the y is fixed, x is a range value
-            var scale = xAxis.scale;
-            var yMid = y + offset;
-            var yMin = yMid + width;
-            var yMax = yMid - width;
-            var xMin = scale(value - lowBound);
-            var xMax = scale(value + highBound); // the right line of |--|
-            lineCoordinates.push({
-                x1: xMax,
-                y1: yMin,
-                x2: xMax,
-                y2: yMax
-            }); // the middle line of |--|
-            lineCoordinates.push({
-                x1: xMin,
-                y1: yMid,
-                x2: xMax,
-                y2: yMid
-            }); // the left line of |--|
-            lineCoordinates.push({
-                x1: xMin,
-                y1: yMin,
-                x2: xMin,
-                y2: yMax
-            });
-        } else if (layout === "horizontal") {
-            // error bar for horizontal charts, the x is fixed, y is a range value
-            var _scale = yAxis.scale;
-            var xMid = x + offset;
-            var _xMin = xMid - width;
-            var _xMax = xMid + width;
-            var _yMin = _scale(value - lowBound);
-            var _yMax = _scale(value + highBound); // the top line
-            lineCoordinates.push({
-                x1: _xMin,
-                y1: _yMax,
-                x2: _xMax,
-                y2: _yMax
-            }); // the middle line
-            lineCoordinates.push({
-                x1: xMid,
-                y1: _yMin,
-                x2: xMid,
-                y2: _yMax
-            }); // the bottom line
-            lineCoordinates.push({
-                x1: _xMin,
-                y1: _yMin,
-                x2: _xMax,
-                y2: _yMin
-            });
-        }
-        return(/*#__PURE__*/ // eslint-disable-next-line react/no-array-index-key
-        (0, _reactDefault.default).createElement((0, _layer.Layer), _extends({
-            className: "recharts-errorBar",
-            key: "bar-".concat(i)
-        }, svgProps), lineCoordinates.map(function(coordinates, index) {
-            return(/*#__PURE__*/ // eslint-disable-next-line react/no-array-index-key
-            (0, _reactDefault.default).createElement("line", _extends({}, coordinates, {
-                key: "line-".concat(index)
-            })));
-        })));
-    });
-    return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _layer.Layer), {
-        className: "recharts-errorBars"
-    }, errorBars);
-}
-ErrorBar.defaultProps = {
-    stroke: "black",
-    strokeWidth: 1.5,
-    width: 5,
-    offset: 0,
-    layout: "horizontal"
-};
-ErrorBar.displayName = "ErrorBar";
-
-},{"react":"21dqq","../container/Layer":"hLZRL","../util/types":"8jZsH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"doQvk":[function(require,module,exports) {
+},{"lodash/isNil":"jYD3f","lodash/isEqual":"9XEia","lodash/isFunction":"cfti6","lodash/isArray":"dZaTH","react":"21dqq","classnames":"jocGM","react-smooth":"p2bRC","../shape/Rectangle":"21ix4","../container/Layer":"hLZRL","./ErrorBar":"ddxHl","../component/Cell":"cmpyN","../component/LabelList":"e2z7M","../util/DataUtils":"exzKF","../util/ReactUtils":"gDert","../util/Global":"7fOrk","../util/ChartUtils":"2s4mV","../util/types":"8jZsH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"doQvk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "XAxis", ()=>XAxis);
@@ -59091,25 +60323,20 @@ YAxis.defaultProps = {
     reversed: false
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"as5Yi":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2RI7N":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "BarChart", ()=>BarChart);
+parcelHelpers.export(exports, "LineChart", ()=>LineChart);
 /**
- * @fileOverview Bar Chart
+ * @fileOverview Line Chart
  */ var _generateCategoricalChart = require("./generateCategoricalChart");
-var _bar = require("../cartesian/Bar");
+var _line = require("../cartesian/Line");
 var _xaxis = require("../cartesian/XAxis");
 var _yaxis = require("../cartesian/YAxis");
 var _cartesianUtils = require("../util/CartesianUtils");
-var BarChart = (0, _generateCategoricalChart.generateCategoricalChart)({
-    chartName: "BarChart",
-    GraphicalChild: (0, _bar.Bar),
-    defaultTooltipEventType: "axis",
-    validateTooltipEventTypes: [
-        "axis",
-        "item"
-    ],
+var LineChart = (0, _generateCategoricalChart.generateCategoricalChart)({
+    chartName: "LineChart",
+    GraphicalChild: (0, _line.Line),
     axisComponents: [
         {
             axisType: "xAxis",
@@ -59123,7 +60350,7 @@ var BarChart = (0, _generateCategoricalChart.generateCategoricalChart)({
     formatAxisMap: (0, _cartesianUtils.formatAxisMap)
 });
 
-},{"./generateCategoricalChart":"4ZsfY","../cartesian/Bar":"62moi","../cartesian/XAxis":"doQvk","../cartesian/YAxis":"h3RMd","../util/CartesianUtils":"j0cay","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4ZsfY":[function(require,module,exports) {
+},{"./generateCategoricalChart":"4ZsfY","../cartesian/Line":"bjP4o","../cartesian/XAxis":"doQvk","../cartesian/YAxis":"h3RMd","../util/CartesianUtils":"j0cay","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4ZsfY":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "generateCategoricalChart", ()=>generateCategoricalChart);
@@ -61499,6 +62726,191 @@ EventEmitter.prefixed = prefix;
 EventEmitter.EventEmitter = EventEmitter;
 module.exports = EventEmitter;
 
-},{}],"bzzPJ":[function() {},{}]},["1xC6H","awEvQ","bB7Pu"], "bB7Pu", "parcelRequire3745")
+},{}],"as5Yi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "BarChart", ()=>BarChart);
+/**
+ * @fileOverview Bar Chart
+ */ var _generateCategoricalChart = require("./generateCategoricalChart");
+var _bar = require("../cartesian/Bar");
+var _xaxis = require("../cartesian/XAxis");
+var _yaxis = require("../cartesian/YAxis");
+var _cartesianUtils = require("../util/CartesianUtils");
+var BarChart = (0, _generateCategoricalChart.generateCategoricalChart)({
+    chartName: "BarChart",
+    GraphicalChild: (0, _bar.Bar),
+    defaultTooltipEventType: "axis",
+    validateTooltipEventTypes: [
+        "axis",
+        "item"
+    ],
+    axisComponents: [
+        {
+            axisType: "xAxis",
+            AxisComp: (0, _xaxis.XAxis)
+        },
+        {
+            axisType: "yAxis",
+            AxisComp: (0, _yaxis.YAxis)
+        }
+    ],
+    formatAxisMap: (0, _cartesianUtils.formatAxisMap)
+});
+
+},{"./generateCategoricalChart":"4ZsfY","../cartesian/Bar":"62moi","../cartesian/XAxis":"doQvk","../cartesian/YAxis":"h3RMd","../util/CartesianUtils":"j0cay","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"f9mWK":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "AreaChart", ()=>AreaChart);
+/**
+ * @fileOverview Area Chart
+ */ var _generateCategoricalChart = require("./generateCategoricalChart");
+var _area = require("../cartesian/Area");
+var _xaxis = require("../cartesian/XAxis");
+var _yaxis = require("../cartesian/YAxis");
+var _cartesianUtils = require("../util/CartesianUtils");
+var AreaChart = (0, _generateCategoricalChart.generateCategoricalChart)({
+    chartName: "AreaChart",
+    GraphicalChild: (0, _area.Area),
+    axisComponents: [
+        {
+            axisType: "xAxis",
+            AxisComp: (0, _xaxis.XAxis)
+        },
+        {
+            axisType: "yAxis",
+            AxisComp: (0, _yaxis.YAxis)
+        }
+    ],
+    formatAxisMap: (0, _cartesianUtils.formatAxisMap)
+});
+
+},{"./generateCategoricalChart":"4ZsfY","../cartesian/Area":"dfpTQ","../cartesian/XAxis":"doQvk","../cartesian/YAxis":"h3RMd","../util/CartesianUtils":"j0cay","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g0hh4":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a4c5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$a4c5.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _recharts = require("recharts");
+class LineGraph extends (0, _reactDefault.default).Component {
+    render() {
+        const { data , color  } = this.props;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.LineChart), {
+            height: 200,
+            width: 300,
+            data: data,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {}, void 0, false, {
+                    fileName: "components/LineGraph/index.jsx",
+                    lineNumber: 10,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
+                    dataKey: "name"
+                }, void 0, false, {
+                    fileName: "components/LineGraph/index.jsx",
+                    lineNumber: 11,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
+                    fileName: "components/LineGraph/index.jsx",
+                    lineNumber: 12,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Line), {
+                    type: "monotone",
+                    dataKey: "val",
+                    stroke: color,
+                    strokeWidth: 2
+                }, void 0, false, {
+                    fileName: "components/LineGraph/index.jsx",
+                    lineNumber: 13,
+                    columnNumber: 13
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "components/LineGraph/index.jsx",
+            lineNumber: 9,
+            columnNumber: 9
+        }, this);
+    }
+}
+exports.default = LineGraph;
+
+  $parcel$ReactRefreshHelpers$a4c5.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","recharts":"7DnXL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"02cn0":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$1361 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1361.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _recharts = require("recharts");
+class LineGraph extends (0, _reactDefault.default).Component {
+    render() {
+        const { data , color  } = this.props;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.AreaChart), {
+            height: 200,
+            width: 300,
+            data: data,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {}, void 0, false, {
+                    fileName: "components/AreaGraph/index.jsx",
+                    lineNumber: 10,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
+                    dataKey: "name"
+                }, void 0, false, {
+                    fileName: "components/AreaGraph/index.jsx",
+                    lineNumber: 11,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
+                    fileName: "components/AreaGraph/index.jsx",
+                    lineNumber: 12,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Area), {
+                    type: "monotone",
+                    dataKey: "val",
+                    stroke: color,
+                    fill: color
+                }, void 0, false, {
+                    fileName: "components/AreaGraph/index.jsx",
+                    lineNumber: 13,
+                    columnNumber: 13
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "components/AreaGraph/index.jsx",
+            lineNumber: 9,
+            columnNumber: 9
+        }, this);
+    }
+}
+exports.default = LineGraph;
+
+  $parcel$ReactRefreshHelpers$1361.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","recharts":"7DnXL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bzzPJ":[function() {},{}]},["1xC6H","awEvQ","bB7Pu"], "bB7Pu", "parcelRequire3745")
 
 //# sourceMappingURL=index.3d214d75.js.map
