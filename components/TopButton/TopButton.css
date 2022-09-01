@@ -15,23 +15,25 @@
   width: 20%;
   height: 100%;
   position: relative;
+  transition: all 400ms ease;
 }
 
 .overlap-group:hover {
+  border-radius: 15px 25px 95px 15px;
+  /*border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
   border-top-right-radius: 55px;
-  border-bottom-right-radius: 55px;
-  background-color: lightgray;
+  border-bottom-right-radius: 55px;*/
+  background-color: rgba(0, 0, 0, 0.199);
 }
 
-.inicio,
-.chats,
-.notificaciones,
-.perfil {
+.texto {
   font-size: 100%;
   left: 0;
   letter-spacing: 0;
   line-height: 30px;
   position: absolute;
+  color: rgb(0, 2, 32);
   /*top: 15px;*/ 
   white-space: nowrap;
 }

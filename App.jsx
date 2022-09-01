@@ -1,55 +1,43 @@
 import "./App.css";
 import React from "react";
-import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
-import Web19201 from "./components/Web19201";
+import { useParams, Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import TopSearch from "./components/TopSearch";
+import TopMenu from "./components/TopMenu";
+import Muro from "./components/Muro";
+import Perfil from "./components/Perfil";
 
 class App extends React.Component {
   render() {
     return (
-      <Router>
-        <Switch>
-          <Route path="/:path(|muro)">
-            <Web19201 topSearchProps={web19201Data.topSearchProps} topMenuProps={web19201Data.topMenuProps} />
-          </Route>
-        </Switch>
-      </Router>
+      <div className="Fondo">
+        <Router>
+          <TopSearch/>
+          <TopMenu/>  
+          <Switch>
+            <Route exact path="/" children={<LinkMuro />} />
+            <Route exact path="/muro" children={<LinkMuro />} />
+            <Route exact path="/perfil/:id" children={<LinkPerfil />} />
+          </Switch>
+        </Router>
+      </div>
     );
   }
 }
 
+function LinkMuro(){
+  return(
+    <Muro />
+  )
+}
+
+function LinkPerfil(){
+  const { id } = useParams();
+
+  console.log("ID = "+id);
+
+  return(
+    <Perfil />
+  )
+}
+
 export default App;
-const topSearchData = {
-    inputType: "text",
-    inputPlaceholder: "Busqueda",
-    buscar: "Buscar",
-};
-
-const grupo11Data = {
-    inicio: "Inicio",
-};
-
-const grupo12Data = {
-    inicio: "Chats",
-};
-
-const grupo13Data = {
-    inicio: "Notificaciones",
-};
-
-const grupo14Data = {
-    inicio: "Perfil",
-};
-
-const topMenuData = {
-    title: "LEAKED",
-    grupo11Props: grupo11Data,
-    grupo12Props: grupo12Data,
-    grupo13Props: grupo13Data,
-    grupo14Props: grupo14Data,
-};
-
-const web19201Data = {
-    topSearchProps: topSearchData,
-    topMenuProps: topMenuData,
-};
-

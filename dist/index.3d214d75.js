@@ -27066,75 +27066,114 @@ var _appCss = require("./App.css");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
-var _web19201 = require("./components/Web19201");
-var _web19201Default = parcelHelpers.interopDefault(_web19201);
+var _topSearch = require("./components/TopSearch");
+var _topSearchDefault = parcelHelpers.interopDefault(_topSearch);
+var _topMenu = require("./components/TopMenu");
+var _topMenuDefault = parcelHelpers.interopDefault(_topMenu);
+var _muro = require("./components/Muro");
+var _muroDefault = parcelHelpers.interopDefault(_muro);
+var _perfil = require("./components/Perfil");
+var _perfilDefault = parcelHelpers.interopDefault(_perfil);
+var _s = $RefreshSig$();
 class App extends (0, _reactDefault.default).Component {
     render() {
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Switch), {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                    path: "/:path(|muro)",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _web19201Default.default), {
-                        topSearchProps: web19201Data.topSearchProps,
-                        topMenuProps: web19201Data.topMenuProps
-                    }, void 0, false, {
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "Fondo",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topSearchDefault.default), {}, void 0, false, {
                         fileName: "App.jsx",
-                        lineNumber: 12,
-                        columnNumber: 13
+                        lineNumber: 14,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topMenuDefault.default), {}, void 0, false, {
+                        fileName: "App.jsx",
+                        lineNumber: 15,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Switch), {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                exact: true,
+                                path: "/",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkMuro, {}, void 0, false, void 0, void 0)
+                            }, void 0, false, {
+                                fileName: "App.jsx",
+                                lineNumber: 17,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                exact: true,
+                                path: "/muro",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkMuro, {}, void 0, false, void 0, void 0)
+                            }, void 0, false, {
+                                fileName: "App.jsx",
+                                lineNumber: 18,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                exact: true,
+                                path: "/perfil/:id",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkPerfil, {}, void 0, false, void 0, void 0)
+                            }, void 0, false, {
+                                fileName: "App.jsx",
+                                lineNumber: 19,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "App.jsx",
+                        lineNumber: 16,
+                        columnNumber: 11
                     }, this)
-                }, void 0, false, {
-                    fileName: "App.jsx",
-                    lineNumber: 11,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
+                ]
+            }, void 0, true, {
                 fileName: "App.jsx",
-                lineNumber: 10,
+                lineNumber: 13,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "App.jsx",
-            lineNumber: 9,
+            lineNumber: 12,
             columnNumber: 7
         }, this);
     }
 }
+function LinkMuro() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _muroDefault.default), {}, void 0, false, {
+        fileName: "App.jsx",
+        lineNumber: 29,
+        columnNumber: 5
+    }, this);
+}
+_c = LinkMuro;
+function LinkPerfil() {
+    _s();
+    const { id  } = (0, _reactRouterDom.useParams)();
+    console.log("ID = " + id);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _perfilDefault.default), {}, void 0, false, {
+        fileName: "App.jsx",
+        lineNumber: 39,
+        columnNumber: 5
+    }, this);
+}
+_s(LinkPerfil, "yQgCIz/jJfqV1l9s2yoba81MT5A=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams)
+    ];
+});
+_c1 = LinkPerfil;
 exports.default = App;
-const topSearchData = {
-    inputType: "text",
-    inputPlaceholder: "Busqueda",
-    buscar: "Buscar"
-};
-const grupo11Data = {
-    inicio: "Inicio"
-};
-const grupo12Data = {
-    inicio: "Chats"
-};
-const grupo13Data = {
-    inicio: "Notificaciones"
-};
-const grupo14Data = {
-    inicio: "Perfil"
-};
-const topMenuData = {
-    title: "LEAKED",
-    grupo11Props: grupo11Data,
-    grupo12Props: grupo12Data,
-    grupo13Props: grupo13Data,
-    grupo14Props: grupo14Data
-};
-const web19201Data = {
-    topSearchProps: topSearchData,
-    topMenuProps: topMenuData
-};
+var _c, _c1;
+$RefreshReg$(_c, "LinkMuro");
+$RefreshReg$(_c1, "LinkPerfil");
 
   $parcel$ReactRefreshHelpers$53a7.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./App.css":"7g3a6","react":"21dqq","react-router-dom":"cHIiW","./components/Web19201":"iCLLV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7g3a6":[function() {},{}],"cHIiW":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./App.css":"7g3a6","react":"21dqq","react-router-dom":"cHIiW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Muro":"bn3mf","./components/Perfil":"lF5zK","./components/TopSearch":"aJY3s","./components/TopMenu":"9kQfm"}],"7g3a6":[function() {},{}],"cHIiW":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MemoryRouter", ()=>(0, _reactRouter.MemoryRouter));
@@ -27402,7 +27441,7 @@ NavLink.propTypes = (0, _extendsDefault.default)({}, Link.propTypes, {
     style: (0, _propTypesDefault.default).object
 });
 
-},{"react-router":"dvHa0","@babel/runtime/helpers/esm/inheritsLoose":"9u2Z8","react":"21dqq","history":"6yWeD","prop-types":"7wKI2","tiny-warning":"82vrW","@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","tiny-invariant":"fnIPv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dvHa0":[function(require,module,exports) {
+},{"react-router":"9sEZ2","@babel/runtime/helpers/esm/inheritsLoose":"9u2Z8","react":"21dqq","history":"6yWeD","prop-types":"7wKI2","tiny-warning":"82vrW","@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","tiny-invariant":"fnIPv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9sEZ2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MemoryRouter", ()=>MemoryRouter);
@@ -27988,7 +28027,7 @@ if (typeof window !== "undefined") {
     global[key] = "esm";
 }
 
-},{"@babel/runtime/helpers/esm/inheritsLoose":"9u2Z8","react":"21dqq","prop-types":"7wKI2","history":"6yWeD","tiny-warning":"82vrW","mini-create-react-context":"azpWE","tiny-invariant":"fnIPv","@babel/runtime/helpers/esm/extends":"fTBFS","path-to-regexp":"6q3tZ","react-is":"7EuwB","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","hoist-non-react-statics":"1GfsB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9u2Z8":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/inheritsLoose":"9u2Z8","react":"21dqq","prop-types":"7wKI2","history":"6yWeD","tiny-warning":"82vrW","mini-create-react-context":"3l6YS","tiny-invariant":"fnIPv","@babel/runtime/helpers/esm/extends":"fTBFS","path-to-regexp":"6q3tZ","react-is":"7EuwB","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","hoist-non-react-statics":"1GfsB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9u2Z8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _setPrototypeOfJs = require("./setPrototypeOf.js");
@@ -29622,7 +29661,7 @@ function invariant(condition, message) {
     throw new Error(value);
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"azpWE":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3l6YS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -30162,228 +30201,7 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 }
 module.exports = hoistNonReactStatics;
 
-},{"react-is":"7EuwB"}],"iCLLV":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$cb53 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$cb53.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _topSearch = require("../TopSearch");
-var _topSearchDefault = parcelHelpers.interopDefault(_topSearch);
-var _topMenu = require("../TopMenu");
-var _topMenuDefault = parcelHelpers.interopDefault(_topMenu);
-var _tablaPublicaciones = require("../TablaPublicaciones");
-var _tablaPublicacionesDefault = parcelHelpers.interopDefault(_tablaPublicaciones);
-var _web19201Css = require("./Web19201.css");
-class Web19201 extends (0, _reactDefault.default).Component {
-    render() {
-        const fecha = Date.now();
-        const hoy = new Date(fecha);
-        const texto = 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno est\xe1ndar de las industrias desde el a\xf1o 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido us\xf3 una galer\xeda de textos y los mezcl\xf3 de tal manera que logr\xf3 hacer un libro de textos especimen. No s\xf3lo sobrevivi\xf3 500 a\xf1os, sino que tambien ingres\xf3 como texto de relleno en documentos electr\xf3nicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creaci\xf3n de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y m\xe1s recientemente con software de autoedici\xf3n, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.';
-        const Publs = [
-            {
-                nombre: "GenNom1",
-                fecha: hoy.toLocaleDateString(),
-                texto: texto,
-                graphType: "BarGraph",
-                data: [
-                    {
-                        name: "Page A",
-                        val: 150
-                    },
-                    {
-                        name: "Page B",
-                        val: 200
-                    },
-                    {
-                        name: "Page C",
-                        val: 10
-                    }
-                ],
-                color: "red",
-                key: 1
-            },
-            {
-                nombre: "GenNom2",
-                fecha: hoy.toLocaleDateString(),
-                texto: "texto 2",
-                graphType: "LineGraph",
-                data: [
-                    {
-                        name: "Lun",
-                        val: 10
-                    },
-                    {
-                        name: "Mar",
-                        val: 12
-                    },
-                    {
-                        name: "Mie",
-                        val: 4
-                    },
-                    {
-                        name: "Jue",
-                        val: 2
-                    },
-                    {
-                        name: "Vie",
-                        val: 7
-                    }
-                ],
-                color: "blue",
-                key: 2
-            },
-            {
-                nombre: "GenNom3",
-                fecha: hoy.toLocaleDateString(),
-                texto: "texto 3",
-                graphType: "AreaGraph",
-                data: [
-                    {
-                        name: 1,
-                        val: 10
-                    },
-                    {
-                        name: 2,
-                        val: 6
-                    },
-                    {
-                        name: 3,
-                        val: 9
-                    },
-                    {
-                        name: 4,
-                        val: 5
-                    },
-                    {
-                        name: 5,
-                        val: 7
-                    }
-                ],
-                color: "green",
-                key: 3
-            }
-        ];
-        const { topSearchProps , topMenuProps  } = this.props;
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "muro screen",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topSearchDefault.default), {
-                    inputType: topSearchProps.inputType,
-                    inputPlaceholder: topSearchProps.inputPlaceholder,
-                    buscar: topSearchProps.buscar
-                }, void 0, false, {
-                    fileName: "components/Web19201/index.jsx",
-                    lineNumber: 108,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topMenuDefault.default), {
-                    title: topMenuProps.title,
-                    grupo11Props: topMenuProps.grupo11Props,
-                    grupo12Props: topMenuProps.grupo12Props,
-                    grupo13Props: topMenuProps.grupo13Props,
-                    grupo14Props: topMenuProps.grupo14Props
-                }, void 0, false, {
-                    fileName: "components/Web19201/index.jsx",
-                    lineNumber: 113,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tablaPublicacionesDefault.default), {
-                    publicaciones: Publs
-                }, void 0, false, {
-                    fileName: "components/Web19201/index.jsx",
-                    lineNumber: 120,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/Web19201/index.jsx",
-            lineNumber: 107,
-            columnNumber: 7
-        }, this);
-    }
-}
-exports.default = Web19201;
-
-  $parcel$ReactRefreshHelpers$cb53.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../TopSearch":"aJY3s","../TopMenu":"9kQfm","../TablaPublicaciones":"2dsaR","./Web19201.css":"bzzPJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aJY3s":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$2db0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2db0.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _topSearchCss = require("./TopSearch.css");
-class TopSearch extends (0, _reactDefault.default).Component {
-    render() {
-        const { inputType , inputPlaceholder , buscar  } = this.props;
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "top-search",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "overlap-group5 border-1px-dove-gray",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "busqueda sitkatext-regular-normal-masala-20px",
-                        name: "busqueda4",
-                        placeholder: inputPlaceholder,
-                        type: inputType,
-                        required: true
-                    }, void 0, false, {
-                        fileName: "components/TopSearch/index.jsx",
-                        lineNumber: 11,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "components/TopSearch/index.jsx",
-                    lineNumber: 10,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "search-button border-1px-dove-gray",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "buscar",
-                        children: buscar
-                    }, void 0, false, {
-                        fileName: "components/TopSearch/index.jsx",
-                        lineNumber: 20,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "components/TopSearch/index.jsx",
-                    lineNumber: 19,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/TopSearch/index.jsx",
-            lineNumber: 9,
-            columnNumber: 7
-        }, this);
-    }
-}
-exports.default = TopSearch;
-
-  $parcel$ReactRefreshHelpers$2db0.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./TopSearch.css":"kVP5i","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kVP5i":[function() {},{}],"km3Ru":[function(require,module,exports) {
+},{"react-is":"7EuwB"}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("react-refresh/runtime");
 function debounce(func, delay) {
@@ -30503,11 +30321,11 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}],"9kQfm":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$51e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react-refresh/runtime":"786KC"}],"bn3mf":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d36c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$51e7.prelude(module);
+$parcel$ReactRefreshHelpers$d36c.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -30515,116 +30333,38 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _topButton = require("../TopButton");
-var _topButtonDefault = parcelHelpers.interopDefault(_topButton);
-var _topMenuCss = require("./TopMenu.css");
-class TopMenu extends (0, _reactDefault.default).Component {
+var _tablaPublicaciones = require("../TablaPublicaciones");
+var _tablaPublicacionesDefault = parcelHelpers.interopDefault(_tablaPublicaciones);
+var _publicacionesJson = require("../../data/publicaciones.json");
+var _publicacionesJsonDefault = parcelHelpers.interopDefault(_publicacionesJson);
+var _muroCss = require("./Muro.css");
+class Muro extends (0, _reactDefault.default).Component {
     render() {
-        const { title , grupo11Props , grupo12Props , grupo13Props , grupo14Props  } = this.props;
+        const Publs = (0, _publicacionesJsonDefault.default).publicaciones;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "top-menu",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "title",
-                    children: title
-                }, void 0, false, {
-                    fileName: "components/TopMenu/index.jsx",
-                    lineNumber: 11,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                    inicio: grupo11Props.inicio
-                }, void 0, false, {
-                    fileName: "components/TopMenu/index.jsx",
-                    lineNumber: 12,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                    inicio: grupo12Props.inicio
-                }, void 0, false, {
-                    fileName: "components/TopMenu/index.jsx",
-                    lineNumber: 13,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                    inicio: grupo13Props.inicio
-                }, void 0, false, {
-                    fileName: "components/TopMenu/index.jsx",
-                    lineNumber: 14,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                    inicio: grupo14Props.inicio
-                }, void 0, false, {
-                    fileName: "components/TopMenu/index.jsx",
-                    lineNumber: 15,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/TopMenu/index.jsx",
-            lineNumber: 10,
+            className: "muro screen",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tablaPublicacionesDefault.default), {
+                publicaciones: Publs
+            }, void 0, false, {
+                fileName: "components/Muro/index.jsx",
+                lineNumber: 12,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "components/Muro/index.jsx",
+            lineNumber: 11,
             columnNumber: 7
         }, this);
     }
 }
-exports.default = TopMenu;
+exports.default = Muro;
 
-  $parcel$ReactRefreshHelpers$51e7.postlude(module);
+  $parcel$ReactRefreshHelpers$d36c.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../TopButton":"42MwR","./TopMenu.css":"cYT8F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"42MwR":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b13a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b13a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _topButtonCss = require("./TopButton.css");
-class TopButton extends (0, _reactDefault.default).Component {
-    render() {
-        const { inicio  } = this.props;
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "overlap-group",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "top-back"
-                }, void 0, false, {
-                    fileName: "components/TopButton/index.jsx",
-                    lineNumber: 10,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "inicio sitkatext-regular-normal-masala-30px",
-                    children: inicio
-                }, void 0, false, {
-                    fileName: "components/TopButton/index.jsx",
-                    lineNumber: 11,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/TopButton/index.jsx",
-            lineNumber: 9,
-            columnNumber: 7
-        }, this);
-    }
-}
-exports.default = TopButton;
-
-  $parcel$ReactRefreshHelpers$b13a.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./TopButton.css":"4QBl8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4QBl8":[function() {},{}],"cYT8F":[function() {},{}],"2dsaR":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../TablaPublicaciones":"2dsaR","./Muro.css":"1VjHr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../data/publicaciones.json":"f3ov1"}],"2dsaR":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e109 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30645,12 +30385,9 @@ class TablaPublicaciones extends (0, _reactDefault.default).Component {
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "TablaPublicaciones",
             children: publicaciones.map((pub)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _publicacionDefault.default), {
-                    nombre: pub.nombre,
+                    usuario: pub.usuario,
                     fecha: pub.fecha,
                     texto: pub.texto,
-                    graphType: pub.graphType,
-                    data: pub.data,
-                    color: pub.color,
                     id: pub.key
                 }, void 0, false, {
                     fileName: "components/TablaPublicaciones/index.jsx",
@@ -30689,31 +30426,30 @@ var _downarrow11X74Fc2Ae1Png = require("../../dist/downarrow-1@1x.74fc2ae1.png")
 var _downarrow11X74Fc2Ae1PngDefault = parcelHelpers.interopDefault(_downarrow11X74Fc2Ae1Png);
 var _comments11X472E0DadPng = require("../../dist/comments-1@1x.472e0dad.png");
 var _comments11X472E0DadPngDefault = parcelHelpers.interopDefault(_comments11X472E0DadPng);
-var _perfilplaceholder11XDce7175BPng = require("../../dist/perfilplaceholder-1@1x.dce7175b.png");
-var _perfilplaceholder11XDce7175BPngDefault = parcelHelpers.interopDefault(_perfilplaceholder11XDce7175BPng);
 var _publicacionCss = require("./Publicacion.css");
 var _graphics = require("../Graphics");
 var _graphicsDefault = parcelHelpers.interopDefault(_graphics);
 class Publicacion extends (0, _reactDefault.default).Component {
     render() {
-        const { nombre , fecha , texto , graphType , data , color , key  } = this.props;
+        const { usuario , fecha , texto , key  } = this.props;
+        const PerfilImage = require("../../dist/img/perfilplaceholder.png");
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "publicacion border-1px-dove-gray",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     className: "perfil-placeholder",
-                    src: (0, _perfilplaceholder11XDce7175BPngDefault.default)
+                    src: PerfilImage
                 }, void 0, false, {
                     fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 15,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                     className: "usuario segoeui-black-dove-gray-30px",
-                    children: nombre
+                    children: usuario.nombre
                 }, void 0, false, {
                     fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 16,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30721,35 +30457,19 @@ class Publicacion extends (0, _reactDefault.default).Component {
                     children: fecha
                 }, void 0, false, {
                     fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 17,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "salto"
                 }, void 0, false, {
                     fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 18,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "contenido segoeui-regular-normal-dove-gray-25px",
                     children: texto
-                }, void 0, false, {
-                    fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 19,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "bloque-grafico",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _graphicsDefault.default), {
-                        graphType: graphType,
-                        data: data,
-                        color: color
-                    }, void 0, false, {
-                        fileName: "components/Publicacion/index.jsx",
-                        lineNumber: 21,
-                        columnNumber: 11
-                    }, this)
                 }, void 0, false, {
                     fileName: "components/Publicacion/index.jsx",
                     lineNumber: 20,
@@ -30760,7 +30480,7 @@ class Publicacion extends (0, _reactDefault.default).Component {
                     src: (0, _uparrow11X5E56Ec5BPngDefault.default)
                 }, void 0, false, {
                     fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 23,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -30768,7 +30488,7 @@ class Publicacion extends (0, _reactDefault.default).Component {
                     src: (0, _downarrow11X74Fc2Ae1PngDefault.default)
                 }, void 0, false, {
                     fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 24,
+                    lineNumber: 22,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -30776,13 +30496,13 @@ class Publicacion extends (0, _reactDefault.default).Component {
                     src: (0, _comments11X472E0DadPngDefault.default)
                 }, void 0, false, {
                     fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 25,
+                    lineNumber: 23,
                     columnNumber: 9
                 }, this)
             ]
         }, key, true, {
             fileName: "components/Publicacion/index.jsx",
-            lineNumber: 14,
+            lineNumber: 15,
             columnNumber: 7
         }, this);
     }
@@ -30794,7 +30514,7 @@ exports.default = Publicacion;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../dist/uparrow-1@1x.5e56ec5b.png":"6r3v6","../../dist/downarrow-1@1x.74fc2ae1.png":"a8e4k","../../dist/comments-1@1x.472e0dad.png":"h5AIe","../../dist/perfilplaceholder-1@1x.dce7175b.png":"hBpMn","./Publicacion.css":"lT8a2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Graphics":"khCUO"}],"6r3v6":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../dist/uparrow-1@1x.5e56ec5b.png":"6r3v6","../../dist/downarrow-1@1x.74fc2ae1.png":"a8e4k","../../dist/comments-1@1x.472e0dad.png":"h5AIe","./Publicacion.css":"lT8a2","../Graphics":"khCUO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../dist/img/perfilplaceholder.png":"djlbM"}],"6r3v6":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "uparrow-1@1x.5e56ec5b.ca4defab.png" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -30836,9 +30556,6 @@ module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "downar
 
 },{"./helpers/bundle-url":"lgJ39"}],"h5AIe":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "comments-1@1x.472e0dad.d30ffb54.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"hBpMn":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "perfilplaceholder-1@1x.dce7175b.0b244b6e.png" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lT8a2":[function() {},{}],"khCUO":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8312 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -30894,7 +30611,7 @@ exports.default = Graphics;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../BarGraph":"gwO7C","../LineGraph":"g0hh4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../AreaGraph":"02cn0"}],"gwO7C":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../BarGraph":"gwO7C","../LineGraph":"g0hh4","../AreaGraph":"02cn0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gwO7C":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$a5f9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -31065,7 +30782,7 @@ var _funnelChart = require("./chart/FunnelChart");
 var _trapezoid = require("./shape/Trapezoid");
 var _global = require("./util/Global");
 
-},{"./container/Surface":"ldrIX","./container/Layer":"hLZRL","./component/Legend":"3qIzt","./component/Tooltip":"gEbNO","./component/ResponsiveContainer":"jjAvV","./component/Cell":"cmpyN","./component/Text":"gXuIW","./component/Label":"snyTy","./component/LabelList":"e2z7M","./component/Customized":false,"./shape/Sector":"djk2D","./shape/Curve":"ldzTR","./shape/Rectangle":"21ix4","./shape/Polygon":false,"./shape/Dot":"hrSyt","./shape/Cross":"8B3ly","./shape/Symbols":"2a019","./polar/PolarGrid":false,"./polar/PolarRadiusAxis":false,"./polar/PolarAngleAxis":false,"./polar/Pie":false,"./polar/Radar":false,"./polar/RadialBar":false,"./cartesian/Brush":"b3JiM","./cartesian/ReferenceLine":"9l3Ij","./cartesian/ReferenceDot":"8ANk2","./cartesian/ReferenceArea":"8U9tT","./cartesian/CartesianAxis":"2GpfE","./cartesian/CartesianGrid":false,"./cartesian/Line":"bjP4o","./cartesian/Area":"dfpTQ","./cartesian/Bar":"62moi","./cartesian/Scatter":false,"./cartesian/XAxis":"doQvk","./cartesian/YAxis":"h3RMd","./cartesian/ZAxis":false,"./cartesian/ErrorBar":"ddxHl","./chart/LineChart":"2RI7N","./chart/BarChart":"as5Yi","./chart/PieChart":false,"./chart/Treemap":false,"./chart/Sankey":false,"./chart/RadarChart":false,"./chart/ScatterChart":false,"./chart/AreaChart":"f9mWK","./chart/RadialBarChart":false,"./chart/ComposedChart":false,"./numberAxis/Funnel":false,"./chart/FunnelChart":false,"./shape/Trapezoid":false,"./util/Global":"7fOrk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ldrIX":[function(require,module,exports) {
+},{"./container/Surface":"ldrIX","./container/Layer":"hLZRL","./component/Legend":"3qIzt","./component/Tooltip":"gEbNO","./component/ResponsiveContainer":false,"./component/Cell":"cmpyN","./component/Text":"gXuIW","./component/Label":"snyTy","./component/LabelList":"e2z7M","./component/Customized":false,"./shape/Sector":"djk2D","./shape/Curve":"ldzTR","./shape/Rectangle":"21ix4","./shape/Polygon":false,"./shape/Dot":"hrSyt","./shape/Cross":"8B3ly","./shape/Symbols":"2a019","./polar/PolarGrid":false,"./polar/PolarRadiusAxis":false,"./polar/PolarAngleAxis":false,"./polar/Pie":false,"./polar/Radar":false,"./polar/RadialBar":false,"./cartesian/Brush":"b3JiM","./cartesian/ReferenceLine":"9l3Ij","./cartesian/ReferenceDot":"8ANk2","./cartesian/ReferenceArea":"8U9tT","./cartesian/CartesianAxis":"2GpfE","./cartesian/CartesianGrid":false,"./cartesian/Line":"bjP4o","./cartesian/Area":"dfpTQ","./cartesian/Bar":"62moi","./cartesian/Scatter":false,"./cartesian/XAxis":"doQvk","./cartesian/YAxis":"h3RMd","./cartesian/ZAxis":false,"./cartesian/ErrorBar":"ddxHl","./chart/LineChart":"2RI7N","./chart/BarChart":"as5Yi","./chart/PieChart":false,"./chart/Treemap":false,"./chart/Sankey":false,"./chart/RadarChart":false,"./chart/ScatterChart":false,"./chart/AreaChart":"f9mWK","./chart/RadialBarChart":false,"./chart/ComposedChart":false,"./numberAxis/Funnel":false,"./chart/FunnelChart":false,"./shape/Trapezoid":false,"./util/Global":"7fOrk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ldrIX":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Surface", ()=>Surface);
@@ -40962,1162 +40679,6 @@ var Global = {
             if (keys && keys.length) keys.forEach(function(k) {
                 Global[k] = key[k];
             });
-        }
-    }
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jjAvV":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ResponsiveContainer", ()=>ResponsiveContainer);
-var _debounce = require("lodash/debounce");
-var _debounceDefault = parcelHelpers.interopDefault(_debounce);
-/**
- * @fileOverview Wrapper component to make charts adapt to the size of parent * DOM
- */ var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactResizeDetector = require("react-resize-detector");
-var _reactResizeDetectorDefault = parcelHelpers.interopDefault(_reactResizeDetector);
-var _dataUtils = require("../util/DataUtils");
-var _logUtils = require("../util/LogUtils");
-function _extends() {
-    _extends = Object.assign || function(target) {
-        for(var i = 1; i < arguments.length; i++){
-            var source = arguments[i];
-            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
-        }
-        return target;
-    };
-    return _extends.apply(this, arguments);
-}
-function _slicedToArray(arr, i) {
-    return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-}
-function _nonIterableRest() {
-    throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-function _unsupportedIterableToArray(o, minLen) {
-    if (!o) return;
-    if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-    var n = Object.prototype.toString.call(o).slice(8, -1);
-    if (n === "Object" && o.constructor) n = o.constructor.name;
-    if (n === "Map" || n === "Set") return Array.from(o);
-    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-function _arrayLikeToArray(arr, len) {
-    if (len == null || len > arr.length) len = arr.length;
-    for(var i = 0, arr2 = new Array(len); i < len; i++)arr2[i] = arr[i];
-    return arr2;
-}
-function _iterableToArrayLimit(arr, i) {
-    if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-    var _arr = [];
-    var _n = true;
-    var _d = false;
-    var _e = undefined;
-    try {
-        for(var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true){
-            _arr.push(_s.value);
-            if (i && _arr.length === i) break;
-        }
-    } catch (err) {
-        _d = true;
-        _e = err;
-    } finally{
-        try {
-            if (!_n && _i["return"] != null) _i["return"]();
-        } finally{
-            if (_d) throw _e;
-        }
-    }
-    return _arr;
-}
-function _arrayWithHoles(arr) {
-    if (Array.isArray(arr)) return arr;
-}
-var ResponsiveContainer = /*#__PURE__*/ (0, _react.forwardRef)(function(_ref, ref) {
-    var aspect = _ref.aspect, _ref$width = _ref.width, width = _ref$width === void 0 ? "100%" : _ref$width, _ref$height = _ref.height, height = _ref$height === void 0 ? "100%" : _ref$height, minWidth = _ref.minWidth, minHeight = _ref.minHeight, maxHeight = _ref.maxHeight, children = _ref.children, _ref$debounce = _ref.debounce, debounce = _ref$debounce === void 0 ? 0 : _ref$debounce, id = _ref.id, className = _ref.className;
-    var _useState = (0, _react.useState)({
-        containerWidth: -1,
-        containerHeight: -1
-    }), _useState2 = _slicedToArray(_useState, 2), sizes = _useState2[0], setSizes = _useState2[1];
-    var containerRef = (0, _react.useRef)(null);
-    (0, _react.useImperativeHandle)(ref, function() {
-        return containerRef;
-    }, [
-        containerRef
-    ]);
-    var _useState3 = (0, _react.useState)(false), _useState4 = _slicedToArray(_useState3, 2), mounted = _useState4[0], setMounted = _useState4[1];
-    var getContainerSize = function getContainerSize() {
-        if (!containerRef.current) return null;
-        return {
-            containerWidth: containerRef.current.clientWidth,
-            containerHeight: containerRef.current.clientHeight
-        };
-    };
-    var updateDimensionsImmediate = function updateDimensionsImmediate() {
-        if (!mounted) return;
-        var newSize = getContainerSize();
-        if (newSize) {
-            var oldWidth = sizes.containerWidth, oldHeight = sizes.containerHeight;
-            var containerWidth = newSize.containerWidth, containerHeight = newSize.containerHeight;
-            if (containerWidth !== oldWidth || containerHeight !== oldHeight) setSizes({
-                containerWidth: containerWidth,
-                containerHeight: containerHeight
-            });
-        }
-    };
-    var handleResize = debounce > 0 ? (0, _debounceDefault.default)(updateDimensionsImmediate, debounce) : updateDimensionsImmediate;
-    var renderChart = function renderChart() {
-        var containerWidth = sizes.containerWidth, containerHeight = sizes.containerHeight;
-        if (containerWidth < 0 || containerHeight < 0) return null;
-        (0, _logUtils.warn)((0, _dataUtils.isPercent)(width) || (0, _dataUtils.isPercent)(height), "The width(%s) and height(%s) are both fixed numbers,\n       maybe you don't need to use a ResponsiveContainer.", width, height);
-        (0, _logUtils.warn)(!aspect || aspect > 0, "The aspect(%s) must be greater than zero.", aspect);
-        var calculatedWidth = (0, _dataUtils.isPercent)(width) ? containerWidth : width;
-        var calculatedHeight = (0, _dataUtils.isPercent)(height) ? containerHeight : height;
-        if (aspect && aspect > 0) {
-            // Preserve the desired aspect ratio
-            if (calculatedWidth) // Will default to using width for aspect ratio
-            calculatedHeight = calculatedWidth / aspect;
-            else if (calculatedHeight) // But we should also take height into consideration
-            calculatedWidth = calculatedHeight * aspect;
-             // if maxHeight is set, overwrite if calculatedHeight is greater than maxHeight
-            if (maxHeight && calculatedHeight > maxHeight) calculatedHeight = maxHeight;
-        }
-        (0, _logUtils.warn)(calculatedWidth > 0 || calculatedHeight > 0, "The width(%s) and height(%s) of chart should be greater than 0,\n       please check the style of container, or the props width(%s) and height(%s),\n       or add a minWidth(%s) or minHeight(%s) or use aspect(%s) to control the\n       height and width.", calculatedWidth, calculatedHeight, width, height, minWidth, minHeight, aspect);
-        return /*#__PURE__*/ (0, _react.cloneElement)(children, {
-            width: calculatedWidth,
-            height: calculatedHeight
-        });
-    };
-    (0, _react.useEffect)(function() {
-        if (mounted) {
-            var size = getContainerSize();
-            if (size) setSizes(size);
-        }
-    }, [
-        mounted
-    ]);
-    (0, _react.useEffect)(function() {
-        setMounted(true);
-    }, []);
-    var style = {
-        width: width,
-        height: height,
-        minWidth: minWidth,
-        minHeight: minHeight,
-        maxHeight: maxHeight
-    };
-    return /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _reactResizeDetectorDefault.default), {
-        handleWidth: true,
-        handleHeight: true,
-        onResize: handleResize,
-        targetRef: containerRef
-    }, /*#__PURE__*/ (0, _reactDefault.default).createElement("div", _extends({}, id != null ? {
-        id: "".concat(id)
-    } : {}, {
-        className: (0, _classnamesDefault.default)("recharts-responsive-container", className),
-        style: style,
-        ref: containerRef
-    }), renderChart()));
-});
-
-},{"lodash/debounce":"bv6vy","classnames":"jocGM","react":"21dqq","react-resize-detector":"5PaWy","../util/DataUtils":"exzKF","../util/LogUtils":"8xgWw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bv6vy":[function(require,module,exports) {
-var isObject = require("./isObject"), now = require("./now"), toNumber = require("./toNumber");
-/** Error message constants. */ var FUNC_ERROR_TEXT = "Expected a function";
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max, nativeMin = Math.min;
-/**
- * Creates a debounced function that delays invoking `func` until after `wait`
- * milliseconds have elapsed since the last time the debounced function was
- * invoked. The debounced function comes with a `cancel` method to cancel
- * delayed `func` invocations and a `flush` method to immediately invoke them.
- * Provide `options` to indicate whether `func` should be invoked on the
- * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
- * with the last arguments provided to the debounced function. Subsequent
- * calls to the debounced function return the result of the last `func`
- * invocation.
- *
- * **Note:** If `leading` and `trailing` options are `true`, `func` is
- * invoked on the trailing edge of the timeout only if the debounced function
- * is invoked more than once during the `wait` timeout.
- *
- * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
- * until to the next tick, similar to `setTimeout` with a timeout of `0`.
- *
- * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
- * for details over the differences between `_.debounce` and `_.throttle`.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Function
- * @param {Function} func The function to debounce.
- * @param {number} [wait=0] The number of milliseconds to delay.
- * @param {Object} [options={}] The options object.
- * @param {boolean} [options.leading=false]
- *  Specify invoking on the leading edge of the timeout.
- * @param {number} [options.maxWait]
- *  The maximum time `func` is allowed to be delayed before it's invoked.
- * @param {boolean} [options.trailing=true]
- *  Specify invoking on the trailing edge of the timeout.
- * @returns {Function} Returns the new debounced function.
- * @example
- *
- * // Avoid costly calculations while the window size is in flux.
- * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
- *
- * // Invoke `sendMail` when clicked, debouncing subsequent calls.
- * jQuery(element).on('click', _.debounce(sendMail, 300, {
- *   'leading': true,
- *   'trailing': false
- * }));
- *
- * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
- * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
- * var source = new EventSource('/stream');
- * jQuery(source).on('message', debounced);
- *
- * // Cancel the trailing debounced invocation.
- * jQuery(window).on('popstate', debounced.cancel);
- */ function debounce(func, wait, options) {
-    var lastArgs, lastThis, maxWait, result, timerId, lastCallTime, lastInvokeTime = 0, leading = false, maxing = false, trailing = true;
-    if (typeof func != "function") throw new TypeError(FUNC_ERROR_TEXT);
-    wait = toNumber(wait) || 0;
-    if (isObject(options)) {
-        leading = !!options.leading;
-        maxing = "maxWait" in options;
-        maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
-        trailing = "trailing" in options ? !!options.trailing : trailing;
-    }
-    function invokeFunc(time) {
-        var args = lastArgs, thisArg = lastThis;
-        lastArgs = lastThis = undefined;
-        lastInvokeTime = time;
-        result = func.apply(thisArg, args);
-        return result;
-    }
-    function leadingEdge(time) {
-        // Reset any `maxWait` timer.
-        lastInvokeTime = time;
-        // Start the timer for the trailing edge.
-        timerId = setTimeout(timerExpired, wait);
-        // Invoke the leading edge.
-        return leading ? invokeFunc(time) : result;
-    }
-    function remainingWait(time) {
-        var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime, timeWaiting = wait - timeSinceLastCall;
-        return maxing ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke) : timeWaiting;
-    }
-    function shouldInvoke(time) {
-        var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime;
-        // Either this is the first call, activity has stopped and we're at the
-        // trailing edge, the system time has gone backwards and we're treating
-        // it as the trailing edge, or we've hit the `maxWait` limit.
-        return lastCallTime === undefined || timeSinceLastCall >= wait || timeSinceLastCall < 0 || maxing && timeSinceLastInvoke >= maxWait;
-    }
-    function timerExpired() {
-        var time = now();
-        if (shouldInvoke(time)) return trailingEdge(time);
-        // Restart the timer.
-        timerId = setTimeout(timerExpired, remainingWait(time));
-    }
-    function trailingEdge(time) {
-        timerId = undefined;
-        // Only invoke if we have `lastArgs` which means `func` has been
-        // debounced at least once.
-        if (trailing && lastArgs) return invokeFunc(time);
-        lastArgs = lastThis = undefined;
-        return result;
-    }
-    function cancel() {
-        if (timerId !== undefined) clearTimeout(timerId);
-        lastInvokeTime = 0;
-        lastArgs = lastCallTime = lastThis = timerId = undefined;
-    }
-    function flush() {
-        return timerId === undefined ? result : trailingEdge(now());
-    }
-    function debounced() {
-        var time = now(), isInvoking = shouldInvoke(time);
-        lastArgs = arguments;
-        lastThis = this;
-        lastCallTime = time;
-        if (isInvoking) {
-            if (timerId === undefined) return leadingEdge(lastCallTime);
-            if (maxing) {
-                // Handle invocations in a tight loop.
-                clearTimeout(timerId);
-                timerId = setTimeout(timerExpired, wait);
-                return invokeFunc(lastCallTime);
-            }
-        }
-        if (timerId === undefined) timerId = setTimeout(timerExpired, wait);
-        return result;
-    }
-    debounced.cancel = cancel;
-    debounced.flush = flush;
-    return debounced;
-}
-module.exports = debounce;
-
-},{"./isObject":"cGhqJ","./now":"kOH6e","./toNumber":"12NaH"}],"kOH6e":[function(require,module,exports) {
-var root = require("./_root");
-/**
- * Gets the timestamp of the number of milliseconds that have elapsed since
- * the Unix epoch (1 January 1970 00:00:00 UTC).
- *
- * @static
- * @memberOf _
- * @since 2.4.0
- * @category Date
- * @returns {number} Returns the timestamp.
- * @example
- *
- * _.defer(function(stamp) {
- *   console.log(_.now() - stamp);
- * }, _.now());
- * // => Logs the number of milliseconds it took for the deferred invocation.
- */ var now = function() {
-    return root.Date.now();
-};
-module.exports = now;
-
-},{"./_root":"dSYUs"}],"12NaH":[function(require,module,exports) {
-var baseTrim = require("./_baseTrim"), isObject = require("./isObject"), isSymbol = require("./isSymbol");
-/** Used as references for various `Number` constants. */ var NAN = 0 / 0;
-/** Used to detect bad signed hexadecimal string values. */ var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
-/** Used to detect binary string values. */ var reIsBinary = /^0b[01]+$/i;
-/** Used to detect octal string values. */ var reIsOctal = /^0o[0-7]+$/i;
-/** Built-in method references without a dependency on `root`. */ var freeParseInt = parseInt;
-/**
- * Converts `value` to a number.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to process.
- * @returns {number} Returns the number.
- * @example
- *
- * _.toNumber(3.2);
- * // => 3.2
- *
- * _.toNumber(Number.MIN_VALUE);
- * // => 5e-324
- *
- * _.toNumber(Infinity);
- * // => Infinity
- *
- * _.toNumber('3.2');
- * // => 3.2
- */ function toNumber(value) {
-    if (typeof value == "number") return value;
-    if (isSymbol(value)) return NAN;
-    if (isObject(value)) {
-        var other = typeof value.valueOf == "function" ? value.valueOf() : value;
-        value = isObject(other) ? other + "" : other;
-    }
-    if (typeof value != "string") return value === 0 ? value : +value;
-    value = baseTrim(value);
-    var isBinary = reIsBinary.test(value);
-    return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
-}
-module.exports = toNumber;
-
-},{"./_baseTrim":"eUJZ3","./isObject":"cGhqJ","./isSymbol":"i3BHC"}],"eUJZ3":[function(require,module,exports) {
-var trimmedEndIndex = require("./_trimmedEndIndex");
-/** Used to match leading whitespace. */ var reTrimStart = /^\s+/;
-/**
- * The base implementation of `_.trim`.
- *
- * @private
- * @param {string} string The string to trim.
- * @returns {string} Returns the trimmed string.
- */ function baseTrim(string) {
-    return string ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, "") : string;
-}
-module.exports = baseTrim;
-
-},{"./_trimmedEndIndex":"hHJmS"}],"hHJmS":[function(require,module,exports) {
-/** Used to match a single whitespace character. */ var reWhitespace = /\s/;
-/**
- * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
- * character of `string`.
- *
- * @private
- * @param {string} string The string to inspect.
- * @returns {number} Returns the index of the last non-whitespace character.
- */ function trimmedEndIndex(string) {
-    var index = string.length;
-    while(index-- && reWhitespace.test(string.charAt(index)));
-    return index;
-}
-module.exports = trimmedEndIndex;
-
-},{}],"5PaWy":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>ResizeDetector);
-parcelHelpers.export(exports, "useResizeDetector", ()=>useResizeDetector);
-parcelHelpers.export(exports, "withResizeDetector", ()=>withResizeDetector);
-var _react = require("react");
-var _reactDom = require("react-dom"); /******************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */ 
-var global = arguments[3];
-/* global Reflect, Promise */ var extendStatics = function(d, b) {
-    extendStatics = Object.setPrototypeOf || ({
-        __proto__: []
-    }) instanceof Array && function(d, b) {
-        d.__proto__ = b;
-    } || function(d, b) {
-        for(var p in b)if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
-    };
-    return extendStatics(d, b);
-};
-function __extends(d, b) {
-    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-    extendStatics(d, b);
-    function __() {
-        this.constructor = d;
-    }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
-var __assign = function() {
-    __assign = Object.assign || function __assign(t) {
-        for(var s, i = 1, n = arguments.length; i < n; i++){
-            s = arguments[i];
-            for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-function __rest(s, e) {
-    var t = {};
-    for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function") {
-        for(var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++)if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-    }
-    return t;
-}
-var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {}; /**
- * Checks if `value` is the
- * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
- * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an object, else `false`.
- * @example
- *
- * _.isObject({});
- * // => true
- *
- * _.isObject([1, 2, 3]);
- * // => true
- *
- * _.isObject(_.noop);
- * // => true
- *
- * _.isObject(null);
- * // => false
- */ 
-function isObject$3(value) {
-    var type = typeof value;
-    return value != null && (type == "object" || type == "function");
-}
-var isObject_1 = isObject$3; /** Detect free variable `global` from Node.js. */ 
-var freeGlobal$1 = typeof commonjsGlobal == "object" && commonjsGlobal && commonjsGlobal.Object === Object && commonjsGlobal;
-var _freeGlobal = freeGlobal$1;
-var freeGlobal = _freeGlobal;
-/** Detect free variable `self`. */ var freeSelf = typeof self == "object" && self && self.Object === Object && self;
-/** Used as a reference to the global object. */ var root$2 = freeGlobal || freeSelf || Function("return this")();
-var _root = root$2;
-var root$1 = _root;
-/**
- * Gets the timestamp of the number of milliseconds that have elapsed since
- * the Unix epoch (1 January 1970 00:00:00 UTC).
- *
- * @static
- * @memberOf _
- * @since 2.4.0
- * @category Date
- * @returns {number} Returns the timestamp.
- * @example
- *
- * _.defer(function(stamp) {
- *   console.log(_.now() - stamp);
- * }, _.now());
- * // => Logs the number of milliseconds it took for the deferred invocation.
- */ var now$1 = function() {
-    return root$1.Date.now();
-};
-var now_1 = now$1; /** Used to match a single whitespace character. */ 
-var reWhitespace = /\s/;
-/**
- * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
- * character of `string`.
- *
- * @private
- * @param {string} string The string to inspect.
- * @returns {number} Returns the index of the last non-whitespace character.
- */ function trimmedEndIndex$1(string) {
-    var index = string.length;
-    while(index-- && reWhitespace.test(string.charAt(index)));
-    return index;
-}
-var _trimmedEndIndex = trimmedEndIndex$1;
-var trimmedEndIndex = _trimmedEndIndex;
-/** Used to match leading whitespace. */ var reTrimStart = /^\s+/;
-/**
- * The base implementation of `_.trim`.
- *
- * @private
- * @param {string} string The string to trim.
- * @returns {string} Returns the trimmed string.
- */ function baseTrim$1(string) {
-    return string ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, "") : string;
-}
-var _baseTrim = baseTrim$1;
-var root = _root;
-/** Built-in value references. */ var Symbol$2 = root.Symbol;
-var _Symbol = Symbol$2;
-var Symbol$1 = _Symbol;
-/** Used for built-in method references. */ var objectProto$1 = Object.prototype;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto$1.hasOwnProperty;
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */ var nativeObjectToString$1 = objectProto$1.toString;
-/** Built-in value references. */ var symToStringTag$1 = Symbol$1 ? Symbol$1.toStringTag : undefined;
-/**
- * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the raw `toStringTag`.
- */ function getRawTag$1(value) {
-    var isOwn = hasOwnProperty.call(value, symToStringTag$1), tag = value[symToStringTag$1];
-    try {
-        value[symToStringTag$1] = undefined;
-        var unmasked = true;
-    } catch (e) {}
-    var result = nativeObjectToString$1.call(value);
-    if (unmasked) {
-        if (isOwn) value[symToStringTag$1] = tag;
-        else delete value[symToStringTag$1];
-    }
-    return result;
-}
-var _getRawTag = getRawTag$1; /** Used for built-in method references. */ 
-var objectProto = Object.prototype;
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */ var nativeObjectToString = objectProto.toString;
-/**
- * Converts `value` to a string using `Object.prototype.toString`.
- *
- * @private
- * @param {*} value The value to convert.
- * @returns {string} Returns the converted string.
- */ function objectToString$1(value) {
-    return nativeObjectToString.call(value);
-}
-var _objectToString = objectToString$1;
-var Symbol = _Symbol, getRawTag = _getRawTag, objectToString = _objectToString;
-/** `Object#toString` result references. */ var nullTag = "[object Null]", undefinedTag = "[object Undefined]";
-/** Built-in value references. */ var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
-/**
- * The base implementation of `getTag` without fallbacks for buggy environments.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the `toStringTag`.
- */ function baseGetTag$1(value) {
-    if (value == null) return value === undefined ? undefinedTag : nullTag;
-    return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString(value);
-}
-var _baseGetTag = baseGetTag$1; /**
- * Checks if `value` is object-like. A value is object-like if it's not `null`
- * and has a `typeof` result of "object".
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
- * @example
- *
- * _.isObjectLike({});
- * // => true
- *
- * _.isObjectLike([1, 2, 3]);
- * // => true
- *
- * _.isObjectLike(_.noop);
- * // => false
- *
- * _.isObjectLike(null);
- * // => false
- */ 
-function isObjectLike$1(value) {
-    return value != null && typeof value == "object";
-}
-var isObjectLike_1 = isObjectLike$1;
-var baseGetTag = _baseGetTag, isObjectLike = isObjectLike_1;
-/** `Object#toString` result references. */ var symbolTag = "[object Symbol]";
-/**
- * Checks if `value` is classified as a `Symbol` primitive or object.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
- * @example
- *
- * _.isSymbol(Symbol.iterator);
- * // => true
- *
- * _.isSymbol('abc');
- * // => false
- */ function isSymbol$1(value) {
-    return typeof value == "symbol" || isObjectLike(value) && baseGetTag(value) == symbolTag;
-}
-var isSymbol_1 = isSymbol$1;
-var baseTrim = _baseTrim, isObject$2 = isObject_1, isSymbol = isSymbol_1;
-/** Used as references for various `Number` constants. */ var NAN = 0 / 0;
-/** Used to detect bad signed hexadecimal string values. */ var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
-/** Used to detect binary string values. */ var reIsBinary = /^0b[01]+$/i;
-/** Used to detect octal string values. */ var reIsOctal = /^0o[0-7]+$/i;
-/** Built-in method references without a dependency on `root`. */ var freeParseInt = parseInt;
-/**
- * Converts `value` to a number.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to process.
- * @returns {number} Returns the number.
- * @example
- *
- * _.toNumber(3.2);
- * // => 3.2
- *
- * _.toNumber(Number.MIN_VALUE);
- * // => 5e-324
- *
- * _.toNumber(Infinity);
- * // => Infinity
- *
- * _.toNumber('3.2');
- * // => 3.2
- */ function toNumber$1(value) {
-    if (typeof value == "number") return value;
-    if (isSymbol(value)) return NAN;
-    if (isObject$2(value)) {
-        var other = typeof value.valueOf == "function" ? value.valueOf() : value;
-        value = isObject$2(other) ? other + "" : other;
-    }
-    if (typeof value != "string") return value === 0 ? value : +value;
-    value = baseTrim(value);
-    var isBinary = reIsBinary.test(value);
-    return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
-}
-var toNumber_1 = toNumber$1;
-var isObject$1 = isObject_1, now = now_1, toNumber = toNumber_1;
-/** Error message constants. */ var FUNC_ERROR_TEXT$1 = "Expected a function";
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max, nativeMin = Math.min;
-/**
- * Creates a debounced function that delays invoking `func` until after `wait`
- * milliseconds have elapsed since the last time the debounced function was
- * invoked. The debounced function comes with a `cancel` method to cancel
- * delayed `func` invocations and a `flush` method to immediately invoke them.
- * Provide `options` to indicate whether `func` should be invoked on the
- * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
- * with the last arguments provided to the debounced function. Subsequent
- * calls to the debounced function return the result of the last `func`
- * invocation.
- *
- * **Note:** If `leading` and `trailing` options are `true`, `func` is
- * invoked on the trailing edge of the timeout only if the debounced function
- * is invoked more than once during the `wait` timeout.
- *
- * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
- * until to the next tick, similar to `setTimeout` with a timeout of `0`.
- *
- * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
- * for details over the differences between `_.debounce` and `_.throttle`.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Function
- * @param {Function} func The function to debounce.
- * @param {number} [wait=0] The number of milliseconds to delay.
- * @param {Object} [options={}] The options object.
- * @param {boolean} [options.leading=false]
- *  Specify invoking on the leading edge of the timeout.
- * @param {number} [options.maxWait]
- *  The maximum time `func` is allowed to be delayed before it's invoked.
- * @param {boolean} [options.trailing=true]
- *  Specify invoking on the trailing edge of the timeout.
- * @returns {Function} Returns the new debounced function.
- * @example
- *
- * // Avoid costly calculations while the window size is in flux.
- * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
- *
- * // Invoke `sendMail` when clicked, debouncing subsequent calls.
- * jQuery(element).on('click', _.debounce(sendMail, 300, {
- *   'leading': true,
- *   'trailing': false
- * }));
- *
- * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
- * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
- * var source = new EventSource('/stream');
- * jQuery(source).on('message', debounced);
- *
- * // Cancel the trailing debounced invocation.
- * jQuery(window).on('popstate', debounced.cancel);
- */ function debounce$1(func, wait, options) {
-    var lastArgs, lastThis, maxWait, result, timerId, lastCallTime, lastInvokeTime = 0, leading = false, maxing = false, trailing = true;
-    if (typeof func != "function") throw new TypeError(FUNC_ERROR_TEXT$1);
-    wait = toNumber(wait) || 0;
-    if (isObject$1(options)) {
-        leading = !!options.leading;
-        maxing = "maxWait" in options;
-        maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
-        trailing = "trailing" in options ? !!options.trailing : trailing;
-    }
-    function invokeFunc(time) {
-        var args = lastArgs, thisArg = lastThis;
-        lastArgs = lastThis = undefined;
-        lastInvokeTime = time;
-        result = func.apply(thisArg, args);
-        return result;
-    }
-    function leadingEdge(time) {
-        // Reset any `maxWait` timer.
-        lastInvokeTime = time;
-        // Start the timer for the trailing edge.
-        timerId = setTimeout(timerExpired, wait);
-        // Invoke the leading edge.
-        return leading ? invokeFunc(time) : result;
-    }
-    function remainingWait(time) {
-        var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime, timeWaiting = wait - timeSinceLastCall;
-        return maxing ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke) : timeWaiting;
-    }
-    function shouldInvoke(time) {
-        var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime;
-        // Either this is the first call, activity has stopped and we're at the
-        // trailing edge, the system time has gone backwards and we're treating
-        // it as the trailing edge, or we've hit the `maxWait` limit.
-        return lastCallTime === undefined || timeSinceLastCall >= wait || timeSinceLastCall < 0 || maxing && timeSinceLastInvoke >= maxWait;
-    }
-    function timerExpired() {
-        var time = now();
-        if (shouldInvoke(time)) return trailingEdge(time);
-        // Restart the timer.
-        timerId = setTimeout(timerExpired, remainingWait(time));
-    }
-    function trailingEdge(time) {
-        timerId = undefined;
-        // Only invoke if we have `lastArgs` which means `func` has been
-        // debounced at least once.
-        if (trailing && lastArgs) return invokeFunc(time);
-        lastArgs = lastThis = undefined;
-        return result;
-    }
-    function cancel() {
-        if (timerId !== undefined) clearTimeout(timerId);
-        lastInvokeTime = 0;
-        lastArgs = lastCallTime = lastThis = timerId = undefined;
-    }
-    function flush() {
-        return timerId === undefined ? result : trailingEdge(now());
-    }
-    function debounced() {
-        var time = now(), isInvoking = shouldInvoke(time);
-        lastArgs = arguments;
-        lastThis = this;
-        lastCallTime = time;
-        if (isInvoking) {
-            if (timerId === undefined) return leadingEdge(lastCallTime);
-            if (maxing) {
-                // Handle invocations in a tight loop.
-                clearTimeout(timerId);
-                timerId = setTimeout(timerExpired, wait);
-                return invokeFunc(lastCallTime);
-            }
-        }
-        if (timerId === undefined) timerId = setTimeout(timerExpired, wait);
-        return result;
-    }
-    debounced.cancel = cancel;
-    debounced.flush = flush;
-    return debounced;
-}
-var debounce_1 = debounce$1;
-var debounce = debounce_1, isObject = isObject_1;
-/** Error message constants. */ var FUNC_ERROR_TEXT = "Expected a function";
-/**
- * Creates a throttled function that only invokes `func` at most once per
- * every `wait` milliseconds. The throttled function comes with a `cancel`
- * method to cancel delayed `func` invocations and a `flush` method to
- * immediately invoke them. Provide `options` to indicate whether `func`
- * should be invoked on the leading and/or trailing edge of the `wait`
- * timeout. The `func` is invoked with the last arguments provided to the
- * throttled function. Subsequent calls to the throttled function return the
- * result of the last `func` invocation.
- *
- * **Note:** If `leading` and `trailing` options are `true`, `func` is
- * invoked on the trailing edge of the timeout only if the throttled function
- * is invoked more than once during the `wait` timeout.
- *
- * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
- * until to the next tick, similar to `setTimeout` with a timeout of `0`.
- *
- * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
- * for details over the differences between `_.throttle` and `_.debounce`.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Function
- * @param {Function} func The function to throttle.
- * @param {number} [wait=0] The number of milliseconds to throttle invocations to.
- * @param {Object} [options={}] The options object.
- * @param {boolean} [options.leading=true]
- *  Specify invoking on the leading edge of the timeout.
- * @param {boolean} [options.trailing=true]
- *  Specify invoking on the trailing edge of the timeout.
- * @returns {Function} Returns the new throttled function.
- * @example
- *
- * // Avoid excessively updating the position while scrolling.
- * jQuery(window).on('scroll', _.throttle(updatePosition, 100));
- *
- * // Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.
- * var throttled = _.throttle(renewToken, 300000, { 'trailing': false });
- * jQuery(element).on('click', throttled);
- *
- * // Cancel the trailing throttled invocation.
- * jQuery(window).on('popstate', throttled.cancel);
- */ function throttle(func, wait, options) {
-    var leading = true, trailing = true;
-    if (typeof func != "function") throw new TypeError(FUNC_ERROR_TEXT);
-    if (isObject(options)) {
-        leading = "leading" in options ? !!options.leading : leading;
-        trailing = "trailing" in options ? !!options.trailing : trailing;
-    }
-    return debounce(func, wait, {
-        "leading": leading,
-        "maxWait": wait,
-        "trailing": trailing
-    });
-}
-var throttle_1 = throttle;
-var patchResizeHandler = function(resizeCallback, refreshMode, refreshRate, refreshOptions) {
-    switch(refreshMode){
-        case "debounce":
-            return debounce_1(resizeCallback, refreshRate, refreshOptions);
-        case "throttle":
-            return throttle_1(resizeCallback, refreshRate, refreshOptions);
-        default:
-            return resizeCallback;
-    }
-};
-var isFunction = function(fn) {
-    return typeof fn === "function";
-};
-var isSSR = function() {
-    return typeof window === "undefined";
-};
-var isDOMElement = function(element) {
-    return element instanceof Element || element instanceof HTMLDocument;
-};
-var createNotifier = function(onResize, setSize, handleWidth, handleHeight) {
-    return function(_a) {
-        var width = _a.width, height = _a.height;
-        setSize(function(prev) {
-            if (prev.width === width && prev.height === height) // skip if dimensions haven't changed
-            return prev;
-            if (prev.width === width && !handleHeight || prev.height === height && !handleWidth) // process `handleHeight/handleWidth` props
-            return prev;
-            if (onResize && isFunction(onResize)) onResize(width, height);
-            return {
-                width: width,
-                height: height
-            };
-        });
-    };
-};
-var ResizeDetector = /** @class */ function(_super) {
-    __extends(ResizeDetector, _super);
-    function ResizeDetector(props) {
-        var _this = _super.call(this, props) || this;
-        _this.cancelHandler = function() {
-            if (_this.resizeHandler && _this.resizeHandler.cancel) {
-                // cancel debounced handler
-                _this.resizeHandler.cancel();
-                _this.resizeHandler = null;
-            }
-        };
-        _this.attachObserver = function() {
-            var _a = _this.props, targetRef = _a.targetRef, observerOptions = _a.observerOptions;
-            if (isSSR()) return;
-            if (targetRef && targetRef.current) _this.targetRef.current = targetRef.current;
-            var element = _this.getElement();
-            if (!element) // can't find element to observe
-            return;
-            if (_this.observableElement && _this.observableElement === element) // element is already observed
-            return;
-            _this.observableElement = element;
-            _this.resizeObserver.observe(element, observerOptions);
-        };
-        _this.getElement = function() {
-            var _a = _this.props, querySelector = _a.querySelector, targetDomEl = _a.targetDomEl;
-            if (isSSR()) return null;
-            // in case we pass a querySelector
-            if (querySelector) return document.querySelector(querySelector);
-            // in case we pass a DOM element
-            if (targetDomEl && isDOMElement(targetDomEl)) return targetDomEl;
-            // in case we pass a React ref using React.createRef()
-            if (_this.targetRef && isDOMElement(_this.targetRef.current)) return _this.targetRef.current;
-            // the worse case when we don't receive any information from the parent and the library doesn't add any wrappers
-            // we have to use a deprecated `findDOMNode` method in order to find a DOM element to attach to
-            var currentElement = (0, _reactDom.findDOMNode)(_this);
-            if (!currentElement) return null;
-            var renderType = _this.getRenderType();
-            switch(renderType){
-                case "renderProp":
-                    return currentElement;
-                case "childFunction":
-                    return currentElement;
-                case "child":
-                    return currentElement;
-                case "childArray":
-                    return currentElement;
-                default:
-                    return currentElement.parentElement;
-            }
-        };
-        _this.createResizeHandler = function(entries) {
-            var _a = _this.props, _b = _a.handleWidth, handleWidth = _b === void 0 ? true : _b, _c = _a.handleHeight, handleHeight = _c === void 0 ? true : _c, onResize = _a.onResize;
-            if (!handleWidth && !handleHeight) return;
-            var notifyResize = createNotifier(onResize, _this.setState.bind(_this), handleWidth, handleHeight);
-            entries.forEach(function(entry) {
-                var _a = entry && entry.contentRect || {}, width = _a.width, height = _a.height;
-                var shouldSetSize = !_this.skipOnMount && !isSSR();
-                if (shouldSetSize) notifyResize({
-                    width: width,
-                    height: height
-                });
-                _this.skipOnMount = false;
-            });
-        };
-        _this.getRenderType = function() {
-            var _a = _this.props, render = _a.render, children = _a.children;
-            if (isFunction(render)) // DEPRECATED. Use `Child Function Pattern` instead
-            return "renderProp";
-            if (isFunction(children)) return "childFunction";
-            if ((0, _react.isValidElement)(children)) return "child";
-            if (Array.isArray(children)) // DEPRECATED. Wrap children with a single parent
-            return "childArray";
-            // DEPRECATED. Use `Child Function Pattern` instead
-            return "parent";
-        };
-        var skipOnMount = props.skipOnMount, refreshMode = props.refreshMode, _a = props.refreshRate, refreshRate = _a === void 0 ? 1000 : _a, refreshOptions = props.refreshOptions;
-        _this.state = {
-            width: undefined,
-            height: undefined
-        };
-        _this.skipOnMount = skipOnMount;
-        _this.targetRef = (0, _react.createRef)();
-        _this.observableElement = null;
-        if (isSSR()) return _this;
-        _this.resizeHandler = patchResizeHandler(_this.createResizeHandler, refreshMode, refreshRate, refreshOptions);
-        _this.resizeObserver = new window.ResizeObserver(_this.resizeHandler);
-        return _this;
-    }
-    ResizeDetector.prototype.componentDidMount = function() {
-        this.attachObserver();
-    };
-    ResizeDetector.prototype.componentDidUpdate = function() {
-        this.attachObserver();
-    };
-    ResizeDetector.prototype.componentWillUnmount = function() {
-        if (isSSR()) return;
-        this.observableElement = null;
-        this.resizeObserver.disconnect();
-        this.cancelHandler();
-    };
-    ResizeDetector.prototype.render = function() {
-        var _a = this.props, render = _a.render, children = _a.children, _b = _a.nodeType, WrapperTag = _b === void 0 ? "div" : _b;
-        var _c = this.state, width = _c.width, height = _c.height;
-        var childProps = {
-            width: width,
-            height: height,
-            targetRef: this.targetRef
-        };
-        var renderType = this.getRenderType();
-        var typedChildren;
-        switch(renderType){
-            case "renderProp":
-                return render && render(childProps);
-            case "childFunction":
-                typedChildren = children;
-                return typedChildren(childProps);
-            case "child":
-                // @TODO bug prone logic
-                typedChildren = children;
-                if (typedChildren.type && typeof typedChildren.type === "string") {
-                    // child is a native DOM elements such as div, span etc
-                    childProps.targetRef;
-                    var nativeProps = __rest(childProps, [
-                        "targetRef"
-                    ]);
-                    return (0, _react.cloneElement)(typedChildren, nativeProps);
-                }
-                // class or functional component otherwise
-                return (0, _react.cloneElement)(typedChildren, childProps);
-            case "childArray":
-                typedChildren = children;
-                return typedChildren.map(function(el) {
-                    return !!el && (0, _react.cloneElement)(el, childProps);
-                });
-            default:
-                return _react.createElement(WrapperTag, null);
-        }
-    };
-    return ResizeDetector;
-}((0, _react.PureComponent));
-function withResizeDetector(ComponentInner, options) {
-    if (options === void 0) options = {};
-    var ResizeDetectorHOC = /** @class */ function(_super) {
-        __extends(ResizeDetectorHOC, _super);
-        function ResizeDetectorHOC() {
-            var _this = _super !== null && _super.apply(this, arguments) || this;
-            _this.ref = (0, _react.createRef)();
-            return _this;
-        }
-        ResizeDetectorHOC.prototype.render = function() {
-            var _a = this.props, forwardedRef = _a.forwardedRef, rest = __rest(_a, [
-                "forwardedRef"
-            ]);
-            var targetRef = forwardedRef !== null && forwardedRef !== void 0 ? forwardedRef : this.ref;
-            return _react.createElement(ResizeDetector, __assign({}, options, {
-                targetRef: targetRef
-            }), _react.createElement(ComponentInner, __assign({
-                targetRef: targetRef
-            }, rest)));
-        };
-        return ResizeDetectorHOC;
-    }((0, _react.Component));
-    function forwardRefWrapper(props, ref) {
-        return _react.createElement(ResizeDetectorHOC, __assign({}, props, {
-            forwardedRef: ref
-        }));
-    }
-    var name = ComponentInner.displayName || ComponentInner.name;
-    forwardRefWrapper.displayName = "withResizeDetector(".concat(name, ")");
-    return (0, _react.forwardRef)(forwardRefWrapper);
-}
-var useEnhancedEffect = isSSR() ? (0, _react.useEffect) : (0, _react.useLayoutEffect);
-function useResizeDetector(props) {
-    if (props === void 0) props = {};
-    var _a = props.skipOnMount, skipOnMount = _a === void 0 ? false : _a, refreshMode = props.refreshMode, _b = props.refreshRate, refreshRate = _b === void 0 ? 1000 : _b, refreshOptions = props.refreshOptions, _c = props.handleWidth, handleWidth = _c === void 0 ? true : _c, _d = props.handleHeight, handleHeight = _d === void 0 ? true : _d, targetRef = props.targetRef, observerOptions = props.observerOptions, onResize = props.onResize;
-    var skipResize = (0, _react.useRef)(skipOnMount);
-    var localRef = (0, _react.useRef)(null);
-    var ref = targetRef !== null && targetRef !== void 0 ? targetRef : localRef;
-    var resizeHandler = (0, _react.useRef)();
-    var _e = (0, _react.useState)({
-        width: undefined,
-        height: undefined
-    }), size = _e[0], setSize = _e[1];
-    useEnhancedEffect(function() {
-        if (isSSR()) return;
-        var notifyResize = createNotifier(onResize, setSize, handleWidth, handleHeight);
-        var resizeCallback = function(entries) {
-            if (!handleWidth && !handleHeight) return;
-            entries.forEach(function(entry) {
-                var _a = entry && entry.contentRect || {}, width = _a.width, height = _a.height;
-                var shouldSetSize = !skipResize.current && !isSSR();
-                if (shouldSetSize) notifyResize({
-                    width: width,
-                    height: height
-                });
-                skipResize.current = false;
-            });
-        };
-        resizeHandler.current = patchResizeHandler(resizeCallback, refreshMode, refreshRate, refreshOptions);
-        var resizeObserver = new window.ResizeObserver(resizeHandler.current);
-        if (ref.current) // Something wrong with typings here...
-        resizeObserver.observe(ref.current, observerOptions);
-        return function() {
-            resizeObserver.disconnect();
-            var patchedResizeHandler = resizeHandler.current;
-            if (patchedResizeHandler && patchedResizeHandler.cancel) patchedResizeHandler.cancel();
-        };
-    }, [
-        refreshMode,
-        refreshRate,
-        refreshOptions,
-        handleWidth,
-        handleHeight,
-        onResize,
-        observerOptions,
-        ref.current
-    ]);
-    return __assign({
-        ref: ref
-    }, size);
-}
-
-},{"react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8xgWw":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "warn", ()=>warn);
-/* eslint no-console: 0 */ var isDev = true;
-var warn = function warn(condition, format) {
-    for(var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++)args[_key - 2] = arguments[_key];
-    if (isDev && typeof console !== "undefined" && console.warn) {
-        if (format === undefined) console.warn("LogUtils requires an error message argument");
-        if (!condition) {
-            if (format === undefined) console.warn("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");
-            else {
-                var argIndex = 0;
-                console.warn(format.replace(/%s/g, function() {
-                    return args[argIndex++];
-                }));
-            }
         }
     }
 };
@@ -56842,7 +55403,80 @@ var toNumber = require("./toNumber");
 }
 module.exports = toFinite;
 
-},{"./toNumber":"12NaH"}],"tV6uk":[function(require,module,exports) {
+},{"./toNumber":"12NaH"}],"12NaH":[function(require,module,exports) {
+var baseTrim = require("./_baseTrim"), isObject = require("./isObject"), isSymbol = require("./isSymbol");
+/** Used as references for various `Number` constants. */ var NAN = 0 / 0;
+/** Used to detect bad signed hexadecimal string values. */ var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+/** Used to detect binary string values. */ var reIsBinary = /^0b[01]+$/i;
+/** Used to detect octal string values. */ var reIsOctal = /^0o[0-7]+$/i;
+/** Built-in method references without a dependency on `root`. */ var freeParseInt = parseInt;
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */ function toNumber(value) {
+    if (typeof value == "number") return value;
+    if (isSymbol(value)) return NAN;
+    if (isObject(value)) {
+        var other = typeof value.valueOf == "function" ? value.valueOf() : value;
+        value = isObject(other) ? other + "" : other;
+    }
+    if (typeof value != "string") return value === 0 ? value : +value;
+    value = baseTrim(value);
+    var isBinary = reIsBinary.test(value);
+    return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
+}
+module.exports = toNumber;
+
+},{"./_baseTrim":"eUJZ3","./isObject":"cGhqJ","./isSymbol":"i3BHC"}],"eUJZ3":[function(require,module,exports) {
+var trimmedEndIndex = require("./_trimmedEndIndex");
+/** Used to match leading whitespace. */ var reTrimStart = /^\s+/;
+/**
+ * The base implementation of `_.trim`.
+ *
+ * @private
+ * @param {string} string The string to trim.
+ * @returns {string} Returns the trimmed string.
+ */ function baseTrim(string) {
+    return string ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, "") : string;
+}
+module.exports = baseTrim;
+
+},{"./_trimmedEndIndex":"hHJmS"}],"hHJmS":[function(require,module,exports) {
+/** Used to match a single whitespace character. */ var reWhitespace = /\s/;
+/**
+ * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
+ * character of `string`.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {number} Returns the index of the last non-whitespace character.
+ */ function trimmedEndIndex(string) {
+    var index = string.length;
+    while(index-- && reWhitespace.test(string.charAt(index)));
+    return index;
+}
+module.exports = trimmedEndIndex;
+
+},{}],"tV6uk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "generatePrefixStyle", ()=>generatePrefixStyle);
@@ -57605,7 +56239,28 @@ var defineProperty = require("./_defineProperty");
 }
 module.exports = baseAssignValue;
 
-},{"./_defineProperty":"cZOnw"}],"8ANk2":[function(require,module,exports) {
+},{"./_defineProperty":"cZOnw"}],"8xgWw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "warn", ()=>warn);
+/* eslint no-console: 0 */ var isDev = true;
+var warn = function warn(condition, format) {
+    for(var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++)args[_key - 2] = arguments[_key];
+    if (isDev && typeof console !== "undefined" && console.warn) {
+        if (format === undefined) console.warn("LogUtils requires an error message argument");
+        if (!condition) {
+            if (format === undefined) console.warn("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");
+            else {
+                var argIndex = 0;
+                console.warn(format.replace(/%s/g, function() {
+                    return args[argIndex++];
+                }));
+            }
+        }
+    }
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8ANk2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ReferenceDot", ()=>ReferenceDot);
@@ -62383,7 +61038,167 @@ var debounce = require("./debounce"), isObject = require("./isObject");
 }
 module.exports = throttle;
 
-},{"./debounce":"bv6vy","./isObject":"cGhqJ"}],"3vg3p":[function(require,module,exports) {
+},{"./debounce":"bv6vy","./isObject":"cGhqJ"}],"bv6vy":[function(require,module,exports) {
+var isObject = require("./isObject"), now = require("./now"), toNumber = require("./toNumber");
+/** Error message constants. */ var FUNC_ERROR_TEXT = "Expected a function";
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max, nativeMin = Math.min;
+/**
+ * Creates a debounced function that delays invoking `func` until after `wait`
+ * milliseconds have elapsed since the last time the debounced function was
+ * invoked. The debounced function comes with a `cancel` method to cancel
+ * delayed `func` invocations and a `flush` method to immediately invoke them.
+ * Provide `options` to indicate whether `func` should be invoked on the
+ * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+ * with the last arguments provided to the debounced function. Subsequent
+ * calls to the debounced function return the result of the last `func`
+ * invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the debounced function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.debounce` and `_.throttle`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to debounce.
+ * @param {number} [wait=0] The number of milliseconds to delay.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=false]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {number} [options.maxWait]
+ *  The maximum time `func` is allowed to be delayed before it's invoked.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new debounced function.
+ * @example
+ *
+ * // Avoid costly calculations while the window size is in flux.
+ * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+ *
+ * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+ * jQuery(element).on('click', _.debounce(sendMail, 300, {
+ *   'leading': true,
+ *   'trailing': false
+ * }));
+ *
+ * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+ * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+ * var source = new EventSource('/stream');
+ * jQuery(source).on('message', debounced);
+ *
+ * // Cancel the trailing debounced invocation.
+ * jQuery(window).on('popstate', debounced.cancel);
+ */ function debounce(func, wait, options) {
+    var lastArgs, lastThis, maxWait, result, timerId, lastCallTime, lastInvokeTime = 0, leading = false, maxing = false, trailing = true;
+    if (typeof func != "function") throw new TypeError(FUNC_ERROR_TEXT);
+    wait = toNumber(wait) || 0;
+    if (isObject(options)) {
+        leading = !!options.leading;
+        maxing = "maxWait" in options;
+        maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+        trailing = "trailing" in options ? !!options.trailing : trailing;
+    }
+    function invokeFunc(time) {
+        var args = lastArgs, thisArg = lastThis;
+        lastArgs = lastThis = undefined;
+        lastInvokeTime = time;
+        result = func.apply(thisArg, args);
+        return result;
+    }
+    function leadingEdge(time) {
+        // Reset any `maxWait` timer.
+        lastInvokeTime = time;
+        // Start the timer for the trailing edge.
+        timerId = setTimeout(timerExpired, wait);
+        // Invoke the leading edge.
+        return leading ? invokeFunc(time) : result;
+    }
+    function remainingWait(time) {
+        var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime, timeWaiting = wait - timeSinceLastCall;
+        return maxing ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke) : timeWaiting;
+    }
+    function shouldInvoke(time) {
+        var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime;
+        // Either this is the first call, activity has stopped and we're at the
+        // trailing edge, the system time has gone backwards and we're treating
+        // it as the trailing edge, or we've hit the `maxWait` limit.
+        return lastCallTime === undefined || timeSinceLastCall >= wait || timeSinceLastCall < 0 || maxing && timeSinceLastInvoke >= maxWait;
+    }
+    function timerExpired() {
+        var time = now();
+        if (shouldInvoke(time)) return trailingEdge(time);
+        // Restart the timer.
+        timerId = setTimeout(timerExpired, remainingWait(time));
+    }
+    function trailingEdge(time) {
+        timerId = undefined;
+        // Only invoke if we have `lastArgs` which means `func` has been
+        // debounced at least once.
+        if (trailing && lastArgs) return invokeFunc(time);
+        lastArgs = lastThis = undefined;
+        return result;
+    }
+    function cancel() {
+        if (timerId !== undefined) clearTimeout(timerId);
+        lastInvokeTime = 0;
+        lastArgs = lastCallTime = lastThis = timerId = undefined;
+    }
+    function flush() {
+        return timerId === undefined ? result : trailingEdge(now());
+    }
+    function debounced() {
+        var time = now(), isInvoking = shouldInvoke(time);
+        lastArgs = arguments;
+        lastThis = this;
+        lastCallTime = time;
+        if (isInvoking) {
+            if (timerId === undefined) return leadingEdge(lastCallTime);
+            if (maxing) {
+                // Handle invocations in a tight loop.
+                clearTimeout(timerId);
+                timerId = setTimeout(timerExpired, wait);
+                return invokeFunc(lastCallTime);
+            }
+        }
+        if (timerId === undefined) timerId = setTimeout(timerExpired, wait);
+        return result;
+    }
+    debounced.cancel = cancel;
+    debounced.flush = flush;
+    return debounced;
+}
+module.exports = debounce;
+
+},{"./isObject":"cGhqJ","./now":"kOH6e","./toNumber":"12NaH"}],"kOH6e":[function(require,module,exports) {
+var root = require("./_root");
+/**
+ * Gets the timestamp of the number of milliseconds that have elapsed since
+ * the Unix epoch (1 January 1970 00:00:00 UTC).
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Date
+ * @returns {number} Returns the timestamp.
+ * @example
+ *
+ * _.defer(function(stamp) {
+ *   console.log(_.now() - stamp);
+ * }, _.now());
+ * // => Logs the number of milliseconds it took for the deferred invocation.
+ */ var now = function() {
+    return root.Date.now();
+};
+module.exports = now;
+
+},{"./_root":"dSYUs"}],"3vg3p":[function(require,module,exports) {
 var baseGetTag = require("./_baseGetTag"), isObjectLike = require("./isObjectLike");
 /** `Object#toString` result references. */ var boolTag = "[object Boolean]";
 /**
@@ -62911,6 +61726,279 @@ exports.default = LineGraph;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","recharts":"7DnXL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bzzPJ":[function() {},{}]},["1xC6H","awEvQ","bB7Pu"], "bB7Pu", "parcelRequire3745")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","recharts":"7DnXL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"djlbM":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "perfilplaceholder.606ce028.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"1VjHr":[function() {},{}],"f3ov1":[function(require,module,exports) {
+module.exports = JSON.parse('{"publicaciones":[{"usuario":{"id":1,"nombre":"GenNom1","imagen":"perfilplaceholder.png"},"fecha":"27-08-2022","texto":"texto 1","key":1},{"usuario":{"id":3,"nombre":"GenNom2","imagen":"perfilplaceholder.png"},"fecha":"05-08-2022","texto":"texto 2","key":2},{"usuario":{"id":2,"nombre":"GenNom3","imagen":"perfilplaceholder.png"},"fecha":"10-08-2022","texto":"texto 3","key":3}]}');
+
+},{}],"lF5zK":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bf32 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bf32.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _perfilCss = require("./Perfil.css");
+class Perfil extends (0, _reactDefault.default).Component {
+    render() {
+        const UsrId = 1;
+        const PerfilImage = require("../../dist/img/perfilplaceholder.png");
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "perfil screen",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "FondoImage",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "PerfilImage",
+                    src: PerfilImage
+                }, void 0, false, {
+                    fileName: "components/Perfil/index.jsx",
+                    lineNumber: 13,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "components/Perfil/index.jsx",
+                lineNumber: 12,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "components/Perfil/index.jsx",
+            lineNumber: 11,
+            columnNumber: 7
+        }, this);
+    }
+}
+exports.default = Perfil;
+
+  $parcel$ReactRefreshHelpers$bf32.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Perfil.css":"1ReUE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../dist/img/perfilplaceholder.png":"djlbM"}],"1ReUE":[function() {},{}],"aJY3s":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2db0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2db0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _topSearchCss = require("./TopSearch.css");
+class TopSearch extends (0, _reactDefault.default).Component {
+    render() {
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "top-search",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "overlap-group5 border-1px-dove-gray",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "busqueda sitkatext-regular-normal-masala-20px",
+                        name: "busqueda4",
+                        placeholder: "busqueda",
+                        type: "text",
+                        required: true
+                    }, void 0, false, {
+                        fileName: "components/TopSearch/index.jsx",
+                        lineNumber: 10,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/TopSearch/index.jsx",
+                    lineNumber: 9,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "search-button border-1px-dove-gray",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "buscar",
+                        children: "buscar"
+                    }, void 0, false, {
+                        fileName: "components/TopSearch/index.jsx",
+                        lineNumber: 19,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/TopSearch/index.jsx",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "components/TopSearch/index.jsx",
+            lineNumber: 8,
+            columnNumber: 7
+        }, this);
+    }
+}
+exports.default = TopSearch;
+
+  $parcel$ReactRefreshHelpers$2db0.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./TopSearch.css":"kVP5i","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kVP5i":[function() {},{}],"9kQfm":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$51e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$51e7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _topButton = require("../TopButton");
+var _topButtonDefault = parcelHelpers.interopDefault(_topButton);
+var _topMenuCss = require("./TopMenu.css");
+class TopMenu extends (0, _reactDefault.default).Component {
+    render() {
+        const history = (0, _reactRouterDom.useHistory);
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "top-menu",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "title",
+                    children: "LEAKED"
+                }, void 0, false, {
+                    fileName: "components/TopMenu/index.jsx",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                    texto: "Inicio",
+                    link: "/muro"
+                }, void 0, false, {
+                    fileName: "components/TopMenu/index.jsx",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                    texto: "Chats",
+                    link: "/chats"
+                }, void 0, false, {
+                    fileName: "components/TopMenu/index.jsx",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                    texto: "Notificaciones",
+                    link: "/notificaciones"
+                }, void 0, false, {
+                    fileName: "components/TopMenu/index.jsx",
+                    lineNumber: 15,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                    texto: "Perfil",
+                    link: "/perfil"
+                }, void 0, false, {
+                    fileName: "components/TopMenu/index.jsx",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "components/TopMenu/index.jsx",
+            lineNumber: 11,
+            columnNumber: 7
+        }, this);
+    }
+}
+exports.default = TopMenu;
+
+  $parcel$ReactRefreshHelpers$51e7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","../TopButton":"42MwR","./TopMenu.css":"cYT8F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"42MwR":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b13a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b13a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _topButtonCss = require("./TopButton.css");
+class TopButton extends (0, _reactDefault.default).Component {
+    render() {
+        const { texto , link  } = this.props;
+        if (link == "/perfil") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+            className: "overlap-group",
+            to: "perfil/1",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "top-back"
+                }, void 0, false, {
+                    fileName: "components/TopButton/index.jsx",
+                    lineNumber: 11,
+                    columnNumber: 11
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "texto sitkatext-regular-normal-masala-30px",
+                    children: texto
+                }, void 0, false, {
+                    fileName: "components/TopButton/index.jsx",
+                    lineNumber: 12,
+                    columnNumber: 11
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "components/TopButton/index.jsx",
+            lineNumber: 10,
+            columnNumber: 9
+        }, this);
+        else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+            className: "overlap-group",
+            to: link,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "top-back"
+                }, void 0, false, {
+                    fileName: "components/TopButton/index.jsx",
+                    lineNumber: 18,
+                    columnNumber: 11
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "texto sitkatext-regular-normal-masala-30px",
+                    children: texto
+                }, void 0, false, {
+                    fileName: "components/TopButton/index.jsx",
+                    lineNumber: 19,
+                    columnNumber: 11
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "components/TopButton/index.jsx",
+            lineNumber: 17,
+            columnNumber: 9
+        }, this);
+    }
+}
+exports.default = TopButton;
+
+  $parcel$ReactRefreshHelpers$b13a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./TopButton.css":"4QBl8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4QBl8":[function() {},{}],"cYT8F":[function() {},{}]},["1xC6H","awEvQ","bB7Pu"], "bB7Pu", "parcelRequire3745")
 
 //# sourceMappingURL=index.3d214d75.js.map

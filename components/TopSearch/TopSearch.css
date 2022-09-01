@@ -1,6 +1,7 @@
 .top-search {
   align-items: center;
-  background-color: var(--bon-jour);
+  /*background-color: var(--bon-jour);*/
+  background: linear-gradient(45deg, rgb(102, 141, 248), rgb(90, 105, 241), rgb(152, 108, 233));
   display: flex;
   height: 40px;
   left: 0;
@@ -9,6 +10,8 @@
   padding-left: 10%;
   position: fixed;
   top: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 15px;
   z-index: 2;
 }
 
@@ -45,6 +48,7 @@
   font-family: "SitkaText-Regular";
   font-size: 100%;
   letter-spacing: 0;
+  color:rgb(201, 205, 243);
   /*line-height: 20px;*/
   position:absolute;
   /*top: 10px;*/
@@ -52,7 +56,7 @@
 }
 
 .search-button {
-  background-color: #cccccc;
+  background: linear-gradient(45deg, #481e8b, rgb(87, 56, 116));
   left: 10px;
   display: flex;
   justify-content: center;
@@ -65,5 +69,27 @@
 }
 
 .search-button:hover {
-  background-color: #a8a8a8;
+  animation: BotonAclarado 200ms 1;
+  background: linear-gradient(45deg, #7659a3, rgb(130, 101, 158));
+}
+
+@keyframes BotonAclarado {
+  0% {
+    background: linear-gradient(45deg, #481e8b, #573874);
+  }
+  20% {
+    background: linear-gradient(45deg, #542493, #61427d);
+  }
+  40% {
+    background: linear-gradient(45deg, #582e9b, #674884);
+  }
+  60% {
+    background: linear-gradient(45deg, #64319f, #6f4f8d);
+  }
+  80% {
+    background: linear-gradient(45deg, #684ea0, #775894);
+  }
+  100% {
+    background: linear-gradient(45deg, #7659a3, #826597);
+  }
 }

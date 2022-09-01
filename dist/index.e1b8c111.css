@@ -51,137 +51,18 @@ input:focus {
   border: 1px solid var(--dove-gray);
 }
 
-
-
-.top-search {
-  background-color: var(--bon-jour);
-  height: 40px;
+.Fondo {
   min-width: 600px;
   width: 100%;
-  z-index: 2;
-  align-items: center;
-  padding-left: 10%;
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.overlap-group5 {
-  background-color: var(--white);
-  height: 80%;
-  width: 70%;
-  max-width: 550px;
-  border-radius: 20px;
-  align-items: center;
-  padding-left: 19px;
-  padding-right: 19px;
-  display: flex;
-}
-
-.busqueda {
-  height: 22px;
-  letter-spacing: 0;
-  white-space: nowrap;
-  width: 100%;
-  background-color: #0000;
-  border: 0;
-  padding: 0;
-  line-height: 20px;
-}
-
-.busqueda::placeholder {
-  color: #3d3d3d99;
-}
-
-.buscar {
-  letter-spacing: 0;
-  white-space: nowrap;
-  font-family: SitkaText-Regular;
-  font-size: 100%;
-  position: absolute;
-}
-
-.search-button {
-  height: 80%;
-  min-width: 100px;
-  width: 10%;
-  background-color: #ccc;
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(45deg, #fff, #e4e4ff, #e0e0ff);
+  flex-direction: column;
   display: flex;
   position: relative;
-  left: 10px;
-}
-
-.search-button:hover {
-  background-color: #a8a8a8;
-}
-
-.top-back {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.overlap-group {
-  width: 20%;
-  height: 100%;
-  align-items: center;
-  display: flex;
-  position: relative;
-}
-
-.overlap-group:hover {
-  background-color: #d3d3d3;
-  border-top-right-radius: 55px;
-  border-bottom-right-radius: 55px;
-}
-
-.inicio, .chats, .notificaciones, .perfil {
-  letter-spacing: 0;
-  white-space: nowrap;
-  font-size: 100%;
-  line-height: 30px;
-  position: absolute;
-  left: 0;
-}
-
-.top-menu {
-  background-color: var(--bon-jour);
-  height: 30px;
-  min-width: 600px;
-  width: 100%;
-  z-index: 1;
-  align-items: flex-start;
-  display: flex;
-  position: fixed;
-  top: 40px;
-  left: 0;
-}
-
-.grupo-de-desplazamiento-7::-webkit-scrollbar {
-  width: 0;
-  display: none;
-}
-
-.title {
-  color: var(--masala);
-  font-family: var(--font-family-sitkatext-regular);
-  width: 20%;
-  letter-spacing: 0;
-  white-space: nowrap;
-  margin-bottom: -2px;
-  font-size: 150%;
-  font-weight: 400;
 }
 
 .TablaPublicaciones {
   width: 100%;
-  margin-top: 70px;
+  background: none;
   display: block;
 }
 
@@ -189,12 +70,14 @@ input:focus {
   align-items: left;
   height: auto;
   width: 60%;
+  background: #e4e2e2;
   border-radius: 15px;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 20%;
   padding: 15px;
   position: relative;
+  box-shadow: 5px 2px 10px #00000080;
 }
 
 .perfil-placeholder {
@@ -247,20 +130,202 @@ input:focus {
   margin-left: 15px;
 }
 
-.bloque-grafico {
-  height: 200px;
+.muro {
+  min-width: 600px;
   width: 100%;
-  justify-content: center;
+  background: none;
+  flex-direction: column;
+  margin-top: 70px;
   display: flex;
+  position: relative;
 }
 
-.muro {
+.perfil {
   background-color: var(--white);
   min-width: 600px;
   width: 100%;
   flex-direction: column;
+  margin-top: 70px;
   display: flex;
   position: relative;
+}
+
+.PerfilImage {
+  height: 300px;
+  width: 300px;
+}
+
+.FondoImage {
+  height: 310px;
+  width: 310px;
+  background-color: #000;
+  border-radius: 153px;
+  place-items: center;
+  margin-top: 10px;
+  margin-left: 50%;
+  display: flex;
+  transform: translateX(-155px);
+}
+
+.top-search {
+  height: 40px;
+  min-width: 600px;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(45deg, #668df8, #5a69f1, #986ce9);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 15px;
+  align-items: center;
+  padding-left: 10%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.overlap-group5 {
+  background-color: var(--white);
+  height: 80%;
+  width: 70%;
+  max-width: 550px;
+  border-radius: 20px;
+  align-items: center;
+  padding-left: 19px;
+  padding-right: 19px;
+  display: flex;
+}
+
+.busqueda {
+  height: 22px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #0000;
+  border: 0;
+  padding: 0;
+  line-height: 20px;
+}
+
+.busqueda::placeholder {
+  color: #3d3d3d99;
+}
+
+.buscar {
+  letter-spacing: 0;
+  color: #c9cdf3;
+  white-space: nowrap;
+  font-family: SitkaText-Regular;
+  font-size: 100%;
+  position: absolute;
+}
+
+.search-button {
+  height: 80%;
+  min-width: 100px;
+  width: 10%;
+  background: linear-gradient(45deg, #481e8b, #573874);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  left: 10px;
+}
+
+.search-button:hover {
+  background: linear-gradient(45deg, #7659a3, #82659e);
+  animation: BotonAclarado .2s;
+}
+
+@keyframes BotonAclarado {
+  0% {
+    background: linear-gradient(45deg, #481e8b, #573874);
+  }
+
+  20% {
+    background: linear-gradient(45deg, #542493, #61427d);
+  }
+
+  40% {
+    background: linear-gradient(45deg, #582e9b, #674884);
+  }
+
+  60% {
+    background: linear-gradient(45deg, #64319f, #6f4f8d);
+  }
+
+  80% {
+    background: linear-gradient(45deg, #684ea0, #775894);
+  }
+
+  100% {
+    background: linear-gradient(45deg, #7659a3, #826597);
+  }
+}
+
+.top-back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlap-group {
+  width: 20%;
+  height: 100%;
+  align-items: center;
+  transition: all .4s;
+  display: flex;
+  position: relative;
+}
+
+.overlap-group:hover {
+  background-color: #0003;
+  border-radius: 15px 25px 95px 15px;
+}
+
+.texto {
+  letter-spacing: 0;
+  color: #000220;
+  white-space: nowrap;
+  font-size: 100%;
+  line-height: 30px;
+  position: absolute;
+  left: 0;
+}
+
+.top-menu {
+  height: 30px;
+  min-width: 600px;
+  width: 100%;
+  z-index: 1;
+  background: linear-gradient(45deg, #668df8, #5a69f1, #986ce9);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 25px;
+  align-items: flex-start;
+  display: flex;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  box-shadow: 0 5px 5px #00000067;
+}
+
+.grupo-de-desplazamiento-7::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.title {
+  color: #15055e;
+  font-family: var(--font-family-sitkatext-regular);
+  width: 20%;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-shadow: 10px 2.5px 7px #0000ffb3, 10px 2.5px 14px #00f6, 10px 2.5px 30px #0000ff4d, 10px 2.5px 60px #0000ff1a;
+  margin-bottom: -2px;
+  font-size: 150%;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=index.e1b8c111.css.map */
