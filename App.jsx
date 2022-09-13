@@ -6,22 +6,20 @@ import TopMenu from "./components/TopMenu";
 import Muro from "./components/Muro";
 import Perfil from "./components/Perfil";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="Fondo">
-        <Router>
-          <TopSearch/>
-          <TopMenu/>  
-          <Switch>
-            <Route exact path="/" children={<LinkMuro />} />
-            <Route exact path="/muro" children={<LinkMuro />} />
-            <Route exact path="/perfil/:id" children={<LinkPerfil />} />
-          </Switch>
-        </Router>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="Fondo">
+      <Router>
+        <TopSearch/>
+        <TopMenu/>  
+        <Switch>
+          <Route exact path="/" children={<LinkMuro />} />
+          <Route exact path="/muro" children={<LinkMuro />} />
+          <Route exact path="/perfil/:id" children={<LinkPerfil />} />
+        </Switch>
+      </Router>
+    </div>
+  );
 }
 
 function LinkMuro(){

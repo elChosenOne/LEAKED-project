@@ -27075,85 +27075,84 @@ var _muroDefault = parcelHelpers.interopDefault(_muro);
 var _perfil = require("./components/Perfil");
 var _perfilDefault = parcelHelpers.interopDefault(_perfil);
 var _s = $RefreshSig$();
-class App extends (0, _reactDefault.default).Component {
-    render() {
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "Fondo",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topSearchDefault.default), {}, void 0, false, {
-                        fileName: "App.jsx",
-                        lineNumber: 14,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topMenuDefault.default), {}, void 0, false, {
-                        fileName: "App.jsx",
-                        lineNumber: 15,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Switch), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                exact: true,
-                                path: "/",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkMuro, {}, void 0, false, void 0, void 0)
-                            }, void 0, false, {
-                                fileName: "App.jsx",
-                                lineNumber: 17,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                exact: true,
-                                path: "/muro",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkMuro, {}, void 0, false, void 0, void 0)
-                            }, void 0, false, {
-                                fileName: "App.jsx",
-                                lineNumber: 18,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                exact: true,
-                                path: "/perfil/:id",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkPerfil, {}, void 0, false, void 0, void 0)
-                            }, void 0, false, {
-                                fileName: "App.jsx",
-                                lineNumber: 19,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "App.jsx",
-                        lineNumber: 16,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "App.jsx",
-                lineNumber: 13,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
+function App() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "Fondo",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topSearchDefault.default), {}, void 0, false, {
+                    fileName: "App.jsx",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topMenuDefault.default), {}, void 0, false, {
+                    fileName: "App.jsx",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Switch), {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            exact: true,
+                            path: "/",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkMuro, {}, void 0, false, void 0, void 0)
+                        }, void 0, false, {
+                            fileName: "App.jsx",
+                            lineNumber: 16,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            exact: true,
+                            path: "/muro",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkMuro, {}, void 0, false, void 0, void 0)
+                        }, void 0, false, {
+                            fileName: "App.jsx",
+                            lineNumber: 17,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            exact: true,
+                            path: "/perfil/:id",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkPerfil, {}, void 0, false, void 0, void 0)
+                        }, void 0, false, {
+                            fileName: "App.jsx",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "App.jsx",
+                    lineNumber: 15,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
             fileName: "App.jsx",
             lineNumber: 12,
             columnNumber: 7
-        }, this);
-    }
-}
-function LinkMuro() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _muroDefault.default), {}, void 0, false, {
+        }, this)
+    }, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 29,
+        lineNumber: 11,
         columnNumber: 5
     }, this);
 }
-_c = LinkMuro;
+_c = App;
+function LinkMuro() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _muroDefault.default), {}, void 0, false, {
+        fileName: "App.jsx",
+        lineNumber: 27,
+        columnNumber: 5
+    }, this);
+}
+_c1 = LinkMuro;
 function LinkPerfil() {
     _s();
     const { id  } = (0, _reactRouterDom.useParams)();
     console.log("ID = " + id);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _perfilDefault.default), {}, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 39,
+        lineNumber: 37,
         columnNumber: 5
     }, this);
 }
@@ -27162,18 +27161,19 @@ _s(LinkPerfil, "yQgCIz/jJfqV1l9s2yoba81MT5A=", false, function() {
         (0, _reactRouterDom.useParams)
     ];
 });
-_c1 = LinkPerfil;
+_c2 = LinkPerfil;
 exports.default = App;
-var _c, _c1;
-$RefreshReg$(_c, "LinkMuro");
-$RefreshReg$(_c1, "LinkPerfil");
+var _c, _c1, _c2;
+$RefreshReg$(_c, "App");
+$RefreshReg$(_c1, "LinkMuro");
+$RefreshReg$(_c2, "LinkPerfil");
 
   $parcel$ReactRefreshHelpers$53a7.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./App.css":"7g3a6","react":"21dqq","react-router-dom":"cHIiW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Muro":"bn3mf","./components/Perfil":"lF5zK","./components/TopSearch":"aJY3s","./components/TopMenu":"9kQfm"}],"7g3a6":[function() {},{}],"cHIiW":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./App.css":"7g3a6","react":"21dqq","react-router-dom":"cHIiW","./components/TopSearch":"aJY3s","./components/TopMenu":"9kQfm","./components/Muro":"bn3mf","./components/Perfil":"lF5zK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7g3a6":[function() {},{}],"cHIiW":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MemoryRouter", ()=>(0, _reactRouter.MemoryRouter));
@@ -30201,7 +30201,74 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 }
 module.exports = hoistNonReactStatics;
 
-},{"react-is":"7EuwB"}],"km3Ru":[function(require,module,exports) {
+},{"react-is":"7EuwB"}],"aJY3s":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2db0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2db0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _topSearchCss = require("./TopSearch.css");
+function TopSearch(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "top-search",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "overlap-group5 border-1px-dove-gray",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    className: "busqueda sitkatext-regular-normal-masala-20px",
+                    name: "busqueda4",
+                    placeholder: "busqueda",
+                    type: "text",
+                    required: true
+                }, void 0, false, {
+                    fileName: "components/TopSearch/index.jsx",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "components/TopSearch/index.jsx",
+                lineNumber: 7,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search-button border-1px-dove-gray",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "buscar",
+                    children: "buscar"
+                }, void 0, false, {
+                    fileName: "components/TopSearch/index.jsx",
+                    lineNumber: 17,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "components/TopSearch/index.jsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopSearch/index.jsx",
+        lineNumber: 6,
+        columnNumber: 5
+    }, this);
+}
+_c = TopSearch;
+exports.default = TopSearch;
+var _c;
+$RefreshReg$(_c, "TopSearch");
+
+  $parcel$ReactRefreshHelpers$2db0.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./TopSearch.css":"kVP5i","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kVP5i":[function() {},{}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("react-refresh/runtime");
 function debounce(func, delay) {
@@ -30321,7 +30388,162 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}],"bn3mf":[function(require,module,exports) {
+},{"react-refresh/runtime":"786KC"}],"9kQfm":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$51e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$51e7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _topButton = require("../TopButton");
+var _topButtonDefault = parcelHelpers.interopDefault(_topButton);
+var _topMenuCss = require("./TopMenu.css");
+function TopMenu(props) {
+    const history = (0, _reactRouterDom.useHistory);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "top-menu",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "title",
+                children: "LEAKED"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                texto: "Inicio",
+                link: "/muro"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                texto: "Chats",
+                link: "/chats"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                texto: "Notificaciones",
+                link: "/notificaciones"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                texto: "Perfil",
+                link: "/perfil"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopMenu/index.jsx",
+        lineNumber: 10,
+        columnNumber: 5
+    }, this);
+}
+_c = TopMenu;
+exports.default = TopMenu;
+var _c;
+$RefreshReg$(_c, "TopMenu");
+
+  $parcel$ReactRefreshHelpers$51e7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","../TopButton":"42MwR","./TopMenu.css":"cYT8F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"42MwR":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b13a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b13a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _topButtonCss = require("./TopButton.css");
+function TopButton(props) {
+    const { texto , link  } = props;
+    if (link == "/perfil") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+        className: "overlap-group",
+        to: "perfil/1",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "top-back"
+            }, void 0, false, {
+                fileName: "components/TopButton/index.jsx",
+                lineNumber: 10,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "texto sitkatext-regular-normal-masala-30px",
+                children: texto
+            }, void 0, false, {
+                fileName: "components/TopButton/index.jsx",
+                lineNumber: 11,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopButton/index.jsx",
+        lineNumber: 9,
+        columnNumber: 7
+    }, this);
+    else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+        className: "overlap-group",
+        to: link,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "top-back"
+            }, void 0, false, {
+                fileName: "components/TopButton/index.jsx",
+                lineNumber: 17,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "texto sitkatext-regular-normal-masala-30px",
+                children: texto
+            }, void 0, false, {
+                fileName: "components/TopButton/index.jsx",
+                lineNumber: 18,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopButton/index.jsx",
+        lineNumber: 16,
+        columnNumber: 7
+    }, this);
+}
+_c = TopButton;
+exports.default = TopButton;
+var _c;
+$RefreshReg$(_c, "TopButton");
+
+  $parcel$ReactRefreshHelpers$b13a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./TopButton.css":"4QBl8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4QBl8":[function() {},{}],"cYT8F":[function() {},{}],"bn3mf":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$d36c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30338,33 +30560,34 @@ var _tablaPublicacionesDefault = parcelHelpers.interopDefault(_tablaPublicacione
 var _publicacionesJson = require("../../data/publicaciones.json");
 var _publicacionesJsonDefault = parcelHelpers.interopDefault(_publicacionesJson);
 var _muroCss = require("./Muro.css");
-class Muro extends (0, _reactDefault.default).Component {
-    render() {
-        const Publs = (0, _publicacionesJsonDefault.default).publicaciones;
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "muro screen",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tablaPublicacionesDefault.default), {
-                publicaciones: Publs
-            }, void 0, false, {
-                fileName: "components/Muro/index.jsx",
-                lineNumber: 12,
-                columnNumber: 9
-            }, this)
+function Muro(props) {
+    const Publs = (0, _publicacionesJsonDefault.default).publicaciones;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "muro screen",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tablaPublicacionesDefault.default), {
+            publicaciones: Publs
         }, void 0, false, {
             fileName: "components/Muro/index.jsx",
             lineNumber: 11,
             columnNumber: 7
-        }, this);
-    }
+        }, this)
+    }, void 0, false, {
+        fileName: "components/Muro/index.jsx",
+        lineNumber: 10,
+        columnNumber: 5
+    }, this);
 }
+_c = Muro;
 exports.default = Muro;
+var _c;
+$RefreshReg$(_c, "Muro");
 
   $parcel$ReactRefreshHelpers$d36c.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../TablaPublicaciones":"2dsaR","./Muro.css":"1VjHr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../data/publicaciones.json":"f3ov1"}],"2dsaR":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../TablaPublicaciones":"2dsaR","../../data/publicaciones.json":"f3ov1","./Muro.css":"1VjHr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2dsaR":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e109 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30379,29 +30602,30 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _tablaPublicacionesCss = require("./TablaPublicaciones.css");
 var _publicacion = require("../Publicacion");
 var _publicacionDefault = parcelHelpers.interopDefault(_publicacion);
-class TablaPublicaciones extends (0, _reactDefault.default).Component {
-    render() {
-        const { publicaciones  } = this.props;
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "TablaPublicaciones",
-            children: publicaciones.map((pub)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _publicacionDefault.default), {
-                    usuario: pub.usuario,
-                    fecha: pub.fecha,
-                    texto: pub.texto,
-                    id: pub.key
-                }, void 0, false, {
-                    fileName: "components/TablaPublicaciones/index.jsx",
-                    lineNumber: 12,
-                    columnNumber: 17
-                }, this))
-        }, void 0, false, {
-            fileName: "components/TablaPublicaciones/index.jsx",
-            lineNumber: 10,
-            columnNumber: 9
-        }, this);
-    }
+function TablaPublicaciones(props) {
+    const { publicaciones  } = props;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "TablaPublicaciones",
+        children: publicaciones.map((pub)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _publicacionDefault.default), {
+                usuario: pub.usuario,
+                fecha: pub.fecha,
+                texto: pub.texto,
+                id: pub.key
+            }, void 0, false, {
+                fileName: "components/TablaPublicaciones/index.jsx",
+                lineNumber: 11,
+                columnNumber: 13
+            }, this))
+    }, void 0, false, {
+        fileName: "components/TablaPublicaciones/index.jsx",
+        lineNumber: 9,
+        columnNumber: 5
+    }, this);
 }
+_c = TablaPublicaciones;
 exports.default = TablaPublicaciones;
+var _c;
+$RefreshReg$(_c, "TablaPublicaciones");
 
   $parcel$ReactRefreshHelpers$e109.postlude(module);
 } finally {
@@ -30429,92 +30653,96 @@ var _comments11X472E0DadPngDefault = parcelHelpers.interopDefault(_comments11X47
 var _publicacionCss = require("./Publicacion.css");
 var _graphics = require("../Graphics");
 var _graphicsDefault = parcelHelpers.interopDefault(_graphics);
-class Publicacion extends (0, _reactDefault.default).Component {
-    render() {
-        const { usuario , fecha , texto , key  } = this.props;
-        const PerfilImage = require("../../dist/img/perfilplaceholder.png");
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "publicacion border-1px-dove-gray",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "perfil-placeholder",
-                    src: PerfilImage
-                }, void 0, false, {
-                    fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 16,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "usuario segoeui-black-dove-gray-30px",
-                    children: usuario.nombre
-                }, void 0, false, {
-                    fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 17,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "fecha segoeui-regular-normal-dove-gray-25px",
-                    children: fecha
-                }, void 0, false, {
-                    fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 18,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "salto"
-                }, void 0, false, {
-                    fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 19,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "contenido segoeui-regular-normal-dove-gray-25px",
-                    children: texto
-                }, void 0, false, {
-                    fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 20,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "up-arrow",
-                    src: (0, _uparrow11X5E56Ec5BPngDefault.default)
-                }, void 0, false, {
-                    fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 21,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "down-arrow",
-                    src: (0, _downarrow11X74Fc2Ae1PngDefault.default)
-                }, void 0, false, {
-                    fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 22,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "comments",
-                    src: (0, _comments11X472E0DadPngDefault.default)
-                }, void 0, false, {
-                    fileName: "components/Publicacion/index.jsx",
-                    lineNumber: 23,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, key, true, {
-            fileName: "components/Publicacion/index.jsx",
-            lineNumber: 15,
-            columnNumber: 7
-        }, this);
-    }
+function Publicacion(props) {
+    const { usuario , fecha , texto , key  } = props;
+    usuario.PerfilImage;
+    /*const PerfilImage = require('../../dist/img/perfilplaceholder.png');*/ const images = undefined("../../dist/img", true);
+    //const PerfilImage = require(`../../dist/img/${usuario.imagen}`);
+    const PerfilImage = images(`./${usuario.imagen}`);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "publicacion border-1px-dove-gray",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "perfil-placeholder",
+                src: PerfilImage
+            }, void 0, false, {
+                fileName: "components/Publicacion/index.jsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "usuario segoeui-black-dove-gray-30px",
+                children: usuario.nombre
+            }, void 0, false, {
+                fileName: "components/Publicacion/index.jsx",
+                lineNumber: 20,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "fecha segoeui-regular-normal-dove-gray-25px",
+                children: fecha
+            }, void 0, false, {
+                fileName: "components/Publicacion/index.jsx",
+                lineNumber: 21,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "salto"
+            }, void 0, false, {
+                fileName: "components/Publicacion/index.jsx",
+                lineNumber: 22,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "contenido segoeui-regular-normal-dove-gray-25px",
+                children: texto
+            }, void 0, false, {
+                fileName: "components/Publicacion/index.jsx",
+                lineNumber: 23,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "up-arrow",
+                src: (0, _uparrow11X5E56Ec5BPngDefault.default)
+            }, void 0, false, {
+                fileName: "components/Publicacion/index.jsx",
+                lineNumber: 24,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "down-arrow",
+                src: (0, _downarrow11X74Fc2Ae1PngDefault.default)
+            }, void 0, false, {
+                fileName: "components/Publicacion/index.jsx",
+                lineNumber: 25,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "comments",
+                src: (0, _comments11X472E0DadPngDefault.default)
+            }, void 0, false, {
+                fileName: "components/Publicacion/index.jsx",
+                lineNumber: 26,
+                columnNumber: 7
+            }, this)
+        ]
+    }, key, true, {
+        fileName: "components/Publicacion/index.jsx",
+        lineNumber: 18,
+        columnNumber: 5
+    }, this);
 }
+_c = Publicacion;
 exports.default = Publicacion;
+var _c;
+$RefreshReg$(_c, "Publicacion");
 
   $parcel$ReactRefreshHelpers$e9d4.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../dist/uparrow-1@1x.5e56ec5b.png":"6r3v6","../../dist/downarrow-1@1x.74fc2ae1.png":"a8e4k","../../dist/comments-1@1x.472e0dad.png":"h5AIe","./Publicacion.css":"lT8a2","../Graphics":"khCUO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../dist/img/perfilplaceholder.png":"djlbM"}],"6r3v6":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../dist/uparrow-1@1x.5e56ec5b.png":"6r3v6","../../dist/downarrow-1@1x.74fc2ae1.png":"a8e4k","../../dist/comments-1@1x.472e0dad.png":"h5AIe","./Publicacion.css":"lT8a2","../Graphics":"khCUO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6r3v6":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "uparrow-1@1x.5e56ec5b.ca4defab.png" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -30575,36 +30803,37 @@ var _lineGraph = require("../LineGraph");
 var _lineGraphDefault = parcelHelpers.interopDefault(_lineGraph);
 var _areaGraph = require("../AreaGraph");
 var _areaGraphDefault = parcelHelpers.interopDefault(_areaGraph);
-class Graphics extends (0, _reactDefault.default).Component {
-    render() {
-        const { graphType , data , color  } = this.props;
-        if (graphType === "BarGraph") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _barGraphDefault.default), {
-            data: data,
-            color: color
-        }, void 0, false, {
-            fileName: "components/Graphics/index.jsx",
-            lineNumber: 12,
-            columnNumber: 17
-        }, this);
-        else if (graphType === "LineGraph") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lineGraphDefault.default), {
-            data: data,
-            color: color
-        }, void 0, false, {
-            fileName: "components/Graphics/index.jsx",
-            lineNumber: 16,
-            columnNumber: 17
-        }, this);
-        else if (graphType === "AreaGraph") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _areaGraphDefault.default), {
-            data: data,
-            color: color
-        }, void 0, false, {
-            fileName: "components/Graphics/index.jsx",
-            lineNumber: 20,
-            columnNumber: 17
-        }, this);
-    }
+function Graphics(props) {
+    const { graphType , data , color  } = props;
+    if (graphType === "BarGraph") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _barGraphDefault.default), {
+        data: data,
+        color: color
+    }, void 0, false, {
+        fileName: "components/Graphics/index.jsx",
+        lineNumber: 10,
+        columnNumber: 13
+    }, this);
+    else if (graphType === "LineGraph") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lineGraphDefault.default), {
+        data: data,
+        color: color
+    }, void 0, false, {
+        fileName: "components/Graphics/index.jsx",
+        lineNumber: 12,
+        columnNumber: 13
+    }, this);
+    else if (graphType === "AreaGraph") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _areaGraphDefault.default), {
+        data: data,
+        color: color
+    }, void 0, false, {
+        fileName: "components/Graphics/index.jsx",
+        lineNumber: 14,
+        columnNumber: 13
+    }, this);
 }
+_c = Graphics;
 exports.default = Graphics;
+var _c;
+$RefreshReg$(_c, "Graphics");
 
   $parcel$ReactRefreshHelpers$8312.postlude(module);
 } finally {
@@ -30624,48 +30853,49 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _recharts = require("recharts");
-class BarGraph extends (0, _reactDefault.default).Component {
-    render() {
-        const { data , color  } = this.props;
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.BarChart), {
-            height: 200,
-            width: 300,
-            data: data,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {}, void 0, false, {
-                    fileName: "components/BarGraph/index.jsx",
-                    lineNumber: 10,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
-                    dataKey: "name"
-                }, void 0, false, {
-                    fileName: "components/BarGraph/index.jsx",
-                    lineNumber: 11,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
-                    fileName: "components/BarGraph/index.jsx",
-                    lineNumber: 12,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Bar), {
-                    dataKey: "val",
-                    fill: color
-                }, void 0, false, {
-                    fileName: "components/BarGraph/index.jsx",
-                    lineNumber: 13,
-                    columnNumber: 13
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/BarGraph/index.jsx",
-            lineNumber: 9,
-            columnNumber: 9
-        }, this);
-    }
+function BarGraph(props) {
+    const { data , color  } = props;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.BarChart), {
+        height: 200,
+        width: 300,
+        data: data,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {}, void 0, false, {
+                fileName: "components/BarGraph/index.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
+                dataKey: "name"
+            }, void 0, false, {
+                fileName: "components/BarGraph/index.jsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
+                fileName: "components/BarGraph/index.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Bar), {
+                dataKey: "val",
+                fill: color
+            }, void 0, false, {
+                fileName: "components/BarGraph/index.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/BarGraph/index.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, this);
 }
+_c = BarGraph;
 exports.default = BarGraph;
+var _c;
+$RefreshReg$(_c, "BarGraph");
 
   $parcel$ReactRefreshHelpers$a5f9.postlude(module);
 } finally {
@@ -61613,50 +61843,51 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _recharts = require("recharts");
-class LineGraph extends (0, _reactDefault.default).Component {
-    render() {
-        const { data , color  } = this.props;
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.LineChart), {
-            height: 200,
-            width: 300,
-            data: data,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {}, void 0, false, {
-                    fileName: "components/LineGraph/index.jsx",
-                    lineNumber: 10,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
-                    dataKey: "name"
-                }, void 0, false, {
-                    fileName: "components/LineGraph/index.jsx",
-                    lineNumber: 11,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
-                    fileName: "components/LineGraph/index.jsx",
-                    lineNumber: 12,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Line), {
-                    type: "monotone",
-                    dataKey: "val",
-                    stroke: color,
-                    strokeWidth: 2
-                }, void 0, false, {
-                    fileName: "components/LineGraph/index.jsx",
-                    lineNumber: 13,
-                    columnNumber: 13
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/LineGraph/index.jsx",
-            lineNumber: 9,
-            columnNumber: 9
-        }, this);
-    }
+function LineGraph(props) {
+    const { data , color  } = props;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.LineChart), {
+        height: 200,
+        width: 300,
+        data: data,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {}, void 0, false, {
+                fileName: "components/LineGraph/index.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
+                dataKey: "name"
+            }, void 0, false, {
+                fileName: "components/LineGraph/index.jsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
+                fileName: "components/LineGraph/index.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Line), {
+                type: "monotone",
+                dataKey: "val",
+                stroke: color,
+                strokeWidth: 2
+            }, void 0, false, {
+                fileName: "components/LineGraph/index.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/LineGraph/index.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, this);
 }
+_c = LineGraph;
 exports.default = LineGraph;
+var _c;
+$RefreshReg$(_c, "LineGraph");
 
   $parcel$ReactRefreshHelpers$a4c5.postlude(module);
 } finally {
@@ -61676,63 +61907,61 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _recharts = require("recharts");
-class LineGraph extends (0, _reactDefault.default).Component {
-    render() {
-        const { data , color  } = this.props;
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.AreaChart), {
-            height: 200,
-            width: 300,
-            data: data,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {}, void 0, false, {
-                    fileName: "components/AreaGraph/index.jsx",
-                    lineNumber: 10,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
-                    dataKey: "name"
-                }, void 0, false, {
-                    fileName: "components/AreaGraph/index.jsx",
-                    lineNumber: 11,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
-                    fileName: "components/AreaGraph/index.jsx",
-                    lineNumber: 12,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Area), {
-                    type: "monotone",
-                    dataKey: "val",
-                    stroke: color,
-                    fill: color
-                }, void 0, false, {
-                    fileName: "components/AreaGraph/index.jsx",
-                    lineNumber: 13,
-                    columnNumber: 13
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/AreaGraph/index.jsx",
-            lineNumber: 9,
-            columnNumber: 9
-        }, this);
-    }
+function LineGraph(props) {
+    const { data , color  } = props;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.AreaChart), {
+        height: 200,
+        width: 300,
+        data: data,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {}, void 0, false, {
+                fileName: "components/AreaGraph/index.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
+                dataKey: "name"
+            }, void 0, false, {
+                fileName: "components/AreaGraph/index.jsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
+                fileName: "components/AreaGraph/index.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Area), {
+                type: "monotone",
+                dataKey: "val",
+                stroke: color,
+                fill: color
+            }, void 0, false, {
+                fileName: "components/AreaGraph/index.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/AreaGraph/index.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, this);
 }
+_c = LineGraph;
 exports.default = LineGraph;
+var _c;
+$RefreshReg$(_c, "LineGraph");
 
   $parcel$ReactRefreshHelpers$1361.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","recharts":"7DnXL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"djlbM":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "perfilplaceholder.606ce028.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"1VjHr":[function() {},{}],"f3ov1":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","recharts":"7DnXL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"f3ov1":[function(require,module,exports) {
 module.exports = JSON.parse('{"publicaciones":[{"usuario":{"id":1,"nombre":"GenNom1","imagen":"perfilplaceholder.png"},"fecha":"27-08-2022","texto":"texto 1","key":1},{"usuario":{"id":3,"nombre":"GenNom2","imagen":"perfilplaceholder.png"},"fecha":"05-08-2022","texto":"texto 2","key":2},{"usuario":{"id":2,"nombre":"GenNom3","imagen":"perfilplaceholder.png"},"fecha":"10-08-2022","texto":"texto 3","key":3}]}');
 
-},{}],"lF5zK":[function(require,module,exports) {
+},{}],"1VjHr":[function() {},{}],"lF5zK":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bf32 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -61745,260 +61974,45 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _perfilCss = require("./Perfil.css");
-class Perfil extends (0, _reactDefault.default).Component {
-    render() {
-        const UsrId = 1;
-        const PerfilImage = require("../../dist/img/perfilplaceholder.png");
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "perfil screen",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "FondoImage",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "PerfilImage",
-                    src: PerfilImage
-                }, void 0, false, {
-                    fileName: "components/Perfil/index.jsx",
-                    lineNumber: 13,
-                    columnNumber: 11
-                }, this)
+function Perfil(props) {
+    const UsrId = 1;
+    const PerfilImage = require("../../dist/img/perfilplaceholder.png");
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "perfil screen",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "FondoImage",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "PerfilImage",
+                src: PerfilImage
             }, void 0, false, {
                 fileName: "components/Perfil/index.jsx",
-                lineNumber: 12,
+                lineNumber: 11,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "components/Perfil/index.jsx",
-            lineNumber: 11,
+            lineNumber: 10,
             columnNumber: 7
-        }, this);
-    }
+        }, this)
+    }, void 0, false, {
+        fileName: "components/Perfil/index.jsx",
+        lineNumber: 9,
+        columnNumber: 5
+    }, this);
 }
+_c = Perfil;
 exports.default = Perfil;
+var _c;
+$RefreshReg$(_c, "Perfil");
 
   $parcel$ReactRefreshHelpers$bf32.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Perfil.css":"1ReUE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../dist/img/perfilplaceholder.png":"djlbM"}],"1ReUE":[function() {},{}],"aJY3s":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$2db0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2db0.prelude(module);
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Perfil.css":"1ReUE","../../dist/img/perfilplaceholder.png":"djlbM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1ReUE":[function() {},{}],"djlbM":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "perfilplaceholder.606ce028.png" + "?" + Date.now();
 
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _topSearchCss = require("./TopSearch.css");
-class TopSearch extends (0, _reactDefault.default).Component {
-    render() {
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "top-search",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "overlap-group5 border-1px-dove-gray",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "busqueda sitkatext-regular-normal-masala-20px",
-                        name: "busqueda4",
-                        placeholder: "busqueda",
-                        type: "text",
-                        required: true
-                    }, void 0, false, {
-                        fileName: "components/TopSearch/index.jsx",
-                        lineNumber: 10,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "components/TopSearch/index.jsx",
-                    lineNumber: 9,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "search-button border-1px-dove-gray",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "buscar",
-                        children: "buscar"
-                    }, void 0, false, {
-                        fileName: "components/TopSearch/index.jsx",
-                        lineNumber: 19,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "components/TopSearch/index.jsx",
-                    lineNumber: 18,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/TopSearch/index.jsx",
-            lineNumber: 8,
-            columnNumber: 7
-        }, this);
-    }
-}
-exports.default = TopSearch;
-
-  $parcel$ReactRefreshHelpers$2db0.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./TopSearch.css":"kVP5i","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kVP5i":[function() {},{}],"9kQfm":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$51e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$51e7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _topButton = require("../TopButton");
-var _topButtonDefault = parcelHelpers.interopDefault(_topButton);
-var _topMenuCss = require("./TopMenu.css");
-class TopMenu extends (0, _reactDefault.default).Component {
-    render() {
-        const history = (0, _reactRouterDom.useHistory);
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "top-menu",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "title",
-                    children: "LEAKED"
-                }, void 0, false, {
-                    fileName: "components/TopMenu/index.jsx",
-                    lineNumber: 12,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                    texto: "Inicio",
-                    link: "/muro"
-                }, void 0, false, {
-                    fileName: "components/TopMenu/index.jsx",
-                    lineNumber: 13,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                    texto: "Chats",
-                    link: "/chats"
-                }, void 0, false, {
-                    fileName: "components/TopMenu/index.jsx",
-                    lineNumber: 14,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                    texto: "Notificaciones",
-                    link: "/notificaciones"
-                }, void 0, false, {
-                    fileName: "components/TopMenu/index.jsx",
-                    lineNumber: 15,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                    texto: "Perfil",
-                    link: "/perfil"
-                }, void 0, false, {
-                    fileName: "components/TopMenu/index.jsx",
-                    lineNumber: 16,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/TopMenu/index.jsx",
-            lineNumber: 11,
-            columnNumber: 7
-        }, this);
-    }
-}
-exports.default = TopMenu;
-
-  $parcel$ReactRefreshHelpers$51e7.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","../TopButton":"42MwR","./TopMenu.css":"cYT8F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"42MwR":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b13a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b13a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _topButtonCss = require("./TopButton.css");
-class TopButton extends (0, _reactDefault.default).Component {
-    render() {
-        const { texto , link  } = this.props;
-        if (link == "/perfil") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-            className: "overlap-group",
-            to: "perfil/1",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "top-back"
-                }, void 0, false, {
-                    fileName: "components/TopButton/index.jsx",
-                    lineNumber: 11,
-                    columnNumber: 11
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "texto sitkatext-regular-normal-masala-30px",
-                    children: texto
-                }, void 0, false, {
-                    fileName: "components/TopButton/index.jsx",
-                    lineNumber: 12,
-                    columnNumber: 11
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/TopButton/index.jsx",
-            lineNumber: 10,
-            columnNumber: 9
-        }, this);
-        else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-            className: "overlap-group",
-            to: link,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "top-back"
-                }, void 0, false, {
-                    fileName: "components/TopButton/index.jsx",
-                    lineNumber: 18,
-                    columnNumber: 11
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "texto sitkatext-regular-normal-masala-30px",
-                    children: texto
-                }, void 0, false, {
-                    fileName: "components/TopButton/index.jsx",
-                    lineNumber: 19,
-                    columnNumber: 11
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/TopButton/index.jsx",
-            lineNumber: 17,
-            columnNumber: 9
-        }, this);
-    }
-}
-exports.default = TopButton;
-
-  $parcel$ReactRefreshHelpers$b13a.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./TopButton.css":"4QBl8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4QBl8":[function() {},{}],"cYT8F":[function() {},{}]},["1xC6H","awEvQ","bB7Pu"], "bB7Pu", "parcelRequire3745")
+},{"./helpers/bundle-url":"lgJ39"}]},["1xC6H","awEvQ","bB7Pu"], "bB7Pu", "parcelRequire3745")
 
 //# sourceMappingURL=index.3d214d75.js.map
