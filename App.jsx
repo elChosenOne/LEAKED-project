@@ -7,6 +7,7 @@ import Muro from "./components/Muro";
 import Perfil from "./components/Perfil";
 
 function App() {
+  
   return (
     <div className="Fondo">
       <Router>

@@ -3,16 +3,13 @@ import uparrow from "../../dist/uparrow-1@1x.5e56ec5b.png";
 import downarrow from "../../dist/downarrow-1@1x.74fc2ae1.png";
 import comments from "../../dist/comments-1@1x.472e0dad.png";
 import "./Publicacion.css";
-import Graphics from "../Graphics";
 
 function Publicacion(props) {
   const { usuario, fecha, texto, key } = props;
-  usuario.PerfilImage;
 
-  /*const PerfilImage = require('../../dist/img/perfilplaceholder.png');*/
-  const images = require.context('../../dist/img', true);
+  console.log(process.env.PUBLIC_URL);
+  const PerfilImage = require('../../dist/img/perfilplaceholder.png');
   //const PerfilImage = require(`../../dist/img/${usuario.imagen}`);
-  const PerfilImage = images(`./${usuario.imagen}`)
 
   return (
     <div key={key} className="publicacion border-1px-dove-gray">

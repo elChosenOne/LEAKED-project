@@ -6,6 +6,7 @@ import "./Muro.css";
 function Muro(props){
   const Publs = DataPublicaciones.publicaciones;
 
+
   return (
     <div className="muro screen">
       <TablaPublicaciones publicaciones={Publs} />
