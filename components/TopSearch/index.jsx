@@ -8,9 +8,8 @@ function TopSearch(props) {
         <input
           className="busqueda sitkatext-regular-normal-masala-20px"
           name="busqueda4"
-          placeholder="busqueda"
+          placeholder="Buscar"
           type="text"
-          required
         />
       </div>
       <div className="search-button border-1px-dove-gray">

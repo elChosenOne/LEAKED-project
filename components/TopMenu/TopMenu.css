@@ -1,18 +1,20 @@
 .top-menu {
   align-items: flex-start;
   /*background-color: var(--bon-jour);*/
-  background: linear-gradient(45deg, rgb(102, 141, 248), rgb(90, 105, 241), rgb(152, 108, 233));
+  background: linear-gradient(45deg, rgba(102, 141, 248, 0.5), rgba(90, 105, 241, 0.5), rgba(152, 108, 233, 0.5));
   display: flex;
   height: 30px;
-  left: 0;
+  opacity: 1;
+  left: 2.5%;
   min-width: 600px;
-  width: 100%;
+  width: 95%;
   position:fixed;
-  top:40px;
+  top:45px;
   z-index: 1;
   border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 25px;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.404);
+  border-bottom-right-radius: 10px;
+  /*box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.404);*/
+  backdrop-filter: blur(5px);
 }
 
 .grupo-de-desplazamiento-7::-webkit-scrollbar {

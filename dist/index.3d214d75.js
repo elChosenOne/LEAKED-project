@@ -30223,9 +30223,8 @@ function TopSearch(props) {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                     className: "busqueda sitkatext-regular-normal-masala-20px",
                     name: "busqueda4",
-                    placeholder: "busqueda",
-                    type: "text",
-                    required: true
+                    placeholder: "Buscar",
+                    type: "text"
                 }, void 0, false, {
                     fileName: "components/TopSearch/index.jsx",
                     lineNumber: 8,
@@ -30243,12 +30242,12 @@ function TopSearch(props) {
                     children: "buscar"
                 }, void 0, false, {
                     fileName: "components/TopSearch/index.jsx",
-                    lineNumber: 17,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "components/TopSearch/index.jsx",
-                lineNumber: 16,
+                lineNumber: 15,
                 columnNumber: 7
             }, this)
         ]
@@ -30739,7 +30738,7 @@ $RefreshReg$(_c, "Publicacion");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../dist/uparrow-1@1x.5e56ec5b.png":"6r3v6","../../dist/downarrow-1@1x.74fc2ae1.png":"a8e4k","../../dist/comments-1@1x.472e0dad.png":"h5AIe","./Publicacion.css":"lT8a2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../dist/img/perfilplaceholder.png":"djlbM"}],"6r3v6":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../dist/uparrow-1@1x.5e56ec5b.png":"6r3v6","../../dist/downarrow-1@1x.74fc2ae1.png":"a8e4k","../../dist/comments-1@1x.472e0dad.png":"h5AIe","./Publicacion.css":"lT8a2","../../dist/img/perfilplaceholder.png":"djlbM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6r3v6":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "uparrow-1@1x.5e56ec5b.ca4defab.png" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -30786,7 +30785,7 @@ module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "commen
 module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "perfilplaceholder.606ce028.png" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"f3ov1":[function(require,module,exports) {
-module.exports = JSON.parse('{"publicaciones":[{"usuario":{"id":1,"nombre":"GenNom1","imagen":"perfilplaceholder.png"},"fecha":"27-08-2022","texto":"texto 1","key":1},{"usuario":{"id":3,"nombre":"GenNom2","imagen":"perfilplaceholder.png"},"fecha":"05-08-2022","texto":"texto 2","key":2},{"usuario":{"id":2,"nombre":"GenNom3","imagen":"perfilplaceholder.png"},"fecha":"10-08-2022","texto":"texto 3","key":3}]}');
+module.exports = JSON.parse('{"publicaciones":[{"usuario":{"id":1,"nombre":"GenNom1","imagen":"perfilplaceholder.png"},"fecha":"27-08-2022","texto":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui arcu, facilisis sit amet sapien eget, tincidunt consectetur ipsum. Donec vel nunc ac urna vestibulum maximus sit amet ut dui. Curabitur interdum tellus neque, id sollicitudin neque vehicula in. Donec elementum elit quis quam efficitur rhoncus. Phasellus sit amet eros placerat, malesuada dolor in, accumsan lectus. Aliquam gravida enim nibh, quis fermentum sapien mattis sed. Sed vulputate lorem in porttitor porta. Proin suscipit velit ipsum, non posuere ex dictum sit amet. Nam porta orci a dignissim consequat. Curabitur ornare mattis dui et facilisis. Nulla nisl turpis, consectetur in libero sit amet, porttitor convallis lorem. Morbi finibus, leo a vehicula pulvinar, velit felis hendrerit enim, at fermentum odio libero sit amet magna.","key":1},{"usuario":{"id":3,"nombre":"GenNom2","imagen":"perfilplaceholder.png"},"fecha":"05-08-2022","texto":"texto 2","key":2},{"usuario":{"id":2,"nombre":"GenNom3","imagen":"perfilplaceholder.png"},"fecha":"10-08-2022","texto":"texto 3","key":3}]}');
 
 },{}],"1VjHr":[function() {},{}],"lF5zK":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bf32 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
