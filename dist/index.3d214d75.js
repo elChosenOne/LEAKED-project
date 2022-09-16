@@ -27066,10 +27066,8 @@ var _appCss = require("./App.css");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
-var _topSearch = require("./components/TopSearch");
-var _topSearchDefault = parcelHelpers.interopDefault(_topSearch);
-var _topMenu = require("./components/TopMenu");
-var _topMenuDefault = parcelHelpers.interopDefault(_topMenu);
+var _topBar = require("./components/TopBar");
+var _topBarDefault = parcelHelpers.interopDefault(_topBar);
 var _muro = require("./components/Muro");
 var _muroDefault = parcelHelpers.interopDefault(_muro);
 var _perfil = require("./components/Perfil");
@@ -27080,14 +27078,9 @@ function App() {
         className: "Fondo",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topSearchDefault.default), {}, void 0, false, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topBarDefault.default), {}, void 0, false, {
                     fileName: "App.jsx",
-                    lineNumber: 14,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topMenuDefault.default), {}, void 0, false, {
-                    fileName: "App.jsx",
-                    lineNumber: 15,
+                    lineNumber: 13,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Switch), {
@@ -27098,7 +27091,7 @@ function App() {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkMuro, {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.jsx",
-                            lineNumber: 17,
+                            lineNumber: 15,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27107,7 +27100,7 @@ function App() {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkMuro, {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.jsx",
-                            lineNumber: 18,
+                            lineNumber: 16,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27116,24 +27109,24 @@ function App() {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkPerfil, {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.jsx",
-                            lineNumber: 19,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "App.jsx",
-                    lineNumber: 16,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "App.jsx",
-            lineNumber: 13,
+            lineNumber: 12,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 12,
+        lineNumber: 11,
         columnNumber: 5
     }, this);
 }
@@ -27141,7 +27134,7 @@ _c = App;
 function LinkMuro() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _muroDefault.default), {}, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 28,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }
@@ -27152,7 +27145,7 @@ function LinkPerfil() {
     console.log("ID = " + id);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _perfilDefault.default), {}, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 38,
+        lineNumber: 36,
         columnNumber: 5
     }, this);
 }
@@ -27173,7 +27166,7 @@ $RefreshReg$(_c2, "LinkPerfil");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./App.css":"7g3a6","react":"21dqq","react-router-dom":"cHIiW","./components/TopSearch":"aJY3s","./components/TopMenu":"9kQfm","./components/Muro":"bn3mf","./components/Perfil":"lF5zK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7g3a6":[function() {},{}],"cHIiW":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./App.css":"7g3a6","react":"21dqq","react-router-dom":"cHIiW","./components/Muro":"bn3mf","./components/Perfil":"lF5zK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/TopBar":"9b5PX"}],"7g3a6":[function() {},{}],"cHIiW":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MemoryRouter", ()=>(0, _reactRouter.MemoryRouter));
@@ -30201,348 +30194,7 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 }
 module.exports = hoistNonReactStatics;
 
-},{"react-is":"7EuwB"}],"aJY3s":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$2db0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2db0.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _topSearchCss = require("./TopSearch.css");
-function TopSearch(props) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "top-search",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "overlap-group5 border-1px-dove-gray",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    className: "busqueda sitkatext-regular-normal-masala-20px",
-                    name: "busqueda4",
-                    placeholder: "Buscar",
-                    type: "text"
-                }, void 0, false, {
-                    fileName: "components/TopSearch/index.jsx",
-                    lineNumber: 8,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "components/TopSearch/index.jsx",
-                lineNumber: 7,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search-button border-1px-dove-gray",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "buscar",
-                    children: "buscar"
-                }, void 0, false, {
-                    fileName: "components/TopSearch/index.jsx",
-                    lineNumber: 16,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "components/TopSearch/index.jsx",
-                lineNumber: 15,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "components/TopSearch/index.jsx",
-        lineNumber: 6,
-        columnNumber: 5
-    }, this);
-}
-_c = TopSearch;
-exports.default = TopSearch;
-var _c;
-$RefreshReg$(_c, "TopSearch");
-
-  $parcel$ReactRefreshHelpers$2db0.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./TopSearch.css":"kVP5i","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kVP5i":[function() {},{}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("react-refresh/runtime");
-function debounce(func, delay) {
-    var args;
-    var timeout = undefined;
-    return function(args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
-            timeout = undefined;
-            func.call(null, args);
-        }, delay);
-    };
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30); // Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports; // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-} // When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        Refresh.register(exportValue, id + " %exports% " + key);
-    }
-}
-
-},{"react-refresh/runtime":"786KC"}],"9kQfm":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$51e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$51e7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _topButton = require("../TopButton");
-var _topButtonDefault = parcelHelpers.interopDefault(_topButton);
-var _topMenuCss = require("./TopMenu.css");
-function TopMenu(props) {
-    const history = (0, _reactRouterDom.useHistory);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "top-menu",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "title",
-                children: "LEAKED"
-            }, void 0, false, {
-                fileName: "components/TopMenu/index.jsx",
-                lineNumber: 11,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                texto: "Inicio",
-                link: "/muro"
-            }, void 0, false, {
-                fileName: "components/TopMenu/index.jsx",
-                lineNumber: 12,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                texto: "Chats",
-                link: "/chats"
-            }, void 0, false, {
-                fileName: "components/TopMenu/index.jsx",
-                lineNumber: 13,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                texto: "Notificaciones",
-                link: "/notificaciones"
-            }, void 0, false, {
-                fileName: "components/TopMenu/index.jsx",
-                lineNumber: 14,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                texto: "Perfil",
-                link: "/perfil"
-            }, void 0, false, {
-                fileName: "components/TopMenu/index.jsx",
-                lineNumber: 15,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "components/TopMenu/index.jsx",
-        lineNumber: 10,
-        columnNumber: 5
-    }, this);
-}
-_c = TopMenu;
-exports.default = TopMenu;
-var _c;
-$RefreshReg$(_c, "TopMenu");
-
-  $parcel$ReactRefreshHelpers$51e7.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","../TopButton":"42MwR","./TopMenu.css":"cYT8F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"42MwR":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b13a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b13a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _topButtonCss = require("./TopButton.css");
-function TopButton(props) {
-    const { texto , link  } = props;
-    if (link == "/perfil") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-        className: "overlap-group",
-        to: "perfil/1",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "top-back"
-            }, void 0, false, {
-                fileName: "components/TopButton/index.jsx",
-                lineNumber: 10,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "texto sitkatext-regular-normal-masala-30px",
-                children: texto
-            }, void 0, false, {
-                fileName: "components/TopButton/index.jsx",
-                lineNumber: 11,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "components/TopButton/index.jsx",
-        lineNumber: 9,
-        columnNumber: 7
-    }, this);
-    else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-        className: "overlap-group",
-        to: link,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "top-back"
-            }, void 0, false, {
-                fileName: "components/TopButton/index.jsx",
-                lineNumber: 17,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "texto sitkatext-regular-normal-masala-30px",
-                children: texto
-            }, void 0, false, {
-                fileName: "components/TopButton/index.jsx",
-                lineNumber: 18,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "components/TopButton/index.jsx",
-        lineNumber: 16,
-        columnNumber: 7
-    }, this);
-}
-_c = TopButton;
-exports.default = TopButton;
-var _c;
-$RefreshReg$(_c, "TopButton");
-
-  $parcel$ReactRefreshHelpers$b13a.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./TopButton.css":"4QBl8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4QBl8":[function() {},{}],"cYT8F":[function() {},{}],"bn3mf":[function(require,module,exports) {
+},{"react-is":"7EuwB"}],"bn3mf":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$d36c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30784,8 +30436,128 @@ module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "commen
 },{"./helpers/bundle-url":"lgJ39"}],"lT8a2":[function() {},{}],"djlbM":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("UckoE") + "perfilplaceholder.606ce028.png" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"f3ov1":[function(require,module,exports) {
-module.exports = JSON.parse('{"publicaciones":[{"usuario":{"id":1,"nombre":"GenNom1","imagen":"perfilplaceholder.png"},"fecha":"27-08-2022","texto":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui arcu, facilisis sit amet sapien eget, tincidunt consectetur ipsum. Donec vel nunc ac urna vestibulum maximus sit amet ut dui. Curabitur interdum tellus neque, id sollicitudin neque vehicula in. Donec elementum elit quis quam efficitur rhoncus. Phasellus sit amet eros placerat, malesuada dolor in, accumsan lectus. Aliquam gravida enim nibh, quis fermentum sapien mattis sed. Sed vulputate lorem in porttitor porta. Proin suscipit velit ipsum, non posuere ex dictum sit amet. Nam porta orci a dignissim consequat. Curabitur ornare mattis dui et facilisis. Nulla nisl turpis, consectetur in libero sit amet, porttitor convallis lorem. Morbi finibus, leo a vehicula pulvinar, velit felis hendrerit enim, at fermentum odio libero sit amet magna.","key":1},{"usuario":{"id":3,"nombre":"GenNom2","imagen":"perfilplaceholder.png"},"fecha":"05-08-2022","texto":"texto 2","key":2},{"usuario":{"id":2,"nombre":"GenNom3","imagen":"perfilplaceholder.png"},"fecha":"10-08-2022","texto":"texto 3","key":3}]}');
+},{"./helpers/bundle-url":"lgJ39"}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("react-refresh/runtime");
+function debounce(func, delay) {
+    var args;
+    var timeout = undefined;
+    return function(args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = undefined;
+            func.call(null, args);
+        }, delay);
+    };
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30); // Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports; // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+} // When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        Refresh.register(exportValue, id + " %exports% " + key);
+    }
+}
+
+},{"react-refresh/runtime":"786KC"}],"f3ov1":[function(require,module,exports) {
+module.exports = JSON.parse('{"publicaciones":[{"usuario":{"id":1,"nombre":"GenNom1","imagen":"perfilplaceholder.png"},"fecha":"27-08-2022","texto":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui arcu, facilisis sit amet sapien eget, tincidunt consectetur ipsum. Donec vel nunc ac urna vestibulum maximus sit amet ut dui. Curabitur interdum tellus neque, id sollicitudin neque vehicula in. Donec elementum elit quis quam efficitur rhoncus. Phasellus sit amet eros placerat, malesuada dolor in, accumsan lectus. Aliquam gravida enim nibh, quis fermentum sapien mattis sed. Sed vulputate lorem in porttitor porta. Proin suscipit velit ipsum, non posuere ex dictum sit amet. Nam porta orci a dignissim consequat. Curabitur ornare mattis dui et facilisis. Nulla nisl turpis, consectetur in libero sit amet, porttitor convallis lorem. Morbi finibus, leo a vehicula pulvinar, velit felis hendrerit enim, at fermentum odio libero sit amet magna.","key":1},{"usuario":{"id":3,"nombre":"GenNom2","imagen":"perfilplaceholder.png"},"fecha":"05-08-2022","texto":"Aenean semper ex nisl, a sodales nulla tristique vitae. Integer sodales mi in enim viverra lacinia. Phasellus dapibus velit id neque commodo, eget accumsan enim sollicitudin. Aenean diam mauris, condimentum id tincidunt sit amet, sagittis non urna. Maecenas neque quam, commodo eget dapibus vel, tempor at ante. Aliquam at justo ex. In hac habitasse platea dictumst. Nam tincidunt vestibulum velit a ultrices. Praesent nulla massa, pharetra vitae commodo id, molestie ac leo. Vestibulum non mi eu ante pulvinar fringilla. Nullam cursus nisl nisi, quis fringilla ipsum malesuada eu.","key":2},{"usuario":{"id":2,"nombre":"GenNom3","imagen":"perfilplaceholder.png"},"fecha":"10-08-2022","texto":"Aenean tempus velit a euismod viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in tincidunt nibh. Mauris rhoncus justo eros, ac faucibus augue fermentum in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc facilisis urna nec elit hendrerit rutrum. Praesent gravida lorem lorem, sit amet vehicula neque consequat et. Quisque suscipit tincidunt sem ut mollis. Vivamus ut condimentum magna. Aenean aliquet varius enim ut lacinia. Vivamus sit amet ex quis elit aliquet dictum. Mauris pellentesque porttitor ligula ac egestas. Phasellus consequat nisi non sem congue vulputate. Vivamus interdum dapibus lorem. Cras mattis tortor nulla, non porttitor urna tempor sit amet. Maecenas vitae massa tincidunt, mattis urna a, laoreet nisl. Aliquam leo dui, accumsan porttitor bibendum sed, feugiat non nisi. Vestibulum luctus velit risus, aliquam maximus erat vulputate in. Cras dapibus augue sed scelerisque aliquam. Maecenas tempor metus et lorem iaculis pellentesque. Duis aliquet maximus erat a maximus. Aenean a elit nisl. In ac felis consequat, accumsan nisl eu, suscipit nisi.","key":3},{"usuario":{"id":4,"nombre":"GenNon4","imagen":"perfilplaceholder.png"},"fecha":"15-10-2022","texto":"Aenean tempus velit a euismod viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in tincidunt nibh. Mauris rhoncus justo eros, ac faucibus augue fermentum in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc facilisis urna nec elit hendrerit rutrum. Praesent gravida lorem lorem, sit amet vehicula neque consequat et. Quisque suscipit tincidunt sem ut mollis. Vivamus ut condimentum magna. Aenean aliquet varius enim ut lacinia. Vivamus sit amet ex quis elit aliquet dictum. Mauris pellentesque porttitor ligula ac egestas. Phasellus consequat nisi non sem congue vulputate. Vivamus interdum dapibus lorem. Cras mattis tortor nulla, non porttitor urna tempor sit amet. Maecenas vitae massa tincidunt, mattis urna a, laoreet nisl. Aliquam leo dui, accumsan porttitor bibendum sed, feugiat non nisi. Vestibulum luctus velit risus, aliquam maximus erat vulputate in. Cras dapibus augue sed scelerisque aliquam. Maecenas tempor metus et lorem iaculis pellentesque. Duis aliquet maximus erat a maximus. Aenean a elit nisl. In ac felis consequat, accumsan nisl eu, suscipit nisi.","key":4}]}');
 
 },{}],"1VjHr":[function() {},{}],"lF5zK":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bf32 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -30836,6 +30608,275 @@ $RefreshReg$(_c, "Perfil");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Perfil.css":"1ReUE","../../dist/img/perfilplaceholder.png":"djlbM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1ReUE":[function() {},{}]},["1xC6H","awEvQ","bB7Pu"], "bB7Pu", "parcelRequire3745")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Perfil.css":"1ReUE","../../dist/img/perfilplaceholder.png":"djlbM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1ReUE":[function() {},{}],"9b5PX":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3997 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3997.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _topMenu = require("../TopMenu");
+var _topMenuDefault = parcelHelpers.interopDefault(_topMenu);
+var _topSearch = require("../TopSearch");
+var _topSearchDefault = parcelHelpers.interopDefault(_topSearch);
+var _topBarCss = require("./TopBar.css");
+function TopBar(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "top-bar",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topSearchDefault.default), {}, void 0, false, {
+                fileName: "components/TopBar/index.jsx",
+                lineNumber: 9,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topMenuDefault.default), {}, void 0, false, {
+                fileName: "components/TopBar/index.jsx",
+                lineNumber: 10,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopBar/index.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, this);
+}
+_c = TopBar;
+exports.default = TopBar;
+var _c;
+$RefreshReg$(_c, "TopBar");
+
+  $parcel$ReactRefreshHelpers$3997.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../TopMenu":"9kQfm","../TopSearch":"aJY3s","./TopBar.css":"hIqR7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9kQfm":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$51e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$51e7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _topButton = require("../TopButton");
+var _topButtonDefault = parcelHelpers.interopDefault(_topButton);
+var _topMenuCss = require("./TopMenu.css");
+function TopMenu(props) {
+    const history = (0, _reactRouterDom.useHistory);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "top-menu",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "title",
+                children: "LEAKED"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                texto: "Inicio",
+                link: "/muro"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                texto: "Chats",
+                link: "/chats"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                texto: "Notificaciones",
+                link: "/notificaciones"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                texto: "Perfil",
+                link: "/perfil"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopMenu/index.jsx",
+        lineNumber: 10,
+        columnNumber: 5
+    }, this);
+}
+_c = TopMenu;
+exports.default = TopMenu;
+var _c;
+$RefreshReg$(_c, "TopMenu");
+
+  $parcel$ReactRefreshHelpers$51e7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","../TopButton":"42MwR","./TopMenu.css":"cYT8F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"42MwR":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b13a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b13a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _topButtonCss = require("./TopButton.css");
+function TopButton(props) {
+    const { texto , link  } = props;
+    if (link == "/perfil") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+        className: "overlap-group",
+        to: "perfil/1",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "top-back"
+            }, void 0, false, {
+                fileName: "components/TopButton/index.jsx",
+                lineNumber: 10,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "texto sitkatext-regular-normal-masala-30px",
+                children: texto
+            }, void 0, false, {
+                fileName: "components/TopButton/index.jsx",
+                lineNumber: 11,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopButton/index.jsx",
+        lineNumber: 9,
+        columnNumber: 7
+    }, this);
+    else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+        className: "overlap-group",
+        to: link,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "top-back"
+            }, void 0, false, {
+                fileName: "components/TopButton/index.jsx",
+                lineNumber: 17,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "texto sitkatext-regular-normal-masala-30px",
+                children: texto
+            }, void 0, false, {
+                fileName: "components/TopButton/index.jsx",
+                lineNumber: 18,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopButton/index.jsx",
+        lineNumber: 16,
+        columnNumber: 7
+    }, this);
+}
+_c = TopButton;
+exports.default = TopButton;
+var _c;
+$RefreshReg$(_c, "TopButton");
+
+  $parcel$ReactRefreshHelpers$b13a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./TopButton.css":"4QBl8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4QBl8":[function() {},{}],"cYT8F":[function() {},{}],"aJY3s":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2db0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2db0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _topSearchCss = require("./TopSearch.css");
+function TopSearch(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "top-search",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "overlap-group5 border-1px-dove-gray",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    className: "busqueda sitkatext-regular-normal-masala-20px",
+                    name: "busqueda4",
+                    placeholder: "Buscar",
+                    type: "text"
+                }, void 0, false, {
+                    fileName: "components/TopSearch/index.jsx",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "components/TopSearch/index.jsx",
+                lineNumber: 7,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search-button border-1px-dove-gray",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "buscar",
+                    children: "buscar"
+                }, void 0, false, {
+                    fileName: "components/TopSearch/index.jsx",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "components/TopSearch/index.jsx",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopSearch/index.jsx",
+        lineNumber: 6,
+        columnNumber: 5
+    }, this);
+}
+_c = TopSearch;
+exports.default = TopSearch;
+var _c;
+$RefreshReg$(_c, "TopSearch");
+
+  $parcel$ReactRefreshHelpers$2db0.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./TopSearch.css":"kVP5i","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kVP5i":[function() {},{}],"hIqR7":[function() {},{}]},["1xC6H","awEvQ","bB7Pu"], "bB7Pu", "parcelRequire3745")
 
 //# sourceMappingURL=index.3d214d75.js.map

@@ -1,5 +1,5 @@
 .publicacion {
-    background: #e4e2e2;
+    background: rgba(var(--color-3), 0.2);
     align-items: left;
     border-radius: 15px;
     position: relative;
@@ -31,7 +31,7 @@
   
   
   .fecha {
-    color: #585858;
+    color: rgb(var(--color-1));
     font-size: 18px;
     margin-top: 7px;
     margin-left: 110px;

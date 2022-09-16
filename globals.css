@@ -9,6 +9,9 @@
   src: url("static/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
 }
 
+body {
+  background: linear-gradient(90deg, rgb(var(--color-4)), rgb(var(--color-3)));
+}
 
 .screen a {
   display: contents;

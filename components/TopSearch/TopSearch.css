@@ -1,18 +1,17 @@
 .top-search {
   align-items: center;
   /*background-color: var(--bon-jour);*/
-  background: linear-gradient(45deg, rgba(102, 141, 248, 0.5), rgba(90, 105, 241, 0.5), rgba(152, 108, 233, 0.5));
+  background: rgba(var(--color-2), 0.5);
   display: flex;
   height: 40px;
-  left: 2.5%;
+  left: 0%;
   min-width: 600px;
-  width: 95%;
+  width: 100%;
   padding-left: 10%;
   position: fixed;
-  top: 5px;
+  top: 0px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  backdrop-filter: blur(5px);
   z-index: 2;
 }
 
@@ -41,7 +40,7 @@
 }
 
 .busqueda::placeholder {
-  color: #3d3d3d99;
+  color: rgba(var(--color-1), 0.5);
 }
 
 .buscar {
@@ -49,15 +48,16 @@
   font-family: "SitkaText-Regular";
   font-size: 100%;
   letter-spacing: 0;
-  color:rgb(201, 205, 243);
+  color:rgb(var(--color-4));
   /*line-height: 20px;*/
   position:absolute;
   /*top: 10px;*/
   white-space: nowrap;
+  transition: all 400ms ease;
 }
 
 .search-button {
-  background: linear-gradient(45deg, #481e8b, rgb(87, 56, 116));
+  background: rgb(var(--color-2));
   left: 10px;
   display: flex;
   justify-content: center;
@@ -67,30 +67,14 @@
   position: relative;
   min-width: 100px;
   width: 10%;
+  transition: all 400ms ease;
 }
 
 .search-button:hover {
-  animation: BotonAclarado 200ms 1;
-  background: linear-gradient(45deg, #7659a3, rgb(130, 101, 158));
+  /*animation: BotonAclarado 200ms 1;*/
+  background: rgb(var(--color-3));
 }
 
-@keyframes BotonAclarado {
-  0% {
-    background: linear-gradient(45deg, #481e8b, #573874);
-  }
-  20% {
-    background: linear-gradient(45deg, #542493, #61427d);
-  }
-  40% {
-    background: linear-gradient(45deg, #582e9b, #674884);
-  }
-  60% {
-    background: linear-gradient(45deg, #64319f, #6f4f8d);
-  }
-  80% {
-    background: linear-gradient(45deg, #684ea0, #775894);
-  }
-  100% {
-    background: linear-gradient(45deg, #7659a3, #826597);
-  }
+.search-button:hover > .buscar {
+  color: rgb(var(--color-1));
 }
