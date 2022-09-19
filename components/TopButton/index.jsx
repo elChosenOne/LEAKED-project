@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./TopButton.css";
+import Cookies from "universal-cookie";
 
 function TopButton(props) {
-  const { texto , link } = props;
+  const { cookie, texto , link } = props;
+  const cook = new Cookies(cookie);
+
   if (link == "/perfil"){
     return (
-      <Link className="overlap-group" to={'perfil/1'}>
+      <Link className="overlap-group" to={'/perfil/'+cook.get("usr")}>
         <div className="top-back" ></div>
         <div className="texto sitkatext-regular-normal-masala-30px">{texto}</div>
       </Link>

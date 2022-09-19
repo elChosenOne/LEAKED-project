@@ -9,7 +9,8 @@
     "react-dom": "^18.1.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^5.2.0",
-    "recharts": "^2.1.13"
+    "recharts": "^2.1.13",
+    "universal-cookie": "^4.0.4"
   },
   "devDependencies": {
     "browserslist": "4.19.3",

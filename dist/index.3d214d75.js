@@ -27066,6 +27066,8 @@ var _appCss = require("./App.css");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
+var _universalCookie = require("universal-cookie");
+var _universalCookieDefault = parcelHelpers.interopDefault(_universalCookie);
 var _topBar = require("./components/TopBar");
 var _topBarDefault = parcelHelpers.interopDefault(_topBar);
 var _muro = require("./components/Muro");
@@ -27074,13 +27076,17 @@ var _perfil = require("./components/Perfil");
 var _perfilDefault = parcelHelpers.interopDefault(_perfil);
 var _s = $RefreshSig$();
 function App() {
+    const cookie = new (0, _universalCookieDefault.default)();
+    cookie.set("usr", "1");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "Fondo",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topBarDefault.default), {}, void 0, false, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topBarDefault.default), {
+                    cookie: cookie
+                }, void 0, false, {
                     fileName: "App.jsx",
-                    lineNumber: 13,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Switch), {
@@ -27091,7 +27097,7 @@ function App() {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkMuro, {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.jsx",
-                            lineNumber: 15,
+                            lineNumber: 19,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27100,7 +27106,7 @@ function App() {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkMuro, {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.jsx",
-                            lineNumber: 16,
+                            lineNumber: 20,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27109,24 +27115,24 @@ function App() {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkPerfil, {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.jsx",
-                            lineNumber: 17,
+                            lineNumber: 21,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "App.jsx",
-                    lineNumber: 14,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "App.jsx",
-            lineNumber: 12,
+            lineNumber: 16,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 11,
+        lineNumber: 15,
         columnNumber: 5
     }, this);
 }
@@ -27134,7 +27140,7 @@ _c = App;
 function LinkMuro() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _muroDefault.default), {}, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 26,
+        lineNumber: 30,
         columnNumber: 5
     }, this);
 }
@@ -27142,10 +27148,11 @@ _c1 = LinkMuro;
 function LinkPerfil() {
     _s();
     const { id  } = (0, _reactRouterDom.useParams)();
-    console.log("ID = " + id);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _perfilDefault.default), {}, void 0, false, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _perfilDefault.default), {
+        id: id
+    }, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 36,
+        lineNumber: 38,
         columnNumber: 5
     }, this);
 }
@@ -27166,7 +27173,7 @@ $RefreshReg$(_c2, "LinkPerfil");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./App.css":"7g3a6","react":"21dqq","react-router-dom":"cHIiW","./components/Muro":"bn3mf","./components/Perfil":"lF5zK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/TopBar":"9b5PX"}],"7g3a6":[function() {},{}],"cHIiW":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./App.css":"7g3a6","react":"21dqq","react-router-dom":"cHIiW","./components/Muro":"bn3mf","./components/Perfil":"lF5zK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/TopBar":"9b5PX","universal-cookie":"7mx41"}],"7g3a6":[function() {},{}],"cHIiW":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MemoryRouter", ()=>(0, _reactRouter.MemoryRouter));
@@ -30213,10 +30220,11 @@ var _publicacionesJsonDefault = parcelHelpers.interopDefault(_publicacionesJson)
 var _muroCss = require("./Muro.css");
 function Muro(props) {
     const Publs = (0, _publicacionesJsonDefault.default).publicaciones;
+    const FPubls = Publs.filter((val)=>true);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "muro screen",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tablaPublicacionesDefault.default), {
-            publicaciones: Publs
+            publicaciones: FPubls
         }, void 0, false, {
             fileName: "components/Muro/index.jsx",
             lineNumber: 12,
@@ -30572,29 +30580,81 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _perfilCss = require("./Perfil.css");
+var _perfilesJson = require("../../data/perfiles.json");
+var _perfilesJsonDefault = parcelHelpers.interopDefault(_perfilesJson);
 function Perfil(props) {
-    const UsrId = 1;
-    const PerfilImage = require("../../dist/img/perfilplaceholder.png");
+    const { id  } = props;
+    const perfil = (0, _perfilesJsonDefault.default).perfiles.find((perfil)=>perfil.id == id);
+    const PerfilImage = perfil.imagen === "" ? require("../../dist/img/perfilplaceholder.png") : perfil.imagen;
+    //https://www.fakepersongenerator.com/Face/male/male1085174145447.jpg
+    console.log(perfil);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "perfil screen",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "FondoImage",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "PerfilImage",
-                src: PerfilImage
-            }, void 0, false, {
-                fileName: "components/Perfil/index.jsx",
-                lineNumber: 11,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
+            className: "datos-principales",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "FondoImage",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        className: "PerfilImage",
+                        src: PerfilImage
+                    }, void 0, false, {
+                        fileName: "components/Perfil/index.jsx",
+                        lineNumber: 19,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/Perfil/index.jsx",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "nombre segoeui-black-dove-gray-30px",
+                    children: perfil.nombre
+                }, void 0, false, {
+                    fileName: "components/Perfil/index.jsx",
+                    lineNumber: 21,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "correo segoeui-black-dove-gray-30px",
+                    children: perfil.correo
+                }, void 0, false, {
+                    fileName: "components/Perfil/index.jsx",
+                    lineNumber: 22,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "seguidores segoeui-black-dove-gray-30px",
+                    children: [
+                        "Seguidores: ",
+                        perfil.seguidores.length
+                    ]
+                }, void 0, true, {
+                    fileName: "components/Perfil/index.jsx",
+                    lineNumber: 23,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "seguidos segoeui-black-dove-gray-30px",
+                    children: [
+                        "Seguidos: ",
+                        perfil.seguidos.length
+                    ]
+                }, void 0, true, {
+                    fileName: "components/Perfil/index.jsx",
+                    lineNumber: 24,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
             fileName: "components/Perfil/index.jsx",
-            lineNumber: 10,
+            lineNumber: 17,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "components/Perfil/index.jsx",
-        lineNumber: 9,
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 }
@@ -30608,7 +30668,10 @@ $RefreshReg$(_c, "Perfil");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Perfil.css":"1ReUE","../../dist/img/perfilplaceholder.png":"djlbM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1ReUE":[function() {},{}],"9b5PX":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Perfil.css":"1ReUE","../../dist/img/perfilplaceholder.png":"djlbM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../data/perfiles.json":"kVEgX"}],"1ReUE":[function() {},{}],"kVEgX":[function(require,module,exports) {
+module.exports = JSON.parse('{"perfiles":[{"id":1,"nombre":"GenNom1","correo":"correo1@gmail.com","imagen":"","seguidores":[2,3,4],"seguidos":[2,3,4]},{"id":2,"nombre":"GenNom3","correo":"correo2@gmail.com","imagen":"https://www.fakepersongenerator.com/Face/male/male1085174145447.jpg","seguidores":[1,4],"seguidos":[3,4]},{"id":3,"nombre":"GenNom2","correo":"correo3@gmail.com","imagen":"https://www.fakepersongenerator.com/Face/female/female1022238483612.jpg","seguidores":[2,4],"seguidos":[]},{"id":4,"nombre":"GenNon4","correo":"correo4@gmail.com","imagen":"https://www.fakepersongenerator.com/Face/female/female20161025532139374.jpg","seguidores":[],"seguidos":[1]}]}');
+
+},{}],"9b5PX":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3997 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30673,6 +30736,7 @@ var _topButton = require("../TopButton");
 var _topButtonDefault = parcelHelpers.interopDefault(_topButton);
 var _topMenuCss = require("./TopMenu.css");
 function TopMenu(props) {
+    const { cookie  } = props;
     const history = (0, _reactRouterDom.useHistory);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "top-menu",
@@ -30682,45 +30746,49 @@ function TopMenu(props) {
                 children: "LEAKED"
             }, void 0, false, {
                 fileName: "components/TopMenu/index.jsx",
-                lineNumber: 11,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                texto: "Inicio",
-                link: "/muro"
-            }, void 0, false, {
-                fileName: "components/TopMenu/index.jsx",
                 lineNumber: 12,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                texto: "Chats",
-                link: "/chats"
+                cookie: cookie,
+                texto: "Inicio",
+                link: "/muro"
             }, void 0, false, {
                 fileName: "components/TopMenu/index.jsx",
                 lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                texto: "Notificaciones",
-                link: "/notificaciones"
+                cookie: cookie,
+                texto: "Chats",
+                link: "/chats"
             }, void 0, false, {
                 fileName: "components/TopMenu/index.jsx",
                 lineNumber: 14,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                cookie: cookie,
+                texto: "Notificaciones",
+                link: "/notificaciones"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                cookie: cookie,
                 texto: "Perfil",
                 link: "/perfil"
             }, void 0, false, {
                 fileName: "components/TopMenu/index.jsx",
-                lineNumber: 15,
+                lineNumber: 16,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "components/TopMenu/index.jsx",
-        lineNumber: 10,
+        lineNumber: 11,
         columnNumber: 5
     }, this);
 }
@@ -30748,17 +30816,20 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
 var _topButtonCss = require("./TopButton.css");
+var _universalCookie = require("universal-cookie");
+var _universalCookieDefault = parcelHelpers.interopDefault(_universalCookie);
 function TopButton(props) {
-    const { texto , link  } = props;
+    const { cookie , texto , link  } = props;
+    const cook = new (0, _universalCookieDefault.default)(cookie);
     if (link == "/perfil") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
         className: "overlap-group",
-        to: "perfil/1",
+        to: "/perfil/" + cook.get("usr"),
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "top-back"
             }, void 0, false, {
                 fileName: "components/TopButton/index.jsx",
-                lineNumber: 10,
+                lineNumber: 13,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30766,13 +30837,13 @@ function TopButton(props) {
                 children: texto
             }, void 0, false, {
                 fileName: "components/TopButton/index.jsx",
-                lineNumber: 11,
+                lineNumber: 14,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "components/TopButton/index.jsx",
-        lineNumber: 9,
+        lineNumber: 12,
         columnNumber: 7
     }, this);
     else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -30783,7 +30854,7 @@ function TopButton(props) {
                 className: "top-back"
             }, void 0, false, {
                 fileName: "components/TopButton/index.jsx",
-                lineNumber: 17,
+                lineNumber: 20,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30791,13 +30862,13 @@ function TopButton(props) {
                 children: texto
             }, void 0, false, {
                 fileName: "components/TopButton/index.jsx",
-                lineNumber: 18,
+                lineNumber: 21,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "components/TopButton/index.jsx",
-        lineNumber: 16,
+        lineNumber: 19,
         columnNumber: 7
     }, this);
 }
@@ -30811,7 +30882,272 @@ $RefreshReg$(_c, "TopButton");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./TopButton.css":"4QBl8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4QBl8":[function() {},{}],"cYT8F":[function() {},{}],"aJY3s":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./TopButton.css":"4QBl8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","universal-cookie":"7mx41"}],"4QBl8":[function() {},{}],"7mx41":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _cookies = require("./Cookies");
+var _cookiesDefault = parcelHelpers.interopDefault(_cookies);
+exports.default = (0, _cookiesDefault.default);
+
+},{"./Cookies":"dLGVH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dLGVH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _cookie = require("cookie");
+var _utils = require("./utils");
+var __assign = undefined && undefined.__assign || function() {
+    __assign = Object.assign || function(t) {
+        for(var s, i = 1, n = arguments.length; i < n; i++){
+            s = arguments[i];
+            for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var Cookies = /** @class */ function() {
+    function Cookies(cookies, options) {
+        var _this = this;
+        this.changeListeners = [];
+        this.HAS_DOCUMENT_COOKIE = false;
+        this.cookies = (0, _utils.parseCookies)(cookies, options);
+        new Promise(function() {
+            _this.HAS_DOCUMENT_COOKIE = (0, _utils.hasDocumentCookie)();
+        }).catch(function() {});
+    }
+    Cookies.prototype._updateBrowserValues = function(parseOptions) {
+        if (!this.HAS_DOCUMENT_COOKIE) return;
+        this.cookies = _cookie.parse(document.cookie, parseOptions);
+    };
+    Cookies.prototype._emitChange = function(params) {
+        for(var i = 0; i < this.changeListeners.length; ++i)this.changeListeners[i](params);
+    };
+    Cookies.prototype.get = function(name, options, parseOptions) {
+        if (options === void 0) options = {};
+        this._updateBrowserValues(parseOptions);
+        return (0, _utils.readCookie)(this.cookies[name], options);
+    };
+    Cookies.prototype.getAll = function(options, parseOptions) {
+        if (options === void 0) options = {};
+        this._updateBrowserValues(parseOptions);
+        var result = {};
+        for(var name_1 in this.cookies)result[name_1] = (0, _utils.readCookie)(this.cookies[name_1], options);
+        return result;
+    };
+    Cookies.prototype.set = function(name, value, options) {
+        var _a;
+        if (typeof value === "object") value = JSON.stringify(value);
+        this.cookies = __assign(__assign({}, this.cookies), (_a = {}, _a[name] = value, _a));
+        if (this.HAS_DOCUMENT_COOKIE) document.cookie = _cookie.serialize(name, value, options);
+        this._emitChange({
+            name: name,
+            value: value,
+            options: options
+        });
+    };
+    Cookies.prototype.remove = function(name, options) {
+        var finalOptions = options = __assign(__assign({}, options), {
+            expires: new Date(1970, 1, 1, 0, 0, 1),
+            maxAge: 0
+        });
+        this.cookies = __assign({}, this.cookies);
+        delete this.cookies[name];
+        if (this.HAS_DOCUMENT_COOKIE) document.cookie = _cookie.serialize(name, "", finalOptions);
+        this._emitChange({
+            name: name,
+            value: undefined,
+            options: options
+        });
+    };
+    Cookies.prototype.addChangeListener = function(callback) {
+        this.changeListeners.push(callback);
+    };
+    Cookies.prototype.removeChangeListener = function(callback) {
+        var idx = this.changeListeners.indexOf(callback);
+        if (idx >= 0) this.changeListeners.splice(idx, 1);
+    };
+    return Cookies;
+}();
+exports.default = Cookies;
+
+},{"cookie":"luAip","./utils":"1oWCi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"luAip":[function(require,module,exports) {
+/*!
+ * cookie
+ * Copyright(c) 2012-2014 Roman Shtylman
+ * Copyright(c) 2015 Douglas Christopher Wilson
+ * MIT Licensed
+ */ "use strict";
+/**
+ * Module exports.
+ * @public
+ */ exports.parse = parse;
+exports.serialize = serialize;
+/**
+ * Module variables.
+ * @private
+ */ var decode = decodeURIComponent;
+var encode = encodeURIComponent;
+/**
+ * RegExp to match field-content in RFC 7230 sec 3.2
+ *
+ * field-content = field-vchar [ 1*( SP / HTAB ) field-vchar ]
+ * field-vchar   = VCHAR / obs-text
+ * obs-text      = %x80-FF
+ */ var fieldContentRegExp = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
+/**
+ * Parse a cookie header.
+ *
+ * Parse the given cookie header string into an object
+ * The object has the various cookies as keys(names) => values
+ *
+ * @param {string} str
+ * @param {object} [options]
+ * @return {object}
+ * @public
+ */ function parse(str, options) {
+    if (typeof str !== "string") throw new TypeError("argument str must be a string");
+    var obj = {};
+    var opt = options || {};
+    var pairs = str.split(";");
+    var dec = opt.decode || decode;
+    for(var i = 0; i < pairs.length; i++){
+        var pair = pairs[i];
+        var index = pair.indexOf("=");
+        // skip things that don't look like key=value
+        if (index < 0) continue;
+        var key = pair.substring(0, index).trim();
+        // only assign once
+        if (undefined == obj[key]) {
+            var val = pair.substring(index + 1, pair.length).trim();
+            // quoted values
+            if (val[0] === '"') val = val.slice(1, -1);
+            obj[key] = tryDecode(val, dec);
+        }
+    }
+    return obj;
+}
+/**
+ * Serialize data into a cookie header.
+ *
+ * Serialize the a name value pair into a cookie string suitable for
+ * http headers. An optional options object specified cookie parameters.
+ *
+ * serialize('foo', 'bar', { httpOnly: true })
+ *   => "foo=bar; httpOnly"
+ *
+ * @param {string} name
+ * @param {string} val
+ * @param {object} [options]
+ * @return {string}
+ * @public
+ */ function serialize(name, val, options) {
+    var opt = options || {};
+    var enc = opt.encode || encode;
+    if (typeof enc !== "function") throw new TypeError("option encode is invalid");
+    if (!fieldContentRegExp.test(name)) throw new TypeError("argument name is invalid");
+    var value = enc(val);
+    if (value && !fieldContentRegExp.test(value)) throw new TypeError("argument val is invalid");
+    var str = name + "=" + value;
+    if (null != opt.maxAge) {
+        var maxAge = opt.maxAge - 0;
+        if (isNaN(maxAge) || !isFinite(maxAge)) throw new TypeError("option maxAge is invalid");
+        str += "; Max-Age=" + Math.floor(maxAge);
+    }
+    if (opt.domain) {
+        if (!fieldContentRegExp.test(opt.domain)) throw new TypeError("option domain is invalid");
+        str += "; Domain=" + opt.domain;
+    }
+    if (opt.path) {
+        if (!fieldContentRegExp.test(opt.path)) throw new TypeError("option path is invalid");
+        str += "; Path=" + opt.path;
+    }
+    if (opt.expires) {
+        if (typeof opt.expires.toUTCString !== "function") throw new TypeError("option expires is invalid");
+        str += "; Expires=" + opt.expires.toUTCString();
+    }
+    if (opt.httpOnly) str += "; HttpOnly";
+    if (opt.secure) str += "; Secure";
+    if (opt.sameSite) {
+        var sameSite = typeof opt.sameSite === "string" ? opt.sameSite.toLowerCase() : opt.sameSite;
+        switch(sameSite){
+            case true:
+                str += "; SameSite=Strict";
+                break;
+            case "lax":
+                str += "; SameSite=Lax";
+                break;
+            case "strict":
+                str += "; SameSite=Strict";
+                break;
+            case "none":
+                str += "; SameSite=None";
+                break;
+            default:
+                throw new TypeError("option sameSite is invalid");
+        }
+    }
+    return str;
+}
+/**
+ * Try decoding a string using a decoding function.
+ *
+ * @param {string} str
+ * @param {function} decode
+ * @private
+ */ function tryDecode(str, decode) {
+    try {
+        return decode(str);
+    } catch (e) {
+        return str;
+    }
+}
+
+},{}],"1oWCi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "hasDocumentCookie", ()=>hasDocumentCookie);
+parcelHelpers.export(exports, "cleanCookies", ()=>cleanCookies);
+parcelHelpers.export(exports, "parseCookies", ()=>parseCookies);
+parcelHelpers.export(exports, "isParsingCookie", ()=>isParsingCookie);
+parcelHelpers.export(exports, "readCookie", ()=>readCookie);
+var _cookie = require("cookie");
+function hasDocumentCookie() {
+    // Can we get/set cookies on document.cookie?
+    return typeof document === "object" && typeof document.cookie === "string";
+}
+function cleanCookies() {
+    document.cookie.split(";").forEach(function(c) {
+        document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+    });
+}
+function parseCookies(cookies, options) {
+    if (typeof cookies === "string") return _cookie.parse(cookies, options);
+    else if (typeof cookies === "object" && cookies !== null) return cookies;
+    else return {};
+}
+function isParsingCookie(value, doNotParse) {
+    if (typeof doNotParse === "undefined") // We guess if the cookie start with { or [, it has been serialized
+    doNotParse = !value || value[0] !== "{" && value[0] !== "[" && value[0] !== '"';
+    return !doNotParse;
+}
+function readCookie(value, options) {
+    if (options === void 0) options = {};
+    var cleanValue = cleanupCookieValue(value);
+    if (isParsingCookie(cleanValue, options.doNotParse)) try {
+        return JSON.parse(cleanValue);
+    } catch (e) {
+    // At least we tried
+    }
+    // Ignore clean value if we failed the deserialization
+    // It is not relevant anymore to trim those values
+    return value;
+}
+function cleanupCookieValue(value) {
+    // express prepend j: before serializing a cookie
+    if (value && value[0] === "j" && value[1] === ":") return value.substr(2);
+    return value;
+}
+
+},{"cookie":"luAip","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cYT8F":[function() {},{}],"aJY3s":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2db0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

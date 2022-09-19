@@ -1,0 +1,47 @@
+{
+  "perfiles": [
+    {
+      "id": 1,
+      "nombre": "GenNom1",
+      "correo": "correo1@gmail.com",
+      "imagen": "",
+      "seguidores": [
+        2, 3, 4
+      ],
+      "seguidos": [
+        2, 3, 4
+      ]
+    },{
+      "id": 2,
+      "nombre": "GenNom3", 
+      "correo": "correo2@gmail.com",
+      "imagen": "https://www.fakepersongenerator.com/Face/male/male1085174145447.jpg",
+      "seguidores": [
+        1, 4
+      ],
+      "seguidos": [
+        3, 4
+      ]
+    },{
+      "id": 3,
+      "nombre": "GenNom2", 
+      "correo": "correo3@gmail.com",
+      "imagen": "https://www.fakepersongenerator.com/Face/female/female1022238483612.jpg",
+      "seguidores": [
+        2, 4
+      ],
+      "seguidos": [
+      ]
+    },{
+      "id": 4,
+      "nombre": "GenNon4", 
+      "correo": "correo4@gmail.com",
+      "imagen": "https://www.fakepersongenerator.com/Face/female/female20161025532139374.jpg",
+      "seguidores": [
+      ],
+      "seguidos": [
+        1
+      ]
+    }
+  ]
+}

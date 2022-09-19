@@ -5,11 +5,11 @@ import "./Muro.css";
 
 function Muro(props){
   const Publs = DataPublicaciones.publicaciones;
-
+  const FPubls = Publs.filter(val => true);
 
   return (
     <div className="muro screen">
-      <TablaPublicaciones publicaciones={Publs} />
+      <TablaPublicaciones publicaciones={FPubls} />
     </div>
   );
 }
