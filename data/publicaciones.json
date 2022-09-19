@@ -6,7 +6,7 @@
                 "nombre": "GenNom1",
                 "imagen": "perfilplaceholder.png"
             }, 
-            "fecha": "27-08-2022",
+            "fecha": "19-09-2022",
             "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui arcu, facilisis sit amet sapien eget, tincidunt consectetur ipsum. Donec vel nunc ac urna vestibulum maximus sit amet ut dui. Curabitur interdum tellus neque, id sollicitudin neque vehicula in. Donec elementum elit quis quam efficitur rhoncus. Phasellus sit amet eros placerat, malesuada dolor in, accumsan lectus. Aliquam gravida enim nibh, quis fermentum sapien mattis sed. Sed vulputate lorem in porttitor porta. Proin suscipit velit ipsum, non posuere ex dictum sit amet. Nam porta orci a dignissim consequat. Curabitur ornare mattis dui et facilisis. Nulla nisl turpis, consectetur in libero sit amet, porttitor convallis lorem. Morbi finibus, leo a vehicula pulvinar, velit felis hendrerit enim, at fermentum odio libero sit amet magna.",
             "key": 1
           }, 
@@ -16,7 +16,7 @@
                 "nombre": "GenNom2", 
                 "imagen": "perfilplaceholder.png"
             },
-            "fecha": "05-08-2022", 
+            "fecha": "19-09-2022", 
             "texto": "Aenean semper ex nisl, a sodales nulla tristique vitae. Integer sodales mi in enim viverra lacinia. Phasellus dapibus velit id neque commodo, eget accumsan enim sollicitudin. Aenean diam mauris, condimentum id tincidunt sit amet, sagittis non urna. Maecenas neque quam, commodo eget dapibus vel, tempor at ante. Aliquam at justo ex. In hac habitasse platea dictumst. Nam tincidunt vestibulum velit a ultrices. Praesent nulla massa, pharetra vitae commodo id, molestie ac leo. Vestibulum non mi eu ante pulvinar fringilla. Nullam cursus nisl nisi, quis fringilla ipsum malesuada eu.", 
             "key": 2
           }, 

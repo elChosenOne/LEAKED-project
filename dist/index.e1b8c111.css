@@ -34,6 +34,7 @@ input:focus {
   --color-3: 184, 219, 217;
   --color-4: 244, 244, 249;
   --color-5: 4, 114, 77;
+  --width-min: 1200px;
   --font-size-l: 60px;
   --font-size-m: 30px;
   --font-size-s: 20px;
@@ -72,6 +73,7 @@ input:focus {
   width: 100%;
   background: none;
   display: block;
+  position: absolute;
 }
 
 .publicacion {
@@ -139,7 +141,7 @@ input:focus {
 }
 
 .muro {
-  min-width: 600px;
+  min-width: var(--width-min);
   width: 100%;
   background: none;
   flex-direction: column;
@@ -149,7 +151,7 @@ input:focus {
 }
 
 .perfil {
-  min-width: 600px;
+  min-width: var(--width-min);
   width: 100%;
   background-color: #0000;
   flex-direction: column;
@@ -229,6 +231,12 @@ input:focus {
   left: 800px;
 }
 
+.publicaciones {
+  width: 100%;
+  position: relative;
+  top: 400px;
+}
+
 .top-back {
   height: 100%;
   width: 100%;
@@ -265,7 +273,6 @@ input:focus {
   background: rgba(var(--color-2), .5);
   height: 30px;
   opacity: 1;
-  min-width: 600px;
   width: 100%;
   z-index: 2;
   border-bottom-left-radius: 10px;
@@ -296,7 +303,6 @@ input:focus {
 .top-search {
   background: rgba(var(--color-2), .5);
   height: 40px;
-  min-width: 600px;
   width: 100%;
   z-index: 2;
   border-top-left-radius: 10px;
@@ -372,7 +378,7 @@ input:focus {
   opacity: 1;
   width: 95%;
   height: 70px;
-  min-width: 600px;
+  min-width: var(--width-min);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   z-index: 1;

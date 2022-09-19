@@ -16,19 +16,13 @@ function App() {
       <Router>
         <TopBar cookie={cookie} />
         <Switch>
-          <Route exact path="/" children={<LinkMuro />} />
-          <Route exact path="/muro" children={<LinkMuro />} />
+          <Route exact path="/" children={<Muro cook={cookie}/>} />
+          <Route exact path="/muro" children={<Muro cook={cookie}/>} />
           <Route exact path="/perfil/:id" children={<LinkPerfil />} />
         </Switch>
       </Router>
     </div>
   );
-}
-
-function LinkMuro(){
-  return(
-    <Muro />
-  )
 }
 
 function LinkPerfil(){

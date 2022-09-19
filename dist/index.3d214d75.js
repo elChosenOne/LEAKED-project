@@ -27094,7 +27094,9 @@ function App() {
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                             exact: true,
                             path: "/",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkMuro, {}, void 0, false, void 0, void 0)
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _muroDefault.default), {
+                                cook: cookie
+                            }, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.jsx",
                             lineNumber: 19,
@@ -27103,7 +27105,9 @@ function App() {
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                             exact: true,
                             path: "/muro",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkMuro, {}, void 0, false, void 0, void 0)
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _muroDefault.default), {
+                                cook: cookie
+                            }, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.jsx",
                             lineNumber: 20,
@@ -27137,14 +27141,6 @@ function App() {
     }, this);
 }
 _c = App;
-function LinkMuro() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _muroDefault.default), {}, void 0, false, {
-        fileName: "App.jsx",
-        lineNumber: 30,
-        columnNumber: 5
-    }, this);
-}
-_c1 = LinkMuro;
 function LinkPerfil() {
     _s();
     const { id  } = (0, _reactRouterDom.useParams)();
@@ -27152,7 +27148,7 @@ function LinkPerfil() {
         id: id
     }, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 38,
+        lineNumber: 32,
         columnNumber: 5
     }, this);
 }
@@ -27161,12 +27157,11 @@ _s(LinkPerfil, "yQgCIz/jJfqV1l9s2yoba81MT5A=", false, function() {
         (0, _reactRouterDom.useParams)
     ];
 });
-_c2 = LinkPerfil;
+_c1 = LinkPerfil;
 exports.default = App;
-var _c, _c1, _c2;
+var _c, _c1;
 $RefreshReg$(_c, "App");
-$RefreshReg$(_c1, "LinkMuro");
-$RefreshReg$(_c2, "LinkPerfil");
+$RefreshReg$(_c1, "LinkPerfil");
 
   $parcel$ReactRefreshHelpers$53a7.postlude(module);
 } finally {
@@ -30218,21 +30213,29 @@ var _tablaPublicacionesDefault = parcelHelpers.interopDefault(_tablaPublicacione
 var _publicacionesJson = require("../../data/publicaciones.json");
 var _publicacionesJsonDefault = parcelHelpers.interopDefault(_publicacionesJson);
 var _muroCss = require("./Muro.css");
+var _universalCookie = require("universal-cookie");
+var _universalCookieDefault = parcelHelpers.interopDefault(_universalCookie);
+var _perfilesJson = require("../../data/perfiles.json");
+var _perfilesJsonDefault = parcelHelpers.interopDefault(_perfilesJson);
 function Muro(props) {
+    const { cook  } = props;
+    const cookie = new (0, _universalCookieDefault.default)(cook);
+    const id = cookie.get("usr");
+    const perfil = (0, _perfilesJsonDefault.default).perfiles.find((perfil)=>perfil.id == id);
     const Publs = (0, _publicacionesJsonDefault.default).publicaciones;
-    const FPubls = Publs.filter((val)=>true);
+    const FPubls = Publs.filter((val)=>perfil.seguidos.indexOf(val.usuario.id) != -1);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "muro screen",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tablaPublicacionesDefault.default), {
             publicaciones: FPubls
         }, void 0, false, {
             fileName: "components/Muro/index.jsx",
-            lineNumber: 12,
+            lineNumber: 19,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "components/Muro/index.jsx",
-        lineNumber: 11,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }
@@ -30246,7 +30249,7 @@ $RefreshReg$(_c, "Muro");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../TablaPublicaciones":"2dsaR","../../data/publicaciones.json":"f3ov1","./Muro.css":"1VjHr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2dsaR":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../TablaPublicaciones":"2dsaR","../../data/publicaciones.json":"f3ov1","./Muro.css":"1VjHr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../data/perfiles.json":"kVEgX","universal-cookie":"7mx41"}],"2dsaR":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e109 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30312,6 +30315,9 @@ var _comments11X472E0DadPngDefault = parcelHelpers.interopDefault(_comments11X47
 var _publicacionCss = require("./Publicacion.css");
 function Publicacion(props) {
     const { usuario , fecha , texto , key  } = props;
+    const calendario = new Date();
+    const hoy = `${calendario.getDate()}-${calendario.getMonth() >= 9 ? calendario.getMonth() + 1 : "0" + (calendario.getMonth() + 1)}-${calendario.getFullYear()}`;
+    console.log(hoy + " " + fecha);
     console.log(undefined);
     const PerfilImage = require("../../dist/img/perfilplaceholder.png");
     //const PerfilImage = require(`../../dist/img/${usuario.imagen}`);
@@ -30323,7 +30329,7 @@ function Publicacion(props) {
                 src: PerfilImage
             }, void 0, false, {
                 fileName: "components/Publicacion/index.jsx",
-                lineNumber: 16,
+                lineNumber: 19,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -30331,22 +30337,22 @@ function Publicacion(props) {
                 children: usuario.nombre
             }, void 0, false, {
                 fileName: "components/Publicacion/index.jsx",
-                lineNumber: 17,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "fecha segoeui-regular-normal-dove-gray-25px",
-                children: fecha
+                children: fecha == hoy ? "Hoy" : fecha
             }, void 0, false, {
                 fileName: "components/Publicacion/index.jsx",
-                lineNumber: 18,
+                lineNumber: 21,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "salto"
             }, void 0, false, {
                 fileName: "components/Publicacion/index.jsx",
-                lineNumber: 19,
+                lineNumber: 22,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30354,7 +30360,7 @@ function Publicacion(props) {
                 children: texto
             }, void 0, false, {
                 fileName: "components/Publicacion/index.jsx",
-                lineNumber: 20,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -30362,7 +30368,7 @@ function Publicacion(props) {
                 src: (0, _uparrow11X5E56Ec5BPngDefault.default)
             }, void 0, false, {
                 fileName: "components/Publicacion/index.jsx",
-                lineNumber: 21,
+                lineNumber: 24,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -30370,7 +30376,7 @@ function Publicacion(props) {
                 src: (0, _downarrow11X74Fc2Ae1PngDefault.default)
             }, void 0, false, {
                 fileName: "components/Publicacion/index.jsx",
-                lineNumber: 22,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -30378,13 +30384,13 @@ function Publicacion(props) {
                 src: (0, _comments11X472E0DadPngDefault.default)
             }, void 0, false, {
                 fileName: "components/Publicacion/index.jsx",
-                lineNumber: 23,
+                lineNumber: 26,
                 columnNumber: 7
             }, this)
         ]
     }, key, true, {
         fileName: "components/Publicacion/index.jsx",
-        lineNumber: 15,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }
@@ -30565,324 +30571,12 @@ function registerExportsForReactRefresh(module1) {
 }
 
 },{"react-refresh/runtime":"786KC"}],"f3ov1":[function(require,module,exports) {
-module.exports = JSON.parse('{"publicaciones":[{"usuario":{"id":1,"nombre":"GenNom1","imagen":"perfilplaceholder.png"},"fecha":"27-08-2022","texto":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui arcu, facilisis sit amet sapien eget, tincidunt consectetur ipsum. Donec vel nunc ac urna vestibulum maximus sit amet ut dui. Curabitur interdum tellus neque, id sollicitudin neque vehicula in. Donec elementum elit quis quam efficitur rhoncus. Phasellus sit amet eros placerat, malesuada dolor in, accumsan lectus. Aliquam gravida enim nibh, quis fermentum sapien mattis sed. Sed vulputate lorem in porttitor porta. Proin suscipit velit ipsum, non posuere ex dictum sit amet. Nam porta orci a dignissim consequat. Curabitur ornare mattis dui et facilisis. Nulla nisl turpis, consectetur in libero sit amet, porttitor convallis lorem. Morbi finibus, leo a vehicula pulvinar, velit felis hendrerit enim, at fermentum odio libero sit amet magna.","key":1},{"usuario":{"id":3,"nombre":"GenNom2","imagen":"perfilplaceholder.png"},"fecha":"05-08-2022","texto":"Aenean semper ex nisl, a sodales nulla tristique vitae. Integer sodales mi in enim viverra lacinia. Phasellus dapibus velit id neque commodo, eget accumsan enim sollicitudin. Aenean diam mauris, condimentum id tincidunt sit amet, sagittis non urna. Maecenas neque quam, commodo eget dapibus vel, tempor at ante. Aliquam at justo ex. In hac habitasse platea dictumst. Nam tincidunt vestibulum velit a ultrices. Praesent nulla massa, pharetra vitae commodo id, molestie ac leo. Vestibulum non mi eu ante pulvinar fringilla. Nullam cursus nisl nisi, quis fringilla ipsum malesuada eu.","key":2},{"usuario":{"id":2,"nombre":"GenNom3","imagen":"perfilplaceholder.png"},"fecha":"10-08-2022","texto":"Aenean tempus velit a euismod viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in tincidunt nibh. Mauris rhoncus justo eros, ac faucibus augue fermentum in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc facilisis urna nec elit hendrerit rutrum. Praesent gravida lorem lorem, sit amet vehicula neque consequat et. Quisque suscipit tincidunt sem ut mollis. Vivamus ut condimentum magna. Aenean aliquet varius enim ut lacinia. Vivamus sit amet ex quis elit aliquet dictum. Mauris pellentesque porttitor ligula ac egestas. Phasellus consequat nisi non sem congue vulputate. Vivamus interdum dapibus lorem. Cras mattis tortor nulla, non porttitor urna tempor sit amet. Maecenas vitae massa tincidunt, mattis urna a, laoreet nisl. Aliquam leo dui, accumsan porttitor bibendum sed, feugiat non nisi. Vestibulum luctus velit risus, aliquam maximus erat vulputate in. Cras dapibus augue sed scelerisque aliquam. Maecenas tempor metus et lorem iaculis pellentesque. Duis aliquet maximus erat a maximus. Aenean a elit nisl. In ac felis consequat, accumsan nisl eu, suscipit nisi.","key":3},{"usuario":{"id":4,"nombre":"GenNon4","imagen":"perfilplaceholder.png"},"fecha":"15-10-2022","texto":"Aenean tempus velit a euismod viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in tincidunt nibh. Mauris rhoncus justo eros, ac faucibus augue fermentum in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc facilisis urna nec elit hendrerit rutrum. Praesent gravida lorem lorem, sit amet vehicula neque consequat et. Quisque suscipit tincidunt sem ut mollis. Vivamus ut condimentum magna. Aenean aliquet varius enim ut lacinia. Vivamus sit amet ex quis elit aliquet dictum. Mauris pellentesque porttitor ligula ac egestas. Phasellus consequat nisi non sem congue vulputate. Vivamus interdum dapibus lorem. Cras mattis tortor nulla, non porttitor urna tempor sit amet. Maecenas vitae massa tincidunt, mattis urna a, laoreet nisl. Aliquam leo dui, accumsan porttitor bibendum sed, feugiat non nisi. Vestibulum luctus velit risus, aliquam maximus erat vulputate in. Cras dapibus augue sed scelerisque aliquam. Maecenas tempor metus et lorem iaculis pellentesque. Duis aliquet maximus erat a maximus. Aenean a elit nisl. In ac felis consequat, accumsan nisl eu, suscipit nisi.","key":4}]}');
+module.exports = JSON.parse('{"publicaciones":[{"usuario":{"id":1,"nombre":"GenNom1","imagen":"perfilplaceholder.png"},"fecha":"19-09-2022","texto":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui arcu, facilisis sit amet sapien eget, tincidunt consectetur ipsum. Donec vel nunc ac urna vestibulum maximus sit amet ut dui. Curabitur interdum tellus neque, id sollicitudin neque vehicula in. Donec elementum elit quis quam efficitur rhoncus. Phasellus sit amet eros placerat, malesuada dolor in, accumsan lectus. Aliquam gravida enim nibh, quis fermentum sapien mattis sed. Sed vulputate lorem in porttitor porta. Proin suscipit velit ipsum, non posuere ex dictum sit amet. Nam porta orci a dignissim consequat. Curabitur ornare mattis dui et facilisis. Nulla nisl turpis, consectetur in libero sit amet, porttitor convallis lorem. Morbi finibus, leo a vehicula pulvinar, velit felis hendrerit enim, at fermentum odio libero sit amet magna.","key":1},{"usuario":{"id":3,"nombre":"GenNom2","imagen":"perfilplaceholder.png"},"fecha":"19-09-2022","texto":"Aenean semper ex nisl, a sodales nulla tristique vitae. Integer sodales mi in enim viverra lacinia. Phasellus dapibus velit id neque commodo, eget accumsan enim sollicitudin. Aenean diam mauris, condimentum id tincidunt sit amet, sagittis non urna. Maecenas neque quam, commodo eget dapibus vel, tempor at ante. Aliquam at justo ex. In hac habitasse platea dictumst. Nam tincidunt vestibulum velit a ultrices. Praesent nulla massa, pharetra vitae commodo id, molestie ac leo. Vestibulum non mi eu ante pulvinar fringilla. Nullam cursus nisl nisi, quis fringilla ipsum malesuada eu.","key":2},{"usuario":{"id":2,"nombre":"GenNom3","imagen":"perfilplaceholder.png"},"fecha":"10-08-2022","texto":"Aenean tempus velit a euismod viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in tincidunt nibh. Mauris rhoncus justo eros, ac faucibus augue fermentum in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc facilisis urna nec elit hendrerit rutrum. Praesent gravida lorem lorem, sit amet vehicula neque consequat et. Quisque suscipit tincidunt sem ut mollis. Vivamus ut condimentum magna. Aenean aliquet varius enim ut lacinia. Vivamus sit amet ex quis elit aliquet dictum. Mauris pellentesque porttitor ligula ac egestas. Phasellus consequat nisi non sem congue vulputate. Vivamus interdum dapibus lorem. Cras mattis tortor nulla, non porttitor urna tempor sit amet. Maecenas vitae massa tincidunt, mattis urna a, laoreet nisl. Aliquam leo dui, accumsan porttitor bibendum sed, feugiat non nisi. Vestibulum luctus velit risus, aliquam maximus erat vulputate in. Cras dapibus augue sed scelerisque aliquam. Maecenas tempor metus et lorem iaculis pellentesque. Duis aliquet maximus erat a maximus. Aenean a elit nisl. In ac felis consequat, accumsan nisl eu, suscipit nisi.","key":3},{"usuario":{"id":4,"nombre":"GenNon4","imagen":"perfilplaceholder.png"},"fecha":"15-10-2022","texto":"Aenean tempus velit a euismod viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in tincidunt nibh. Mauris rhoncus justo eros, ac faucibus augue fermentum in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc facilisis urna nec elit hendrerit rutrum. Praesent gravida lorem lorem, sit amet vehicula neque consequat et. Quisque suscipit tincidunt sem ut mollis. Vivamus ut condimentum magna. Aenean aliquet varius enim ut lacinia. Vivamus sit amet ex quis elit aliquet dictum. Mauris pellentesque porttitor ligula ac egestas. Phasellus consequat nisi non sem congue vulputate. Vivamus interdum dapibus lorem. Cras mattis tortor nulla, non porttitor urna tempor sit amet. Maecenas vitae massa tincidunt, mattis urna a, laoreet nisl. Aliquam leo dui, accumsan porttitor bibendum sed, feugiat non nisi. Vestibulum luctus velit risus, aliquam maximus erat vulputate in. Cras dapibus augue sed scelerisque aliquam. Maecenas tempor metus et lorem iaculis pellentesque. Duis aliquet maximus erat a maximus. Aenean a elit nisl. In ac felis consequat, accumsan nisl eu, suscipit nisi.","key":4}]}');
 
-},{}],"1VjHr":[function() {},{}],"lF5zK":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bf32 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bf32.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _perfilCss = require("./Perfil.css");
-var _perfilesJson = require("../../data/perfiles.json");
-var _perfilesJsonDefault = parcelHelpers.interopDefault(_perfilesJson);
-function Perfil(props) {
-    const { id  } = props;
-    const perfil = (0, _perfilesJsonDefault.default).perfiles.find((perfil)=>perfil.id == id);
-    const PerfilImage = perfil.imagen === "" ? require("../../dist/img/perfilplaceholder.png") : perfil.imagen;
-    //https://www.fakepersongenerator.com/Face/male/male1085174145447.jpg
-    console.log(perfil);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "perfil screen",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "datos-principales",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "FondoImage",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "PerfilImage",
-                        src: PerfilImage
-                    }, void 0, false, {
-                        fileName: "components/Perfil/index.jsx",
-                        lineNumber: 19,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "components/Perfil/index.jsx",
-                    lineNumber: 18,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "nombre segoeui-black-dove-gray-30px",
-                    children: perfil.nombre
-                }, void 0, false, {
-                    fileName: "components/Perfil/index.jsx",
-                    lineNumber: 21,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "correo segoeui-black-dove-gray-30px",
-                    children: perfil.correo
-                }, void 0, false, {
-                    fileName: "components/Perfil/index.jsx",
-                    lineNumber: 22,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "seguidores segoeui-black-dove-gray-30px",
-                    children: [
-                        "Seguidores: ",
-                        perfil.seguidores.length
-                    ]
-                }, void 0, true, {
-                    fileName: "components/Perfil/index.jsx",
-                    lineNumber: 23,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "seguidos segoeui-black-dove-gray-30px",
-                    children: [
-                        "Seguidos: ",
-                        perfil.seguidos.length
-                    ]
-                }, void 0, true, {
-                    fileName: "components/Perfil/index.jsx",
-                    lineNumber: 24,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/Perfil/index.jsx",
-            lineNumber: 17,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
-        fileName: "components/Perfil/index.jsx",
-        lineNumber: 16,
-        columnNumber: 5
-    }, this);
-}
-_c = Perfil;
-exports.default = Perfil;
-var _c;
-$RefreshReg$(_c, "Perfil");
-
-  $parcel$ReactRefreshHelpers$bf32.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Perfil.css":"1ReUE","../../dist/img/perfilplaceholder.png":"djlbM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../data/perfiles.json":"kVEgX"}],"1ReUE":[function() {},{}],"kVEgX":[function(require,module,exports) {
+},{}],"1VjHr":[function() {},{}],"kVEgX":[function(require,module,exports) {
 module.exports = JSON.parse('{"perfiles":[{"id":1,"nombre":"GenNom1","correo":"correo1@gmail.com","imagen":"","seguidores":[2,3,4],"seguidos":[2,3,4]},{"id":2,"nombre":"GenNom3","correo":"correo2@gmail.com","imagen":"https://www.fakepersongenerator.com/Face/male/male1085174145447.jpg","seguidores":[1,4],"seguidos":[3,4]},{"id":3,"nombre":"GenNom2","correo":"correo3@gmail.com","imagen":"https://www.fakepersongenerator.com/Face/female/female1022238483612.jpg","seguidores":[2,4],"seguidos":[]},{"id":4,"nombre":"GenNon4","correo":"correo4@gmail.com","imagen":"https://www.fakepersongenerator.com/Face/female/female20161025532139374.jpg","seguidores":[],"seguidos":[1]}]}');
 
-},{}],"9b5PX":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$3997 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$3997.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _topMenu = require("../TopMenu");
-var _topMenuDefault = parcelHelpers.interopDefault(_topMenu);
-var _topSearch = require("../TopSearch");
-var _topSearchDefault = parcelHelpers.interopDefault(_topSearch);
-var _topBarCss = require("./TopBar.css");
-function TopBar(props) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "top-bar",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topSearchDefault.default), {}, void 0, false, {
-                fileName: "components/TopBar/index.jsx",
-                lineNumber: 9,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topMenuDefault.default), {}, void 0, false, {
-                fileName: "components/TopBar/index.jsx",
-                lineNumber: 10,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "components/TopBar/index.jsx",
-        lineNumber: 8,
-        columnNumber: 5
-    }, this);
-}
-_c = TopBar;
-exports.default = TopBar;
-var _c;
-$RefreshReg$(_c, "TopBar");
-
-  $parcel$ReactRefreshHelpers$3997.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../TopMenu":"9kQfm","../TopSearch":"aJY3s","./TopBar.css":"hIqR7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9kQfm":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$51e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$51e7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _topButton = require("../TopButton");
-var _topButtonDefault = parcelHelpers.interopDefault(_topButton);
-var _topMenuCss = require("./TopMenu.css");
-function TopMenu(props) {
-    const { cookie  } = props;
-    const history = (0, _reactRouterDom.useHistory);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "top-menu",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "title",
-                children: "LEAKED"
-            }, void 0, false, {
-                fileName: "components/TopMenu/index.jsx",
-                lineNumber: 12,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                cookie: cookie,
-                texto: "Inicio",
-                link: "/muro"
-            }, void 0, false, {
-                fileName: "components/TopMenu/index.jsx",
-                lineNumber: 13,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                cookie: cookie,
-                texto: "Chats",
-                link: "/chats"
-            }, void 0, false, {
-                fileName: "components/TopMenu/index.jsx",
-                lineNumber: 14,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                cookie: cookie,
-                texto: "Notificaciones",
-                link: "/notificaciones"
-            }, void 0, false, {
-                fileName: "components/TopMenu/index.jsx",
-                lineNumber: 15,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
-                cookie: cookie,
-                texto: "Perfil",
-                link: "/perfil"
-            }, void 0, false, {
-                fileName: "components/TopMenu/index.jsx",
-                lineNumber: 16,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "components/TopMenu/index.jsx",
-        lineNumber: 11,
-        columnNumber: 5
-    }, this);
-}
-_c = TopMenu;
-exports.default = TopMenu;
-var _c;
-$RefreshReg$(_c, "TopMenu");
-
-  $parcel$ReactRefreshHelpers$51e7.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","../TopButton":"42MwR","./TopMenu.css":"cYT8F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"42MwR":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b13a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b13a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _topButtonCss = require("./TopButton.css");
-var _universalCookie = require("universal-cookie");
-var _universalCookieDefault = parcelHelpers.interopDefault(_universalCookie);
-function TopButton(props) {
-    const { cookie , texto , link  } = props;
-    const cook = new (0, _universalCookieDefault.default)(cookie);
-    if (link == "/perfil") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-        className: "overlap-group",
-        to: "/perfil/" + cook.get("usr"),
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "top-back"
-            }, void 0, false, {
-                fileName: "components/TopButton/index.jsx",
-                lineNumber: 13,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "texto sitkatext-regular-normal-masala-30px",
-                children: texto
-            }, void 0, false, {
-                fileName: "components/TopButton/index.jsx",
-                lineNumber: 14,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "components/TopButton/index.jsx",
-        lineNumber: 12,
-        columnNumber: 7
-    }, this);
-    else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-        className: "overlap-group",
-        to: link,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "top-back"
-            }, void 0, false, {
-                fileName: "components/TopButton/index.jsx",
-                lineNumber: 20,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "texto sitkatext-regular-normal-masala-30px",
-                children: texto
-            }, void 0, false, {
-                fileName: "components/TopButton/index.jsx",
-                lineNumber: 21,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "components/TopButton/index.jsx",
-        lineNumber: 19,
-        columnNumber: 7
-    }, this);
-}
-_c = TopButton;
-exports.default = TopButton;
-var _c;
-$RefreshReg$(_c, "TopButton");
-
-  $parcel$ReactRefreshHelpers$b13a.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./TopButton.css":"4QBl8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","universal-cookie":"7mx41"}],"4QBl8":[function() {},{}],"7mx41":[function(require,module,exports) {
+},{}],"7mx41":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _cookies = require("./Cookies");
@@ -31147,7 +30841,341 @@ function cleanupCookieValue(value) {
     return value;
 }
 
-},{"cookie":"luAip","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cYT8F":[function() {},{}],"aJY3s":[function(require,module,exports) {
+},{"cookie":"luAip","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lF5zK":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bf32 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bf32.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _perfilCss = require("./Perfil.css");
+var _perfilesJson = require("../../data/perfiles.json");
+var _perfilesJsonDefault = parcelHelpers.interopDefault(_perfilesJson);
+var _tablaPublicaciones = require("../TablaPublicaciones");
+var _tablaPublicacionesDefault = parcelHelpers.interopDefault(_tablaPublicaciones);
+var _publicacionesJson = require("../../data/publicaciones.json");
+var _publicacionesJsonDefault = parcelHelpers.interopDefault(_publicacionesJson);
+function Perfil(props) {
+    const { id  } = props;
+    const perfil = (0, _perfilesJsonDefault.default).perfiles.find((perfil)=>perfil.id == id);
+    const PerfilImage = perfil.imagen === "" ? require("../../dist/img/perfilplaceholder.png") : perfil.imagen;
+    const Publs = (0, _publicacionesJsonDefault.default).publicaciones;
+    const FPubls = Publs.filter((val)=>val.usuario.id == id);
+    //https://www.fakepersongenerator.com/Face/male/male1085174145447.jpg
+    console.log(perfil);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "perfil screen",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "datos-principales",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "FondoImage",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "PerfilImage",
+                            src: PerfilImage
+                        }, void 0, false, {
+                            fileName: "components/Perfil/index.jsx",
+                            lineNumber: 24,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "components/Perfil/index.jsx",
+                        lineNumber: 23,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "nombre segoeui-black-dove-gray-30px",
+                        children: perfil.nombre
+                    }, void 0, false, {
+                        fileName: "components/Perfil/index.jsx",
+                        lineNumber: 26,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "correo segoeui-black-dove-gray-30px",
+                        children: perfil.correo
+                    }, void 0, false, {
+                        fileName: "components/Perfil/index.jsx",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "seguidores segoeui-black-dove-gray-30px",
+                        children: [
+                            "Seguidores: ",
+                            perfil.seguidores.length
+                        ]
+                    }, void 0, true, {
+                        fileName: "components/Perfil/index.jsx",
+                        lineNumber: 28,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "seguidos segoeui-black-dove-gray-30px",
+                        children: [
+                            "Seguidos: ",
+                            perfil.seguidos.length
+                        ]
+                    }, void 0, true, {
+                        fileName: "components/Perfil/index.jsx",
+                        lineNumber: 29,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/Perfil/index.jsx",
+                lineNumber: 22,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "publicaciones",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tablaPublicacionesDefault.default), {
+                    publicaciones: FPubls
+                }, void 0, false, {
+                    fileName: "components/Perfil/index.jsx",
+                    lineNumber: 32,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "components/Perfil/index.jsx",
+                lineNumber: 31,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/Perfil/index.jsx",
+        lineNumber: 21,
+        columnNumber: 5
+    }, this);
+}
+_c = Perfil;
+exports.default = Perfil;
+var _c;
+$RefreshReg$(_c, "Perfil");
+
+  $parcel$ReactRefreshHelpers$bf32.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Perfil.css":"1ReUE","../../dist/img/perfilplaceholder.png":"djlbM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../data/perfiles.json":"kVEgX","../TablaPublicaciones":"2dsaR","../../data/publicaciones.json":"f3ov1"}],"1ReUE":[function() {},{}],"9b5PX":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3997 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3997.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _topMenu = require("../TopMenu");
+var _topMenuDefault = parcelHelpers.interopDefault(_topMenu);
+var _topSearch = require("../TopSearch");
+var _topSearchDefault = parcelHelpers.interopDefault(_topSearch);
+var _topBarCss = require("./TopBar.css");
+function TopBar(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "top-bar",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topSearchDefault.default), {}, void 0, false, {
+                fileName: "components/TopBar/index.jsx",
+                lineNumber: 9,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topMenuDefault.default), {}, void 0, false, {
+                fileName: "components/TopBar/index.jsx",
+                lineNumber: 10,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopBar/index.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, this);
+}
+_c = TopBar;
+exports.default = TopBar;
+var _c;
+$RefreshReg$(_c, "TopBar");
+
+  $parcel$ReactRefreshHelpers$3997.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../TopMenu":"9kQfm","../TopSearch":"aJY3s","./TopBar.css":"hIqR7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9kQfm":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$51e7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$51e7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _topButton = require("../TopButton");
+var _topButtonDefault = parcelHelpers.interopDefault(_topButton);
+var _topMenuCss = require("./TopMenu.css");
+function TopMenu(props) {
+    const { cookie  } = props;
+    const history = (0, _reactRouterDom.useHistory);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "top-menu",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "title",
+                children: "LEAKED"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                cookie: cookie,
+                texto: "Inicio",
+                link: "/muro"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                cookie: cookie,
+                texto: "Chats",
+                link: "/chats"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                cookie: cookie,
+                texto: "Notificaciones",
+                link: "/notificaciones"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topButtonDefault.default), {
+                cookie: cookie,
+                texto: "Perfil",
+                link: "/perfil"
+            }, void 0, false, {
+                fileName: "components/TopMenu/index.jsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopMenu/index.jsx",
+        lineNumber: 11,
+        columnNumber: 5
+    }, this);
+}
+_c = TopMenu;
+exports.default = TopMenu;
+var _c;
+$RefreshReg$(_c, "TopMenu");
+
+  $parcel$ReactRefreshHelpers$51e7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","../TopButton":"42MwR","./TopMenu.css":"cYT8F","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"42MwR":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b13a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b13a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _topButtonCss = require("./TopButton.css");
+var _universalCookie = require("universal-cookie");
+var _universalCookieDefault = parcelHelpers.interopDefault(_universalCookie);
+function TopButton(props) {
+    const { cookie , texto , link  } = props;
+    const cook = new (0, _universalCookieDefault.default)(cookie);
+    if (link == "/perfil") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+        className: "overlap-group",
+        to: "/perfil/" + cook.get("usr"),
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "top-back"
+            }, void 0, false, {
+                fileName: "components/TopButton/index.jsx",
+                lineNumber: 13,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "texto sitkatext-regular-normal-masala-30px",
+                children: texto
+            }, void 0, false, {
+                fileName: "components/TopButton/index.jsx",
+                lineNumber: 14,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopButton/index.jsx",
+        lineNumber: 12,
+        columnNumber: 7
+    }, this);
+    else return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+        className: "overlap-group",
+        to: link,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "top-back"
+            }, void 0, false, {
+                fileName: "components/TopButton/index.jsx",
+                lineNumber: 20,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "texto sitkatext-regular-normal-masala-30px",
+                children: texto
+            }, void 0, false, {
+                fileName: "components/TopButton/index.jsx",
+                lineNumber: 21,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/TopButton/index.jsx",
+        lineNumber: 19,
+        columnNumber: 7
+    }, this);
+}
+_c = TopButton;
+exports.default = TopButton;
+var _c;
+$RefreshReg$(_c, "TopButton");
+
+  $parcel$ReactRefreshHelpers$b13a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./TopButton.css":"4QBl8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","universal-cookie":"7mx41"}],"4QBl8":[function() {},{}],"cYT8F":[function() {},{}],"aJY3s":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2db0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
