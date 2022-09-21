@@ -389,4 +389,78 @@ input:focus {
   left: 2.5%;
 }
 
+.inicio-sesion {
+  min-width: var(--width-min);
+  width: 100%;
+  background: none;
+  flex-direction: column;
+  margin-top: 70px;
+  display: flex;
+  position: relative;
+}
+
+.overlap-group4 {
+  background-color: var(--white);
+  height: 30px;
+  width: 70%;
+  border-radius: 20px;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 15%;
+  padding-left: 19px;
+  padding-right: 19px;
+  display: flex;
+}
+
+.usuario_inicio-sesion {
+  height: 22px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #0000;
+  border: 0;
+  padding: 0;
+  line-height: 20px;
+}
+
+.overlap-group6 {
+  background-color: var(--white);
+  height: 30px;
+  width: 70%;
+  border-radius: 20px;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 15%;
+  padding-left: 19px;
+  padding-right: 19px;
+  display: flex;
+}
+
+.contrasenna {
+  height: 22px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #0000;
+  border: 0;
+  padding: 0;
+  line-height: 20px;
+}
+
+.fondo {
+  background: rgba(var(--color-3), .2);
+  align-items: left;
+  height: auto;
+  width: 40%;
+  min-width: 500px;
+  border-radius: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 30%;
+  padding: 15px;
+  position: relative;
+  top: 20px;
+  box-shadow: 5px 2px 10px #00000080;
+}
+
 /*# sourceMappingURL=index.e1b8c111.css.map */

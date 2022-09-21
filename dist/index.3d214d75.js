@@ -27074,6 +27074,8 @@ var _muro = require("./components/Muro");
 var _muroDefault = parcelHelpers.interopDefault(_muro);
 var _perfil = require("./components/Perfil");
 var _perfilDefault = parcelHelpers.interopDefault(_perfil);
+var _inicioSesion = require("./components/InicioSesion");
+var _inicioSesionDefault = parcelHelpers.interopDefault(_inicioSesion);
 var _s = $RefreshSig$();
 function App() {
     const cookie = new (0, _universalCookieDefault.default)();
@@ -27086,7 +27088,7 @@ function App() {
                     cookie: cookie
                 }, void 0, false, {
                     fileName: "App.jsx",
-                    lineNumber: 17,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Switch), {
@@ -27094,12 +27096,10 @@ function App() {
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                             exact: true,
                             path: "/",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _muroDefault.default), {
-                                cook: cookie
-                            }, void 0, false, void 0, void 0)
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inicioSesionDefault.default), {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.jsx",
-                            lineNumber: 19,
+                            lineNumber: 20,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27110,7 +27110,7 @@ function App() {
                             }, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.jsx",
-                            lineNumber: 20,
+                            lineNumber: 21,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27119,24 +27119,24 @@ function App() {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LinkPerfil, {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.jsx",
-                            lineNumber: 21,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "App.jsx",
-                    lineNumber: 18,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "App.jsx",
-            lineNumber: 16,
+            lineNumber: 17,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 15,
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 }
@@ -27148,7 +27148,7 @@ function LinkPerfil() {
         id: id
     }, void 0, false, {
         fileName: "App.jsx",
-        lineNumber: 32,
+        lineNumber: 33,
         columnNumber: 5
     }, this);
 }
@@ -27168,7 +27168,7 @@ $RefreshReg$(_c1, "LinkPerfil");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./App.css":"7g3a6","react":"21dqq","react-router-dom":"cHIiW","./components/Muro":"bn3mf","./components/Perfil":"lF5zK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/TopBar":"9b5PX","universal-cookie":"7mx41"}],"7g3a6":[function() {},{}],"cHIiW":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./App.css":"7g3a6","react":"21dqq","react-router-dom":"cHIiW","./components/Muro":"bn3mf","./components/Perfil":"lF5zK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","universal-cookie":"7mx41","./components/TopBar":"9b5PX","./components/InicioSesion":"jEmiN"}],"7g3a6":[function() {},{}],"cHIiW":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MemoryRouter", ()=>(0, _reactRouter.MemoryRouter));
@@ -30249,7 +30249,7 @@ $RefreshReg$(_c, "Muro");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../TablaPublicaciones":"2dsaR","../../data/publicaciones.json":"f3ov1","./Muro.css":"1VjHr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../data/perfiles.json":"kVEgX","universal-cookie":"7mx41"}],"2dsaR":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../TablaPublicaciones":"2dsaR","../../data/publicaciones.json":"f3ov1","./Muro.css":"1VjHr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","universal-cookie":"7mx41","../../data/perfiles.json":"kVEgX"}],"2dsaR":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e109 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30573,10 +30573,7 @@ function registerExportsForReactRefresh(module1) {
 },{"react-refresh/runtime":"786KC"}],"f3ov1":[function(require,module,exports) {
 module.exports = JSON.parse('{"publicaciones":[{"usuario":{"id":1,"nombre":"GenNom1","imagen":"perfilplaceholder.png"},"fecha":"19-09-2022","texto":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui arcu, facilisis sit amet sapien eget, tincidunt consectetur ipsum. Donec vel nunc ac urna vestibulum maximus sit amet ut dui. Curabitur interdum tellus neque, id sollicitudin neque vehicula in. Donec elementum elit quis quam efficitur rhoncus. Phasellus sit amet eros placerat, malesuada dolor in, accumsan lectus. Aliquam gravida enim nibh, quis fermentum sapien mattis sed. Sed vulputate lorem in porttitor porta. Proin suscipit velit ipsum, non posuere ex dictum sit amet. Nam porta orci a dignissim consequat. Curabitur ornare mattis dui et facilisis. Nulla nisl turpis, consectetur in libero sit amet, porttitor convallis lorem. Morbi finibus, leo a vehicula pulvinar, velit felis hendrerit enim, at fermentum odio libero sit amet magna.","key":1},{"usuario":{"id":3,"nombre":"GenNom2","imagen":"perfilplaceholder.png"},"fecha":"19-09-2022","texto":"Aenean semper ex nisl, a sodales nulla tristique vitae. Integer sodales mi in enim viverra lacinia. Phasellus dapibus velit id neque commodo, eget accumsan enim sollicitudin. Aenean diam mauris, condimentum id tincidunt sit amet, sagittis non urna. Maecenas neque quam, commodo eget dapibus vel, tempor at ante. Aliquam at justo ex. In hac habitasse platea dictumst. Nam tincidunt vestibulum velit a ultrices. Praesent nulla massa, pharetra vitae commodo id, molestie ac leo. Vestibulum non mi eu ante pulvinar fringilla. Nullam cursus nisl nisi, quis fringilla ipsum malesuada eu.","key":2},{"usuario":{"id":2,"nombre":"GenNom3","imagen":"perfilplaceholder.png"},"fecha":"10-08-2022","texto":"Aenean tempus velit a euismod viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in tincidunt nibh. Mauris rhoncus justo eros, ac faucibus augue fermentum in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc facilisis urna nec elit hendrerit rutrum. Praesent gravida lorem lorem, sit amet vehicula neque consequat et. Quisque suscipit tincidunt sem ut mollis. Vivamus ut condimentum magna. Aenean aliquet varius enim ut lacinia. Vivamus sit amet ex quis elit aliquet dictum. Mauris pellentesque porttitor ligula ac egestas. Phasellus consequat nisi non sem congue vulputate. Vivamus interdum dapibus lorem. Cras mattis tortor nulla, non porttitor urna tempor sit amet. Maecenas vitae massa tincidunt, mattis urna a, laoreet nisl. Aliquam leo dui, accumsan porttitor bibendum sed, feugiat non nisi. Vestibulum luctus velit risus, aliquam maximus erat vulputate in. Cras dapibus augue sed scelerisque aliquam. Maecenas tempor metus et lorem iaculis pellentesque. Duis aliquet maximus erat a maximus. Aenean a elit nisl. In ac felis consequat, accumsan nisl eu, suscipit nisi.","key":3},{"usuario":{"id":4,"nombre":"GenNon4","imagen":"perfilplaceholder.png"},"fecha":"15-10-2022","texto":"Aenean tempus velit a euismod viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in tincidunt nibh. Mauris rhoncus justo eros, ac faucibus augue fermentum in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc facilisis urna nec elit hendrerit rutrum. Praesent gravida lorem lorem, sit amet vehicula neque consequat et. Quisque suscipit tincidunt sem ut mollis. Vivamus ut condimentum magna. Aenean aliquet varius enim ut lacinia. Vivamus sit amet ex quis elit aliquet dictum. Mauris pellentesque porttitor ligula ac egestas. Phasellus consequat nisi non sem congue vulputate. Vivamus interdum dapibus lorem. Cras mattis tortor nulla, non porttitor urna tempor sit amet. Maecenas vitae massa tincidunt, mattis urna a, laoreet nisl. Aliquam leo dui, accumsan porttitor bibendum sed, feugiat non nisi. Vestibulum luctus velit risus, aliquam maximus erat vulputate in. Cras dapibus augue sed scelerisque aliquam. Maecenas tempor metus et lorem iaculis pellentesque. Duis aliquet maximus erat a maximus. Aenean a elit nisl. In ac felis consequat, accumsan nisl eu, suscipit nisi.","key":4}]}');
 
-},{}],"1VjHr":[function() {},{}],"kVEgX":[function(require,module,exports) {
-module.exports = JSON.parse('{"perfiles":[{"id":1,"nombre":"GenNom1","correo":"correo1@gmail.com","imagen":"","seguidores":[2,3,4],"seguidos":[2,3,4]},{"id":2,"nombre":"GenNom3","correo":"correo2@gmail.com","imagen":"https://www.fakepersongenerator.com/Face/male/male1085174145447.jpg","seguidores":[1,4],"seguidos":[3,4]},{"id":3,"nombre":"GenNom2","correo":"correo3@gmail.com","imagen":"https://www.fakepersongenerator.com/Face/female/female1022238483612.jpg","seguidores":[2,4],"seguidos":[]},{"id":4,"nombre":"GenNon4","correo":"correo4@gmail.com","imagen":"https://www.fakepersongenerator.com/Face/female/female20161025532139374.jpg","seguidores":[],"seguidos":[1]}]}');
-
-},{}],"7mx41":[function(require,module,exports) {
+},{}],"1VjHr":[function() {},{}],"7mx41":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _cookies = require("./Cookies");
@@ -30841,7 +30838,10 @@ function cleanupCookieValue(value) {
     return value;
 }
 
-},{"cookie":"luAip","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lF5zK":[function(require,module,exports) {
+},{"cookie":"luAip","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kVEgX":[function(require,module,exports) {
+module.exports = JSON.parse('{"perfiles":[{"id":1,"nombre":"GenNom1","correo":"correo1@gmail.com","imagen":"","seguidores":[2,3,4],"seguidos":[2,3,4]},{"id":2,"nombre":"GenNom3","correo":"correo2@gmail.com","imagen":"https://www.fakepersongenerator.com/Face/male/male1085174145447.jpg","seguidores":[1,4],"seguidos":[3,4]},{"id":3,"nombre":"GenNom2","correo":"correo3@gmail.com","imagen":"https://www.fakepersongenerator.com/Face/female/female1022238483612.jpg","seguidores":[2,4],"seguidos":[]},{"id":4,"nombre":"GenNon4","correo":"correo4@gmail.com","imagen":"https://www.fakepersongenerator.com/Face/female/female20161025532139374.jpg","seguidores":[],"seguidos":[1]}]}');
+
+},{}],"lF5zK":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bf32 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -31175,7 +31175,7 @@ $RefreshReg$(_c, "TopButton");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./TopButton.css":"4QBl8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","universal-cookie":"7mx41"}],"4QBl8":[function() {},{}],"cYT8F":[function() {},{}],"aJY3s":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./TopButton.css":"4QBl8","universal-cookie":"7mx41","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4QBl8":[function() {},{}],"cYT8F":[function() {},{}],"aJY3s":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2db0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -31241,6 +31241,81 @@ $RefreshReg$(_c, "TopSearch");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./TopSearch.css":"kVP5i","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kVP5i":[function() {},{}],"hIqR7":[function() {},{}]},["1xC6H","awEvQ","bB7Pu"], "bB7Pu", "parcelRequire3745")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./TopSearch.css":"kVP5i","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kVP5i":[function() {},{}],"hIqR7":[function() {},{}],"jEmiN":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bbbe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bbbe.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _inicioSesionCss = require("./InicioSesion.css");
+function InicioSesion(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "inicio-sesion",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "fondo border-1px-dove-gray",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "overlap-group4 border-1px-dove-gray",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "usuario_inicio-sesion sitkatext-regular-normal-masala-20px",
+                        name: "usuario",
+                        placeholder: "Usuario",
+                        type: "text"
+                    }, void 0, false, {
+                        fileName: "components/InicioSesion/index.jsx",
+                        lineNumber: 10,
+                        columnNumber: 17
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/InicioSesion/index.jsx",
+                    lineNumber: 9,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "overlap-group6 border-1px-dove-gray",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "contrasenna sitkatext-regular-normal-masala-20px",
+                        name: "contrasenna",
+                        placeholder: "Contrase\xf1a",
+                        type: "text"
+                    }, void 0, false, {
+                        fileName: "components/InicioSesion/index.jsx",
+                        lineNumber: 18,
+                        columnNumber: 17
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/InicioSesion/index.jsx",
+                    lineNumber: 17,
+                    columnNumber: 13
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "components/InicioSesion/index.jsx",
+            lineNumber: 8,
+            columnNumber: 9
+        }, this)
+    }, void 0, false, {
+        fileName: "components/InicioSesion/index.jsx",
+        lineNumber: 7,
+        columnNumber: 5
+    }, this);
+}
+_c = InicioSesion;
+exports.default = InicioSesion;
+var _c;
+$RefreshReg$(_c, "InicioSesion");
+
+  $parcel$ReactRefreshHelpers$bbbe.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./InicioSesion.css":"biLxD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"biLxD":[function() {},{}]},["1xC6H","awEvQ","bB7Pu"], "bB7Pu", "parcelRequire3745")
 
 //# sourceMappingURL=index.3d214d75.js.map

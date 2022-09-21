@@ -1,0 +1,76 @@
+.inicio-sesion {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: var(--width-min);
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  .overlap-group4 {
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    height: 30px;
+    padding-left: 19px;
+    padding-right: 19px;
+    width: 70%;
+    margin-top: 10px;
+    margin-left: 15%;
+    /*padding: 0 19px;*/
+  }
+  
+  .usuario_inicio-sesion {
+    background-color: transparent;
+    border: 0;
+    height: 22px;
+    letter-spacing: 0;
+    line-height: 20px;
+    padding: 0;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .overlap-group6 {
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    height: 30px;
+    padding-left: 19px;
+    padding-right: 19px;
+    width: 70%;
+    margin-top: 10px;
+    margin-left: 15%;
+    /*padding: 0 19px;*/
+  }
+
+  .contrasenna {
+    background-color: transparent;
+    border: 0;
+    height: 22px;
+    letter-spacing: 0;
+    line-height: 20px;
+    padding: 0;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .fondo {
+    background: rgba(var(--color-3), 0.2);
+    align-items: left;
+    border-radius: 15px;
+    position: relative;
+    height: auto;
+    padding: 15px;
+    width: 40%;
+    min-width: 500px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 30%;
+    box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.5);
+    top: 20px;
+    /*top: 100px;*/
+  }
